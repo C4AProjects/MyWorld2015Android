@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_settings"
+        android:title="@string/menu_settings"
+        android:orderInCategory="300"
+        android:showAsAction="never"
+        android:icon="@drawable/options" />
+     <item android:id="@+id/menu_home"
+        android:title="@string/menu_home"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:icon="@drawable/home" />
+      <item android:id="@+id/menu_info"
+        android:title="@string/menu_info"
+        android:orderInCategory="400"
+        android:showAsAction="never"
+        android:icon="@drawable/info" />
+       <!--  item android:id="@+id/menu_info"
+        android:title="@string/menu_info"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:icon="@drawable/info" /-->
+       <item android:id="@+id/menu_report"
+        android:title="@string/menu_report"
+        android:orderInCategory="200"
+        android:showAsAction="never"
+        android:icon="@drawable/myworld_report" />
+</menu>

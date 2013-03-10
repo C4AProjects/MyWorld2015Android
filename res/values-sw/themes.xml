@@ -1,0 +1,7 @@
+ <resources>
+      <!--style name="Theme.Light.NoTitleBar.Workaround" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:autoCompleteTextViewStyle">@style/AutoCompleteTextViewLight</item>
+        <item name="android:dropDownItemStyle">@style/Widget.DropDownItemLight</item>
+    </style-->
+ </resources>
+ 

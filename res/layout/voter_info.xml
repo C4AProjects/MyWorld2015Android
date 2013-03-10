@@ -1,0 +1,144 @@
+<!--ScrollView 
+     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent" -->
+
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" >
+
+    <!-- Header logo -->
+
+   <LinearLayout
+        android:id="@+id/linearLayoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dip" >
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="90dip"
+            android:layout_height="30dip"
+            android:background="@drawable/text_border"
+            android:contentDescription="@string/logo_description"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:src="@drawable/logo" />
+
+        <!-- My World in Brief -->
+
+        <TextView
+            android:id="@+id/myworld_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#2da9e1"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:layout_marginRight="1dip"
+            android:text="@string/welcome_message"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textSize="15sp" />
+    </LinearLayout>
+    
+    <!-- Instructions -->
+    <TextView
+              android:id="@+id/info_instructions"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginRight="5dip"
+              android:paddingLeft="20sp"
+              android:paddingBottom="10sp"
+              android:background="#000000"
+              android:text="@string/text_info_instructions"
+              android:textAlignment="center"
+              android:textSize="17sp"
+              android:textColor="#ffffff"
+             />
+
+    <!-- Partner ID -->
+        <!-- EditText
+            android:id="@+id/editText_PartnerID"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+             android:layout_marginTop="20dip"
+            android:ems="10"
+            android:hint="@string/text_partnerid_hint"
+            android:textColorHint="#2da9e1"
+            android:inputType="text"
+            android:paddingBottom="5sp" >
+        <requestFocus />
+        </EditText-->
+        
+        <Spinner
+            android:id="@+id/spinner_gender"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dip"
+            android:layout_marginRight="5dip"
+            android:padding="1sp" />
+        
+         <Spinner 
+        android:id="@+id/spinner_age"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dip"
+         android:layout_marginBottom="2dip"
+         android:layout_marginRight="5dip"
+        />
+       
+         <Spinner 
+        android:id="@+id/spinner_education"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dip"
+        android:paddingBottom="2sp"/>
+        
+         <!--Spinner 
+        android:id="@+id/spinner_country"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dip"
+         android:layout_marginBottom="2dip"
+        /-->
+         
+        <!--AutoCompleteTextView
+	    android:id="@+id/autocomplete_voter_country"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:hint="@string/text_country_hint"
+	    android:textColorHint="#2da9e1"
+        android:paddingTop="10sp"
+        android:paddingBottom="20sp" /-->
+        
+        <TextView
+                android:id="@+id/validation_status"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dip"
+                android:textColor="#e30000"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textIsSelectable="false" />
+
+        <Button
+            android:id="@+id/finishVote"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:drawableLeft="@drawable/save"
+            android:layout_height="50dp"
+            android:background="@drawable/btn_blue"
+            android:onClick="btnfinishVote_Click"
+            android:paddingBottom="20dp"
+            android:text="@string/title_submit_vote_button_text" />
+
+</LinearLayout>
+<!-- /ScrollView-->

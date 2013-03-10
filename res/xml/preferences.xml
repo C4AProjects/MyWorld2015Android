@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/pref_partner_info_title" >
+     <ListPreference
+            android:entries="@array/pref_language_item"
+            android:entryValues="@array/pref_language_value"
+            android:key="language"
+            android:persistent="true"
+            android:defaultValue=""
+            android:summary="@string/pref_language_list_summary"
+            android:title="@string/pref_language_list_title" >
+     </ListPreference>
+     
+   
+        <EditTextPreference
+            android:key="partID"
+             android:title="@string/pref_partner_id_title"
+            android:summary="@string/pref_partner_id_summary"
+            android:persistent="true"
+            android:defaultValue=""
+            />
+        <ListPreference
+            android:entries="@array/countries_un"
+            android:entryValues="@array/pref_country_entry_values"
+            android:key="country"
+            android:persistent="true"
+            android:defaultValue="Select"
+            android:title="@string/pref_country_list_title"
+            android:summary="@string/pref_canvassing_country" >
+        </ListPreference>
+
+        
+    
+    
+</PreferenceScreen>

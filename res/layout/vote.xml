@@ -1,0 +1,101 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <!-- Header logo -->
+
+   <LinearLayout
+                android:id="@+id/linearLayoutButtons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                >
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="90dip"
+            android:layout_height="30dip"
+            android:contentDescription="@string/logo_description"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:src="@drawable/logo"
+            android:background="@drawable/text_border" />
+
+        <!-- My World in Brief -->
+
+        <TextView
+            android:id="@+id/canvasser_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#2da9e1"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="@string/welcome_message"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textSize="15sp" />
+</LinearLayout>
+    
+    <!-- Instructions -->
+    <TextView
+              android:id="@+id/vote_instructions"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:visibility="gone"
+              android:paddingLeft="20sp"
+              android:paddingBottom="10sp"
+              android:background="#000000"
+              android:text="@string/text_vote_instructions"
+              android:textAlignment="center"
+              android:textSize="18sp"
+              android:textColor="#ffffff"
+             />
+
+    <ListView
+        android:id="@+id/android:list"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.02"
+        android:divider="#2da9e1"
+        android:dividerHeight="2dp"
+        android:cacheColorHint="#00000000"
+        android:listSelector="@drawable/list_selector" />
+
+    <!-- Bottom Button -->
+
+    <RelativeLayout
+        android:id="@+id/lower_bar"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="15dp"
+          >
+
+        <EditText
+            android:id="@+id/add_option"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/text_option_hint"
+            android:textColorHint="#2da9e1"
+            android:inputType="text" >
+        </EditText>
+
+        <Button
+            android:id="@+id/finishVote"
+            style="@style/ButtonText"
+            android:background="@drawable/btn_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/add_option"
+            android:drawableLeft="@drawable/forward"
+            android:layout_marginLeft="80dp"
+            android:text="@string/title_finish_vote_button_text"
+            android:onClick="btnFinishVote_Click"
+            android:enabled="false" />
+    </RelativeLayout>
+
+</LinearLayout>

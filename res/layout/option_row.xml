@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" android:background="@drawable/list_selector"
+    android:orientation="horizontal" android:padding="5dip"  android:descendantFocusability="blocksDescendants" >
+    
+    <!-- The general structure -->
+    <!--  ListRow Left side of option -->
+    <LinearLayout android:id="@+id/thumbnail"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:padding="3dip"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/option_color_holder"
+        android:layout_marginRight="5dip">
+ 
+        <ImageView
+            android:id="@+id/option_color"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:src="@drawable/option_01_color"
+            android:contentDescription="@string/mdg_color_desc"/>
+ 
+    </LinearLayout>
+    
+    <!-- Option code hidden -->
+    <TextView
+        android:id="@+id/option_code"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+ 
+    <!-- MDG Title-->
+    <TextView
+        android:id="@+id/mdg_title"
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/thumbnail"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:textColor="#040404"
+        android:text="@string/mdg_title_1"
+        android:typeface="sans"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        />
+ 
+    <!-- MDG description -->
+    <TextView
+        android:id="@+id/mdg_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mdg_title"
+        android:layout_toLeftOf="@+id/mdg_check"
+        android:textColor="#343434"
+        android:textSize="17sp"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text="@string/mdg_desc_1" 
+        android:visibility="gone"
+        />
+ 
+ 
+     <!-- Rightend Checkbox -->
+    <CheckBox
+        android:id="@+id/mdg_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/mdg_title"
+        android:gravity="right"
+        android:focusable="false"
+        android:layout_marginRight="5dp"/>
+     <!--ImageView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/check_off_mobile"
+        android:layout_alignParentRight="true"
+        android:contentDescription="@string/mdg_checkbox_desc"
+        android:layout_centerVertical="true"/-->
+
+</RelativeLayout>
