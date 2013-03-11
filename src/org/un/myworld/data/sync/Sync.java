@@ -45,7 +45,7 @@ public class Sync extends Service {
 	private double latitude;
 	private double longitude;
 	public static DB_Adapter db;
-	private final String API_ACCESS_KEY="jshyRODMohqnJDDOuLh04d4e";//the app key
+	private final String API_ACCESS_KEY="XXXXXXXXXXXXXXX";//the app key
 	private final int TEST_CODE=1; //1-for testing..other for posting
 	public static boolean sync_done=false;
 	private int loop_value,total_votes;
