@@ -56,8 +56,8 @@ public class Preferences extends PreferenceActivity implements OnPreferenceChang
     protected void onCreate(final Bundle savedInstanceState)
     {
 		//configure language
-		languagePrefix=sharedPrefs.getString(KEY_LANGUAGE_LIST_PREFERENCE, "");
-		configureLanguage(this);
+		//languagePrefix=sharedPrefs.getString(KEY_LANGUAGE_LIST_PREFERENCE, "");
+		//configureLanguage(this);
         super.onCreate(savedInstanceState);
         if(Build.VERSION.SDK_INT >= 11){//target honeycomb and above
         	setContentView(R.layout.settings_window);

@@ -50,7 +50,8 @@ public class VotesListAdapter extends ListActivity{
 
     private VotesAdapter mAdapter;
     private boolean[] mVoteStates;
-    EditText userPriority; static Button nextButton;TextView voteInstruction, textPriorityDescription;
+    EditText userPriority; static Button nextButton;
+    TextView voteInstruction, textPriorityDescription,textVotesSelectedCount;
     RelativeLayout lowerBar;
     ListView listView;
     
@@ -62,7 +63,7 @@ public class VotesListAdapter extends ListActivity{
     public void onCreate(Bundle savedInstanceState) {
     	
     	//language config
-    	Preferences.configureLanguage(this);
+    	//Preferences.configureLanguage(this);
     	
         super.onCreate(savedInstanceState);
         setContentView(R.layout.vote);
@@ -71,6 +72,7 @@ public class VotesListAdapter extends ListActivity{
         lowerBar=(RelativeLayout)findViewById(R.id.lower_bar);
 		voteInstruction=(TextView)findViewById(R.id.vote_instructions);
 		//priorityDescription=(TextView)findViewById(R.id.mdg_description);
+		textVotesSelectedCount=(TextView)findViewById(R.id.vote_count);
 		userPriority=(EditText)findViewById(R.id.add_option);
 		nextButton=(Button)findViewById(R.id.finishVote);
         
@@ -252,6 +254,7 @@ public class VotesListAdapter extends ListActivity{
             			nextButton.setEnabled(true);
             		}else{
             			countVotes=countVotes+1;
+            			textVotesSelectedCount.setText(getString(R.string.title_count_vote_on_selection,countVotes));
             			Log.i("isChecked: ",""+PRIORITY_CODE[position]);
             			Log.i("Count at: ",""+countVotes);
             			//put vote in the basket :)
@@ -265,6 +268,7 @@ public class VotesListAdapter extends ListActivity{
             		userVotes.remove(countVotes);//remove the unchecked vote
             		if(countVotes>0){
             			countVotes=countVotes-1;
+            			textVotesSelectedCount.setText(getString(R.string.title_count_vote_on_selection,countVotes));
             		}
             		
             		Log.i("unChecked: ",""+PRIORITY_CODE[position]);
@@ -309,5 +313,13 @@ public class VotesListAdapter extends ListActivity{
 		
 		//close current activity
 		//finish();
+  	}
+  	
+  	//on back pressed
+  	@Override
+  	public void onBackPressed(){
+  		Intent intentBackHome = new Intent(getApplicationContext(), HomeActivity.class);
+  		intentBackHome.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		startActivity(intentBackHome);
   	}
 }

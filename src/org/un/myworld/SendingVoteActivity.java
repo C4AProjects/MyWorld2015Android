@@ -17,7 +17,9 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.provider.Settings;
 import android.app.Activity;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
@@ -45,7 +47,7 @@ public class SendingVoteActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		
 		//language config
-		Preferences.configureLanguage(this);
+		//Preferences.configureLanguage(this);
 		
 		//initialize sharePrefs variable
 		Preferences.sharedPrefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
@@ -97,6 +99,7 @@ public class SendingVoteActivity extends Activity {
     		public void run(){
     			count--;
     			progressSpinIcon.setVisibility(View.VISIBLE);
+    			
     			if(count==0){
     				timer.cancel();
     				Log.i(TAG,"Timer Cancelled");
@@ -116,8 +119,22 @@ public class SendingVoteActivity extends Activity {
 		}else{
 			progressSpinIcon.setVisibility(View.VISIBLE);
 			textUploadProcessLabel.setText(R.string.saved_votes_no_internet_reminder);
+			//this.showDataSettings();
+			btnBack.setEnabled(false);
 		}
 	}
+	
+	//open the native Network and Connections Settings panel
+  	private void showDataSettings() {
+  		//Intent intentDataSettings = new Intent(Intent.ACTION_MAIN);
+  		//intentDataSettings.setClassName("com.android.phone", "com.android.phone.NetworkSetting");
+  		Intent intentDataSettings=new Intent(Settings.ACTION_NETWORK_OPERATOR_SETTINGS);
+
+  		ComponentName cName = new ComponentName("com.android.phone","com.android.phone.Settings");
+
+  		intentDataSettings.setComponent(cName);
+  		startActivity(intentDataSettings);
+  	}
 	
 	/*Boolean method to check if internet is available*/
 	public boolean is_connected(){

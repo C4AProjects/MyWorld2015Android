@@ -57,7 +57,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:layout_below="@+id/myworld_brief">
+           >
 
             <LinearLayout
                 android:id="@+id/linearLayoutButtons"
@@ -98,6 +98,27 @@
                    android:text="@string/title_vote_button_text"
                    android:onClick="btnBeginVote_Click" >
                 </Button>
+            </LinearLayout>
+            
+             <LinearLayout
+                android:id="@+id/linearLayoutCloseButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" >
+
+
+                <Button
+                    android:id="@+id/exit_app"
+                    android:background="@drawable/btn_blue"
+                    style="@style/ButtonText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/title_exit_app_button_text"
+                     android:onClick="btnExitApp_Click" >
+                </Button>
+
+                
             </LinearLayout>
         </LinearLayout>
         <!-- Footer goes here -->

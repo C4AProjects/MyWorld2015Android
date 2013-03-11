@@ -1,8 +1,11 @@
-<!--ScrollView 
+<!--
+ScrollView 
      xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
-    android:layout_height="match_parent" -->
+    android:layout_height="match_parent"
+-->
+
 
 <LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
      android:layout_width="fill_parent"
@@ -139,6 +142,8 @@
             android:onClick="btnfinishVote_Click"
             android:paddingBottom="20dp"
             android:text="@string/title_submit_vote_button_text" />
+
+       
 
 </LinearLayout>
 <!-- /ScrollView-->

@@ -2,12 +2,14 @@
 <resources>
 
     <string name="app_name">MyWorld</string>
+   <string name="title_exit_app_button_text">Exit Application</string>
     <string name="myworld_message">PIGIA KURA MABADILIKO YATAKAYOLETA MAENDELEO KWA DUNIA YAKO</string>
     <string name="myworld_thank_you">AHSANTE SANA\nPATNA KWA KURA ZAKO!</string>
     <string name="text_upload_votes">Aplodi</string>
     <string name="text_more_votes">Ongeza</string>
     <string name="text_synchronized_votes">Kura zote zimeaplodiwa</string>
     <string name="text_votes_count_label">Una kura %1$s za kuaplodi</string>
+    <string name="title_count_vote_on_selection">%1$d/6</string>
     <string name="myworld_brief">MY World ni utafiti wa kimataifa ikiongozwa na Umoja wa Mataifa kuuliza WEWE uchague vipaumbele vyako kwa dunia bora.
 Majibu yatatumiwa kwa serikali zote duniani pamoja na watoa maamuzi katika kuamua  ajenda ijayo ya maendeleo ya dunia</string>
     <string name="logo_description">Logo</string>

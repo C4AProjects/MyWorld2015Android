@@ -2,12 +2,14 @@
 <resources>
 
     <string name="app_name">MyWorld</string>
+   <string name="title_exit_app_button_text">Exit Application</string>
     <string name="myworld_message">VOTE FOR THE CHANGES THAT WOULD MAKE THE MOST DIFFERENCE TO YOUR WORLD</string>
    <string name="myworld_thank_you">THANK YOU\nFOR THE VOTES PARTNER!</string>
     <string name="text_upload_votes">Upload</string>
     <string name="text_more_votes">Add</string>
     <string name="text_synchronized_votes">All Votes Uploaded</string>
     <string name="text_votes_count_label">You have %1$s votes to upload</string>
+    <string name="title_count_vote_on_selection">%1$d/6</string>
     <string name="myworld_brief">MY World is a global survey led by the United Nations asking YOU to chose your priorities for a better world. 
 Answers will be shared with governments and decision makers in setting the next development agenda for the world</string>
     <string name="logo_description">Logo</string>

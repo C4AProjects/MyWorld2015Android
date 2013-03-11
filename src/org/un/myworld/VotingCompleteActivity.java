@@ -20,7 +20,7 @@ public class VotingCompleteActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		
 		//language config
-    	Preferences.configureLanguage(this);
+    	//Preferences.configureLanguage(this);
     	
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_finish_vote);

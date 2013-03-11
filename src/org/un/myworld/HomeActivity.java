@@ -1,9 +1,6 @@
 package org.un.myworld;
 
 
-
-import org.un.myworld.data.sync.Sync;
-
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.app.Activity;
@@ -26,8 +23,8 @@ public class HomeActivity extends Activity {
     	
     	//language config
     	Preferences.sharedPrefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-    	//Preferences.languagePrefix=Preferences.sharedPrefs.getString(Preferences.KEY_LANGUAGE_LIST_PREFERENCE, "");
-    	Preferences.configureLanguage(this);
+    	Preferences.languagePrefix=Preferences.sharedPrefs.getString(Preferences.KEY_LANGUAGE_LIST_PREFERENCE, "");
+    	//Preferences.configureLanguage(this);
     	
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
@@ -126,13 +123,8 @@ public class HomeActivity extends Activity {
   	{
   		//start the vote entry activity
   		Intent vote = new Intent(getApplicationContext(), VotesListAdapter.class);
-  		//Intent vote = new Intent(getApplicationContext(), VotesListAdapter.class);
 		vote.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 		startActivity(vote);
-		
-		//start the vote sync service
-		//startService(new Intent(HomeActivity.this,Sync.class));
-    	//Log.d(TAG, "Sync Service Started");
 		
 		//close the home activity
 		finish();
@@ -143,13 +135,8 @@ public class HomeActivity extends Activity {
   	{
   		//start the savedvotes activity
   		Intent vote = new Intent(getApplicationContext(), SavedVotesActivity.class);
-  		//Intent vote = new Intent(getApplicationContext(), VotesListAdapter.class);
 		vote.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 		startActivity(vote);
-		
-		//start the vote sync service
-		//startService(new Intent(HomeActivity.this,Sync.class));
-    	//Log.d(TAG, "Sync Service Started");
 		
 		//close the home activity
 		finish();
@@ -159,6 +146,17 @@ public class HomeActivity extends Activity {
   	public void btnSettings_Click(View view){
   		Intent i = new Intent(this, Preferences.class);
 		startActivityForResult(i,START_PREFERENCES_REQUEST);
+  	}
+  	
+  //close the application completely
+  	public void btnExitApp_Click(View view){
+  		finish();
+  		System.exit(0);
+  	}
+  	
+  	@Override
+  	public void onBackPressed(){
+  		//ignore the back button
   	}
 
     

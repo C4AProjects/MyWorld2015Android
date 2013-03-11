@@ -8,9 +8,7 @@ import java.util.Date;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.un.imports.JSONParser;
-import org.un.myworld.R;
-import org.un.myworld.SavedVotesActivity;
-import org.un.myworld.VotingCompleteActivity;
+
 
 import android.app.Service;
 import android.content.BroadcastReceiver;
@@ -27,7 +25,7 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.os.Looper;
 import android.util.Log;
-import android.view.View;
+
 
 /**
  * 
