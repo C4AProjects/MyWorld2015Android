@@ -128,7 +128,7 @@
             android:layout_marginTop="10dp" >
 
             <Button
-                android:id="@+id/back_to_main"
+                android:id="@+id/sending_back_to_main"
                 style="@style/ButtonText"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -136,6 +136,7 @@
                 android:background="@drawable/btn_blue"
                 android:drawableLeft="@drawable/back"
                 android:onClick="btnBack_Click"
+                android:enabled="false"
                 android:text="@string/pref_back_button" />
 
             <Button

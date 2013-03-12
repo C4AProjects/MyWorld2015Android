@@ -5,6 +5,8 @@
  * */
 package org.un.myworld;
 
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.util.Calendar;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -40,7 +42,7 @@ public class SendingVoteActivity extends Activity {
 	public static Button btnSyncVotes,btnBack;
     private DB_Adapter db;
     public static String [] COUNTRY_NAME;
-    int count;
+    int count,UPDATE_INTERVAL,DELAY;
     Timer timer=new Timer();
 	
 	@Override
@@ -65,10 +67,10 @@ public class SendingVoteActivity extends Activity {
 		textPartnerID=(TextView)findViewById(R.id.parterid_label);
 		textCanvasserCountry=(TextView)findViewById(R.id.partercountry_label);
 		btnSyncVotes=(Button)findViewById(R.id.save_votes);
-		btnBack=(Button)findViewById(R.id.back_to_main);
+		btnBack=(Button)findViewById(R.id.sending_back_to_main);
 		
 		db=new DB_Adapter(getApplicationContext());
-		
+		db.open(); //open db
 		Calendar now = Calendar.getInstance();   // This gets the current date and time.
 		SendingVoteActivity.today= now.get(Calendar.DATE)+"/"+(now.get(Calendar.MONTH)+1)+"/"+now.get(Calendar.YEAR); //get current date
 		Log.i(TAG,"Date: "+today);
@@ -83,8 +85,8 @@ public class SendingVoteActivity extends Activity {
 		
 		
 		if(this.is_connected()){//check connectivity availability
-		int UPDATE_INTERVAL=db.getTotalVotes()*1000;
-		int DELAY=2000;
+		UPDATE_INTERVAL=db.getTotalVotes()*1000;
+		DELAY=2000;
 		count=db.getTotalVotes();
 		
 		
@@ -95,19 +97,69 @@ public class SendingVoteActivity extends Activity {
 		}
 		
 		//some hacked way of keeping the progress while the sync is ongoing
+		ifSendIsCompleteSwitch(this);
+		
+		}else{
+			
+			progressSpinIcon.setVisibility(View.VISIBLE);
+			textUploadProcessLabel.setText(R.string.saved_votes_no_internet_reminder);
+			//this.showDataSettings();
+			btnBack.setEnabled(true);
+			
+			/*try{//to enable data connection
+				setMobileDataEnabled(this,true);
+				if(this.is_connected()){//incase we regain connection at this instance
+					//show the sending votes process
+					textUploadProcessLabel.setText(getString(R.string.saved_votes_upload_process_label,String.valueOf(db.getTotalVotes())));
+					ifSendIsCompleteSwitch(this);
+					
+				}
+			}catch(Exception ex){
+				Log.e(TAG,"Data Enabling: "+ex.toString());
+			}*/
+			
+			
+			
+		}
+		db.close(); //close db
+	}
+	
+	//attempt to turn on data if disconnected
+	private void setMobileDataEnabled(Context context, boolean enabled) throws Exception {
+		 final ConnectivityManager conman = (ConnectivityManager)  context.getSystemService(Context.CONNECTIVITY_SERVICE);
+		   final Class conmanClass = Class.forName(conman.getClass().getName());
+		   final Field iConnectivityManagerField = conmanClass.getDeclaredField("mService");
+		   iConnectivityManagerField.setAccessible(true);
+		   final Object iConnectivityManager = iConnectivityManagerField.get(conman);
+		   final Class iConnectivityManagerClass =  Class.forName(iConnectivityManager.getClass().getName());
+		   final Method setMobileDataEnabledMethod = iConnectivityManagerClass.getDeclaredMethod("setMobileDataEnabled", Boolean.TYPE);
+		   setMobileDataEnabledMethod.setAccessible(true);
+
+		   setMobileDataEnabledMethod.invoke(iConnectivityManager, enabled);
+		}
+	
+	//some hacked way of keeping the progress while the sync is ongoing
+	private void ifSendIsCompleteSwitch(final Context context){
 		timer.scheduleAtFixedRate(new TimerTask(){
     		public void run(){
     			count--;
     			progressSpinIcon.setVisibility(View.VISIBLE);
-    			
+    			btnBack.setEnabled(false);
+    			//call switch window method
     			if(count==0){
+    				//disable connection
+    				/*try{//to disable data connection
+    				setMobileDataEnabled(context,false);
+    				}catch(Exception ex){
+    					Log.e(TAG,"Data Disabling: "+ex.toString());
+    				}*/
     				timer.cancel();
     				Log.i(TAG,"Timer Cancelled");
     				
     				//go back to the saved votes activity
     				Intent intentSavedVotes = new Intent(getApplicationContext(), SavedVotesActivity.class);
     				intentSavedVotes.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-    				startActivity(intentSavedVotes); 
+    				startActivityForResult(intentSavedVotes,HomeActivity.START_ANY_ACTIVITY_REQUEST);
     				
     				finish();//close this activity
     				
@@ -115,16 +167,23 @@ public class SendingVoteActivity extends Activity {
     			}
     		}
     	}, DELAY, UPDATE_INTERVAL+1500);
-		
-		}else{
-			progressSpinIcon.setVisibility(View.VISIBLE);
-			textUploadProcessLabel.setText(R.string.saved_votes_no_internet_reminder);
-			//this.showDataSettings();
-			btnBack.setEnabled(false);
-		}
 	}
 	
+	@Override
+  	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+  	    switch(resultCode)
+  	    {
+  	    case HomeActivity.RESULT_CLOSE_ALL_ACTIVITY:
+  	        setResult(HomeActivity.RESULT_CLOSE_ALL_ACTIVITY);
+  	        finish();
+  	    }
+  	    super.onActivityResult(requestCode, resultCode, data);
+  	}
+	
 	//open the native Network and Connections Settings panel
+	/**
+	 * @description --attempts to enable mobile connection if disconnected. Not actually used yet :)
+	 * */
   	private void showDataSettings() {
   		//Intent intentDataSettings = new Intent(Intent.ACTION_MAIN);
   		//intentDataSettings.setClassName("com.android.phone", "com.android.phone.NetworkSetting");

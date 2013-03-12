@@ -220,7 +220,9 @@ public class JSONParser {
 	            						
 	            						//Sync.db.close();
             							Log.i(TAG, "Vote: Sent");
+            							Sync.db.open();
             							vote_count=Sync.db.getTotalVotes();
+            							Sync.db.close();
             							Log.i(TAG, "Vote Count: "+vote_count);
             							sent=true;
             							total--;

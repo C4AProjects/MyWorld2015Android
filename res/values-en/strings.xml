@@ -8,7 +8,7 @@
     <string name="text_upload_votes">Send Votes </string>
     <string name="text_more_votes">Add Vote</string>
     <string name="text_synchronized_votes">All Votes Uploaded</string>
-    <string name="text_votes_count_label">You have <b>%1$s</b> votes saved and not sent yet</string>
+    <string name="text_votes_count_label">You have <b>%1$s</b> vote(s) saved and not sent yet</string>
     <string name="title_count_vote_on_selection">%1$d/6</string>
     <string name="myworld_brief">MY World is a global survey led by the United Nations asking YOU to chose your priorities for a better world. 
 Answers will be shared with governments and decision makers in setting the next development agenda for the world</string>
@@ -771,7 +771,7 @@ most difference to our lives</string>
     <string name="saved_votes_partner_id_label">PartnerID: %1$s</string>
     <string name="saved_votes_partner_country_label">Country: %1$s</string>
     <string name="saved_votes_section_description_label">Use this section to :\n(i) View the number of votes you collected\n(ii) Send your saved votes to the centralized Database</string>
-    <string name="saved_votes_not_sent_count_label">As of: %1$s - You have %2$d votes saved and not sent yet.</string>
+    <string name="saved_votes_not_sent_count_label">As of: %1$s - You have %2$d vote(s) saved and not sent yet.</string>
     <string name="saved_votes_upload_process_label">%1$s votes being uploaded now.\n\t\t\tPlease wait… \nDo NOT disconnect device from Internet.</string>
     <string name="saved_votes_no_internet_reminder">No Network Connection</string>
 </resources>

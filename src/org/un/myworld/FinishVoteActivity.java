@@ -175,18 +175,26 @@ public class FinishVoteActivity extends Activity {
 		public void btnfinishVote_Click(View view){
 			if(isNotBlank()==true){
 			storeUserPrioritiesLocally();
-			Intent submit = new Intent(getApplicationContext(), VotingCompleteActivity.class);
-			submit.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-			startActivity(submit);
-			
-			//start sync service
-			//startService(new Intent(FinishVoteActivity.this,Sync.class));
-        	//Log.d(TAG, "Sync Service Started");
+			Intent intentSubmit = new Intent(getApplicationContext(), VotingCompleteActivity.class);
+			intentSubmit.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+			startActivityForResult(intentSubmit,HomeActivity.START_ANY_ACTIVITY_REQUEST);
 			
 			//close current activity
+			//setResult(HomeActivity.RESULT_CLOSE_ALL_ACTIVITY);
 			finish();
 			}
 		}
+		
+		
+	  	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+	  	    switch(resultCode)
+	  	    {
+	  	    case HomeActivity.RESULT_CLOSE_ALL_ACTIVITY:
+	  	        setResult(HomeActivity.RESULT_CLOSE_ALL_ACTIVITY);
+	  	        finish();
+	  	    }
+	  	    super.onActivityResult(requestCode, resultCode, data);
+	  	}
 		
 		private void storeUserPrioritiesLocally(){
 			

@@ -49,6 +49,7 @@ public class VotesListAdapter extends ListActivity{
    
 
     private VotesAdapter mAdapter;
+    private final String TAG="VotesListAdapter";
     private boolean[] mVoteStates;
     EditText userPriority; static Button nextButton;
     TextView voteInstruction, textPriorityDescription,textVotesSelectedCount;
@@ -244,8 +245,7 @@ public class VotesListAdapter extends ListActivity{
             	 CheckBox checkBox = (CheckBox)v.findViewById(R.id.mdg_check);
                  //checkBox.setChecked(!checkBox.isChecked());
             	if(mVoteStates[position]==true){
-            		
-            		
+          
             		if(countVotes>=6){
             			Log.i("Check Limit: ","of 6");
             			checkBox.setChecked(false);
@@ -259,18 +259,21 @@ public class VotesListAdapter extends ListActivity{
             			Log.i("Count at: ",""+countVotes);
             			//put vote in the basket :)
             			userVotes.put(String.valueOf(countVotes), String.valueOf(PRIORITY_CODE[position]));
+            			Log.i(TAG,"Votes HM: "+userVotes.toString());
             			if(countVotes==6){
             				nextButton.setEnabled(true);
             			}
             		}
             		
             	}else{
-            		userVotes.remove(countVotes);//remove the unchecked vote
+            		userVotes.remove(String.valueOf(countVotes));//remove the unchecked vote
             		if(countVotes>0){
             			countVotes=countVotes-1;
             			textVotesSelectedCount.setText(getString(R.string.title_count_vote_on_selection,countVotes));
             		}
             		
+            		//userVotes.re
+            		Log.i(TAG,"Votes HM: "+userVotes.toString());
             		Log.i("unChecked: ",""+PRIORITY_CODE[position]);
             		Log.i("Count at: ",""+countVotes);
             		//disable next button as vote limit has reduced by one
@@ -295,7 +298,7 @@ public class VotesListAdapter extends ListActivity{
     //go to the voting activity
   	public void btnFinishVote_Click(View view)
   	{
-  		Intent vote = new Intent(getApplicationContext(), FinishVoteActivity.class);
+  		Intent intentVote = new Intent(getApplicationContext(), FinishVoteActivity.class);
   		
   		//priorities must be =6
   		
@@ -303,23 +306,37 @@ public class VotesListAdapter extends ListActivity{
   		//get user selected priorities pass the data to the user info intent
 
   		//b.putStringArray("chosen_priorities", userVotes);
-  		vote.putExtra("chosen_priorities", userVotes);
-  		vote.putExtra("own_priority", this.userPriority.getText().toString());
+  		intentVote.putExtra("chosen_priorities", userVotes);
+  		intentVote.putExtra("own_priority", this.userPriority.getText().toString());
   		
-		vote.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-		startActivity(vote);
+  		intentVote.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		startActivityForResult(intentVote,HomeActivity.START_ANY_ACTIVITY_REQUEST);
 		countVotes=0; //reset count votes value
+		
 		userVotes.clear();//clear all collected votes
 		
 		//close current activity
-		//finish();
+		finish();
   	}
+  	
   	
   	//on back pressed
   	@Override
   	public void onBackPressed(){
   		Intent intentBackHome = new Intent(getApplicationContext(), HomeActivity.class);
   		intentBackHome.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-		startActivity(intentBackHome);
+		startActivityForResult(intentBackHome,HomeActivity.START_ANY_ACTIVITY_REQUEST);
+  	}
+  	
+  	//a way of letting the app cascade the finish effect
+  	
+  	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+  	    switch(resultCode)
+  	    {
+  	    case HomeActivity.RESULT_CLOSE_ALL_ACTIVITY:
+  	        setResult(HomeActivity.RESULT_CLOSE_ALL_ACTIVITY);
+  	        finish();
+  	    }
+  	    super.onActivityResult(requestCode, resultCode, data);
   	}
 }

@@ -64,6 +64,8 @@ public class MyWorldLauncher extends Activity {
     private LanguageAdapter adapter;
     private ListView contentView;
     private Button btnUseLanguage;
+    
+    static final int START_ANY_ACTIVITY_REQUEST=450;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -150,7 +152,7 @@ public class MyWorldLauncher extends Activity {
 		//start home activity
 		Intent intentHome = new Intent(getApplicationContext(), HomeActivity.class);
 		intentHome.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-		startActivity(intentHome);
+		startActivityForResult(intentHome,START_ANY_ACTIVITY_REQUEST);
 	}
 
 	@Override

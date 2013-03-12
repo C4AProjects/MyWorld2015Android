@@ -60,7 +60,7 @@ public class SavedVotesActivity extends Activity {
 		btnBack=(Button)findViewById(R.id.back_to_main);
 		
 		db=new DB_Adapter(getApplicationContext());
-		
+		db.open(); //open db
 		Calendar now = Calendar.getInstance();   // This gets the current date and time.
 		SavedVotesActivity.today= now.get(Calendar.DATE)+"/"+(now.get((Calendar.MONTH))+1)+"/"+now.get(Calendar.YEAR); //get current date
 		Log.i(TAG,"Date: "+today);
@@ -72,6 +72,7 @@ public class SavedVotesActivity extends Activity {
 		if(db.getTotalVotes()==0){//hide sync button on zero votes found
 			btnSyncVotes.setVisibility(View.GONE);
 		}
+		db.close(); //close db
 	}
 
 	@Override

@@ -15,7 +15,8 @@ import android.view.View;
 
 public class HomeActivity extends Activity {
 	//declarations
-	static final int START_PREFERENCES_REQUEST = 0;
+	static final int START_PREFERENCES_REQUEST = 200,START_ANY_ACTIVITY_REQUEST=450,RESULT_CLOSE_ALL_ACTIVITY=1000;
+	
 	static final String TAG="HomeActivity";
 	
     @Override
@@ -124,7 +125,7 @@ public class HomeActivity extends Activity {
   		//start the vote entry activity
   		Intent vote = new Intent(getApplicationContext(), VotesListAdapter.class);
 		vote.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-		startActivity(vote);
+		startActivityForResult(vote,START_ANY_ACTIVITY_REQUEST);
 		
 		//close the home activity
 		finish();
@@ -134,9 +135,10 @@ public class HomeActivity extends Activity {
   	public void btnSavedVotes_Click(View view)
   	{
   		//start the savedvotes activity
-  		Intent vote = new Intent(getApplicationContext(), SavedVotesActivity.class);
-		vote.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-		startActivity(vote);
+  		Intent intentSavedVote = new Intent(getApplicationContext(), SavedVotesActivity.class);
+  		intentSavedVote.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		//startActivity(vote);
+		startActivityForResult(intentSavedVote,START_ANY_ACTIVITY_REQUEST);
 		
 		//close the home activity
 		finish();
@@ -150,13 +152,24 @@ public class HomeActivity extends Activity {
   	
   //close the application completely
   	public void btnExitApp_Click(View view){
-  		finish();
-  		System.exit(0);
+  		setResult(RESULT_CLOSE_ALL_ACTIVITY);
+	    finish();
   	}
   	
   	@Override
   	public void onBackPressed(){
   		//ignore the back button
+  	}
+  	
+  	
+  	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+  	    switch(resultCode)
+  	    {
+  	    case HomeActivity.RESULT_CLOSE_ALL_ACTIVITY:
+  	        setResult(HomeActivity.RESULT_CLOSE_ALL_ACTIVITY);
+  	        finish();
+  	    }
+  	    super.onActivityResult(requestCode, resultCode, data);
   	}
 
     

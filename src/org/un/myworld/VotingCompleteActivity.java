@@ -28,9 +28,10 @@ public class VotingCompleteActivity extends Activity {
 		
 		db=new DB_Adapter(this);
 		//get vote count
-		
+		db.open();
 		textVotestoSyncCount=(TextView)findViewById(R.id.votes_count_label);
 		textVotestoSyncCount.setText(getString(R.string.text_votes_count_label,String.valueOf(db.getTotalVotes())));
+		db.close();
 	}
 
 	@Override
@@ -44,7 +45,8 @@ public class VotingCompleteActivity extends Activity {
 	public void btnHome_clicked(View v){
 		Intent intentHome = new Intent(getApplicationContext(), HomeActivity.class);
 		intentHome.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-		startActivity(intentHome);
+		startActivityForResult(intentHome,HomeActivity.START_ANY_ACTIVITY_REQUEST);
+		Log.i(TAG,"Result: "+HomeActivity.START_ANY_ACTIVITY_REQUEST);
 		finish();
 		//startService(new Intent(VotingCompleteActivity.this,Sync.class));
     	//Log.d(TAG, "Upload Votes Clicked");
@@ -54,9 +56,20 @@ public class VotingCompleteActivity extends Activity {
 	public void btnAdd_clicked(View view){
 		Intent intentNewVote = new Intent(getApplicationContext(), VotesListAdapter.class);
 		intentNewVote.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-		startActivity(intentNewVote);
+		startActivityForResult(intentNewVote,HomeActivity.START_ANY_ACTIVITY_REQUEST);
 		
 		finish();
 	}
+	
+	
+  	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+  	    switch(resultCode)
+  	    {
+  	    case HomeActivity.RESULT_CLOSE_ALL_ACTIVITY:
+  	        setResult(HomeActivity.RESULT_CLOSE_ALL_ACTIVITY);
+  	        finish();
+  	    }
+  	    super.onActivityResult(requestCode, resultCode, data);
+  	}
 
 }

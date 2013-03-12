@@ -139,7 +139,8 @@ public class DB_Adapter {
 	 * @throws JSONException
 	 */
 	public JSONObject get_vote(String key,int test,long vote_id) throws JSONException{
-		this.open();
+		//this.open();
+		database = db.getWritableDatabase();
 		Cursor cursor = database.query(TBL_VOTE, new String [] {KEY_VOTE_VoteId,KEY_VOTE_VoterId,KEY_VOTE_PartnerId,KEY_VOTE_Country,KEY_VOTE_City,KEY_VOTE_Region,KEY_VOTE_Latitude,KEY_VOTE_Longitude,KEY_VOTE_VotedDate,KEY_VOTE_Gender,KEY_VOTE_YearOfBirth,KEY_VOTE_Education,KEY_VOTE_Reason},KEY_VOTE_PriorityListId+"="+vote_id, null, null, null, null);
 		
 		String votes = null;
@@ -169,7 +170,7 @@ public class DB_Adapter {
 			String my_votes[] = get_prioritylist_byId(vote_id);
 			
 			votes = my_votes[0];
-			//Log.i(TAG,"Votes: "+votes);
+			Log.i(TAG,"Votes: "+votes);
 			//String votes_ = votes.replace(",",",");
 			//Log.i(TAG,"Votes_: "+votes_);
 			String[] vote_to_post = votes.split(",");
@@ -213,16 +214,16 @@ public class DB_Adapter {
 		
 		//Log.i(TAG,"Data: "+data.toString());
 		
-		//cursor.close(); //close the cursor
+		cursor.close(); //close the cursor
 		
 		
 				
-		this.close(); //close the database
+		database.close(); //close the database
 		return json;
 			//}	//end of the for i
 		}else{
 			//cursor.close();
-			this.close();
+			database.close();
 			return null;
 		}
 	}
@@ -293,6 +294,7 @@ public class DB_Adapter {
 		long priority_id=0;
 		long [] priorities=null;
 		this.open();
+		//database = db.getWritableDatabase();
 		 Cursor cursor=database.query(TBL_PriorityList, 
 					new String[] {KEY_PRIORITY_PriorityListId
 		}, null, null, null, null, null);
@@ -305,9 +307,9 @@ public class DB_Adapter {
 					next_index++;
 				}
 		 }
-		db.close();
+		//db.close();
 		//cursor.close();
-		//this.close();
+		this.close();
 		return priorities;
 	}
 	
@@ -318,14 +320,15 @@ public class DB_Adapter {
 	 * @return rowCount
 	 */
 	public int getTotalVotes(){
-		this.open();
+		//this.open();
+		//database = db.getWritableDatabase();
 		 Cursor cursor=database.query(TBL_PriorityList, 
 					new String[] {KEY_PRIORITY_PriorityListId
 		}, null, null, null, null, null);
 		rowCount = cursor.getCount();
 		//db.close();
 		cursor.close();
-		this.close();
+		//this.close();
 		return rowCount;
 	}
 	
@@ -336,9 +339,10 @@ public class DB_Adapter {
 	 */
 	public boolean deletePrioritylist(long id){
 		this.open();
+		//database = db.getWritableDatabase();
 		int action=database.delete(TBL_PriorityList, KEY_PRIORITY_PriorityListId+"="+id, null);
 		this.close();
-		return  action> 0;
+		return  action > 0;
 	}
 	
 	/**
@@ -365,7 +369,7 @@ public class DB_Adapter {
 	 * @throws JSONException
 	 */
 	public JSONObject get_priority() throws JSONException{
-		this.open();
+		//this.open();
 		Cursor cursor = database.query(TBL_PRIORITY, new String [] {KEY_PRIORITY_PriorityId,KEY_PRIORITY_Title,KEY_PRIORITY_Desc},null, null, null, null, null);
 		int priority_id = 0;
 		String priority_title = null;
@@ -383,7 +387,7 @@ public class DB_Adapter {
 		}
 		else{
 			cursor.close();
-			this.close();
+			//this.close();
 			return null;
 		}
 	}

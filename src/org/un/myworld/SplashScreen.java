@@ -16,6 +16,7 @@ public class SplashScreen extends Activity {
      * The thread to process splash screen events
      */
     private Thread mSplashThread;	
+    static final int START_ANY_ACTIVITY_REQUEST=450;
 
 	/** Called when the activity is first created. */
 	@Override
