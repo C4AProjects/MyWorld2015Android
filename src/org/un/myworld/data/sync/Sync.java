@@ -190,7 +190,9 @@ public class Sync extends Service {
 		
 		/*If there is any unsynced data..*/
 		try {
+			db.open();
 			if(db.getTotalVotes()>0){
+				db.close();
 				if(is_connected())
 				do_sync();
 			}
@@ -203,6 +205,7 @@ public class Sync extends Service {
 		
 		
 		do_save();
+		
 	}
 	
 	private void installListener() {
@@ -246,8 +249,9 @@ public class Sync extends Service {
 		
 	/*Synchronize if available.*/
 	public void do_sync() throws JSONException{
-		
+		db.open(); //open db
 		total_votes=db.getTotalVotes();
+		db.close();
 		loop_value=0;
 		
 		
@@ -255,14 +259,17 @@ public class Sync extends Service {
 			JSONObject vote_details;	 
             public void run() {
                 Looper.prepare(); //For Preparing Message Pool for the child Thread
+               // db.open(); //open db again incase it's been closed
+               
 		for(long vote:db.getAllPriorityIds()){//loop thru all the votes
 			loop_value++;
 			//Log.i(TAG,"P_Id: "+vote);
 		//}
 		
 		try {
+			//db.open();
 			vote_details = db.get_vote(API_ACCESS_KEY, TEST_CODE,vote);
-		
+		    
 		
 		
 		//Log.i(TAG,"Vote_Details: "+vote_details.toString());
@@ -296,7 +303,7 @@ public class Sync extends Service {
 		}
 		
 		}//end of the for each vote loop
-		
+		// db.close(); //close any open db in this context
 		 Looper.loop(); //Loop in the message queue
 		
             }
@@ -316,7 +323,7 @@ public class Sync extends Service {
 		}
 		Log.d(TAG, "sync-method");
 		
-		db.close(); //close any open db in this context
+		//db.close(); //close db
 	}
 	
 	

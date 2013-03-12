@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.un.myworld"
+    android:versionCode="5"
+    android:versionName="1.2.2" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="17" />
+
+    <!-- Allow Internet connection -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Network State Permissions -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    
+    <!-- Location Provider permission -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.persmission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        <!-- Splash Screen  -->
+        <activity 
+			android:name="org.un.myworld.SplashScreen"
+			android:theme="@android:style/Theme.NoTitleBar.Fullscreen"			
+		>
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"></action>
+				<category android:name="android.intent.category.LAUNCHER"></category>
+			</intent-filter>
+		</activity>
+
+        <!-- Home Activity: App Launcher  -->
+        <activity
+            android:name="org.un.myworld.HomeActivity"
+            android:configChanges="keyboardHidden|screenLayout|orientation|layoutDirection"
+            android:label="@string/title_activity_home"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+            <!--  intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter-->
+        </activity>
+        <!-- Voting Activity Definition -->
+        <activity
+            android:name="org.un.myworld.VotingActivity"
+            android:configChanges="keyboardHidden|screenLayout|orientation|layoutDirection"
+            android:label="@string/title_activity_voting"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+
+        <!-- Custom List config -->
+        <activity
+            android:name="org.un.myworld.VotesListAdapter"
+            android:configChanges="keyboardHidden|screenLayout|orientation|layoutDirection"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+
+        <!-- Finish Activity Definition -->
+        <activity
+            android:name="org.un.myworld.FinishVoteActivity"
+            android:label="@string/title_activity_saved_votes"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        
+        <!-- SavedVotes Activity -->
+        
+        <activity
+            android:name="org.un.myworld.SavedVotesActivity"
+            android:label="@string/title_activity_finish_vote"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        
+        <!-- SendingVote Activity -->
+         <activity
+            android:name="org.un.myworld.SendingVoteActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_finish_vote"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        
+        <activity
+            android:name="org.un.myworld.VotingCompleteActivity"
+            android:label="@string/title_activity_voting_complete"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+
+        <!-- Preferences activity config -->
+        <activity
+            android:name="org.un.myworld.Preferences"
+            android:label="@string/title_preferences_activity"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        
+        <activity
+            android:name="org.un.myworld.MyWorldLauncher"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_my_world_launcher"
+            android:parentActivityName="android.app.ListActivity"
+            android:theme="@style/FullscreenTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.app.ListActivity" />
+
+            <!--intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter-->
+        </activity>
+        
+        <!-- Service definition -->
+         <service android:name="org.un.myworld.data.sync.Sync"></service>
+    </application>
+
+</manifest>
