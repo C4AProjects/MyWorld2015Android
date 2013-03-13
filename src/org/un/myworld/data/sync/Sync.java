@@ -52,7 +52,7 @@ public class Sync extends Service {
 	JSONParser jsonParser = new JSONParser();
 	
 	public static int server_reponse=0;
-	public static final String POST_URL = "http://apps.myworld2015.org/vote.php";
+	public static final String POST_URL = "https://apps.myworld2015.org/vote.php";
 	@Override
 	public IBinder onBind(Intent arg0) {
 		// TODO Auto-generated method stub
@@ -268,7 +268,8 @@ public class Sync extends Service {
 		
 		try {
 			//db.open();
-			vote_details = db.get_vote(API_ACCESS_KEY, TEST_CODE,vote);
+			//vote_details = db.get_vote(API_ACCESS_KEY, TEST_CODE,vote); //--test params
+			vote_details = db.get_vote(API_ACCESS_KEY,vote); //--live params
 		    
 		
 		

@@ -138,7 +138,8 @@ public class DB_Adapter {
 	 * @return
 	 * @throws JSONException
 	 */
-	public JSONObject get_vote(String key,int test,long vote_id) throws JSONException{
+	//public JSONObject get_vote(String key,int test,long vote_id) throws JSONException{//test params
+		public JSONObject get_vote(String key,long vote_id) throws JSONException{ //live params
 		//this.open();
 		database = db.getWritableDatabase();
 		Cursor cursor = database.query(TBL_VOTE, new String [] {KEY_VOTE_VoteId,KEY_VOTE_VoterId,KEY_VOTE_PartnerId,KEY_VOTE_Country,KEY_VOTE_City,KEY_VOTE_Region,KEY_VOTE_Latitude,KEY_VOTE_Longitude,KEY_VOTE_VotedDate,KEY_VOTE_Gender,KEY_VOTE_YearOfBirth,KEY_VOTE_Education,KEY_VOTE_Reason},KEY_VOTE_PriorityListId+"="+vote_id, null, null, null, null);
@@ -203,7 +204,7 @@ public class DB_Adapter {
 			singleVote.put("age", Integer.valueOf(age));
 			singleVote.put("country", Integer.valueOf(country));
 			singleVote.put("education", Integer.valueOf(education));
-			singleVote.put("test", Integer.valueOf(test));
+			//singleVote.put("test", Integer.valueOf(test)); //--not needed for the live posting
 			//json = new JSONObject("{\"key\":\""+key+"\",\"votes\":\"["+votes+"]\",\"suggested\":\""+suggested_p+"\",\"reason\":\""+reason+"\",gender:\""+gender+"\",age:\""+age+"\",country:\""+country+"\",education:\""+education+"\",test:\""+test+"\"}");
 			//Log.i(TAG,"JSONObject: "+json.toString());
 			
