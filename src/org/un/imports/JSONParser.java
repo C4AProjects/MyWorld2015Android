@@ -12,6 +12,7 @@ import java.util.List;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
+import org.apache.http.HttpStatus;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
@@ -48,13 +49,14 @@ public class JSONParser {
 	private static final String TAG="JSONParser";
 	//private DB_Adapter db;
 	public int RESPONSE_CODE=0;
-	public static int vote_count;
+	public static int vote_count,vote_sent_count;
 	public static boolean sent,sync_done=false;
 	public Thread threadJSONWorker;
 
 	// constructor
 	public JSONParser() {
 		JSONParser.vote_count=-1;
+		JSONParser.vote_sent_count=0;
         JSONParser.sent=false;
         this.threadJSONWorker=new Thread();
 	}
@@ -168,11 +170,11 @@ public class JSONParser {
 		public void sendJson(final String URL,final JSONObject json,final long vote_id,final int total_votes) {
 			        int total=total_votes;
 	                DefaultHttpClient client = new DefaultHttpClient();
-	                HttpConnectionParams.setConnectionTimeout(client.getParams(),60000); //Timeout Limit
+	                HttpConnectionParams.setConnectionTimeout(client.getParams(),90000); //Timeout Limit
 	                HttpResponse response;
 	                JSONParser.jObj = json;
-	                
-	               Log.i(TAG,"JSON Out: "+jObj.toString());
+	                //JSONParser.vote_sent_count=total;
+	               //Log.i(TAG,"JSON Out: "+jObj.toString());
 
 	                try {
 	                    HttpPost post = new HttpPost(URL);
@@ -187,7 +189,7 @@ public class JSONParser {
 	                    RESPONSE_CODE=response.getStatusLine().getStatusCode();
 	                     Log.i(TAG,"Status Code: "+RESPONSE_CODE);
 	                    /*Checking response */
-	                    if(RESPONSE_CODE==200 && response!=null){
+	                    if(RESPONSE_CODE==HttpStatus.SC_OK && response!=null){
 	                    	JSONParser.is = response.getEntity().getContent(); //Get the data in the entity
 	                       Log.i(TAG,"Response: Not null");
 	            			try {
@@ -215,8 +217,12 @@ public class JSONParser {
 	            					//on success delete the sent vote from sqlite db call 
 	            					if(Sync.server_reponse==1){
 	            						//call DB_Adapter function to delete record
-	            						Sync.db.deletePrioritylist(vote_id);
-	            						Sync.db.deleteVote(vote_id);
+	            						//Sync.db.deletePrioritylist(vote_id);
+	            						//Sync.db.deleteVote(vote_id);
+	            						
+	            						//call db function to set export flag
+	            						Sync.db.setUploadFlagOnPrioritylist(vote_id, "Y");
+	            						Sync.db.setUploadFlagOnVote(vote_id, "Y");
 	            						
 	            						//Sync.db.close();
             							Log.i(TAG, "Vote: Sent");
@@ -224,7 +230,8 @@ public class JSONParser {
             							vote_count=Sync.db.getTotalVotes();
             							Sync.db.close();
             							Log.i(TAG, "Vote Count: "+vote_count);
-            							sent=true;
+            							JSONParser.sent=true;
+            							JSONParser.vote_sent_count++;
             							total--;
 	            						
 	            						}else{

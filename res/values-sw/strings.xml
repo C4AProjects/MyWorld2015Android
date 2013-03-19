@@ -30,6 +30,8 @@ Majibu yatatumiwa kwa serikali zote duniani pamoja na watoa maamuzi katika kuamu
     <string name="menu_report">Matokeo</string>
     <string name="title_preferences_activity">MyWorld Settings</string>
     <string name="title_activity_home">MyWorld</string>
+    <string name="title_service_name">UploadService</string>
+    <string name="text_export_votes">Barua Pepe</string>
     <string name="title_activity_vote">Chagua</string>
      <string name="welcome_message">MY World Offline Canvasser</string>
     <string name="title_settings_button_text">Mipangilio</string>

@@ -1,7 +1,7 @@
 /**
  * @author JohnAdamsy
  * @modified March 10th 2013
- * @description Class displays the sending votes layout
+ * @description Class displays the sending votes layout --was discarded after AsyncTask was introduced in the Sync class
  * */
 package org.un.myworld;
 
@@ -74,6 +74,7 @@ public class SendingVoteActivity extends Activity {
 		Calendar now = Calendar.getInstance();   // This gets the current date and time.
 		SendingVoteActivity.today= now.get(Calendar.DATE)+"/"+(now.get(Calendar.MONTH)+1)+"/"+now.get(Calendar.YEAR); //get current date
 		Log.i(TAG,"Date: "+today);
+		
 		textUploadProcessLabel.setText(getString(R.string.saved_votes_upload_process_label,String.valueOf(db.getTotalVotes())));
 		textVotesNotSent.setText(getString(R.string.saved_votes_not_sent_count_label,SendingVoteActivity.today,db.getTotalVotes()));
 		textPartnerID.setText(getString(R.string.saved_votes_partner_id_label,Preferences.sharedPrefs.getString(Preferences.KEY_PARTNER_ID_EDIT_TEXT_PREFERENCE, null).trim()));
@@ -84,9 +85,9 @@ public class SendingVoteActivity extends Activity {
 		}
 		
 		
-		if(this.is_connected()){//check connectivity availability
+		/*if(this.is_connected()){//check connectivity availability
 		UPDATE_INTERVAL=db.getTotalVotes()*1000;
-		DELAY=2000;
+		DELAY=1000;
 		count=db.getTotalVotes();
 		
 		
@@ -97,10 +98,11 @@ public class SendingVoteActivity extends Activity {
 		}
 		
 		//some hacked way of keeping the progress while the sync is ongoing
-		ifSendIsCompleteSwitch(this);
-		
+		ifSendIsCompleteSwitch(this);*/
+		if(this.is_connected()){//check connectivity availability
+			progressSpinIcon.setVisibility(View.VISIBLE);
+			btnBack.setEnabled(false);
 		}else{
-			
 			progressSpinIcon.setVisibility(View.VISIBLE);
 			textUploadProcessLabel.setText(R.string.saved_votes_no_internet_reminder);
 			//this.showDataSettings();
@@ -157,16 +159,16 @@ public class SendingVoteActivity extends Activity {
     				Log.i(TAG,"Timer Cancelled");
     				
     				//go back to the saved votes activity
-    				Intent intentSavedVotes = new Intent(getApplicationContext(), SavedVotesActivity.class);
-    				intentSavedVotes.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-    				startActivityForResult(intentSavedVotes,HomeActivity.START_ANY_ACTIVITY_REQUEST);
+    				//Intent intentSavedVotes = new Intent(getApplicationContext(), SavedVotesActivity.class);
+    				//intentSavedVotes.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+    				//startActivityForResult(intentSavedVotes,HomeActivity.START_ANY_ACTIVITY_REQUEST);
     				
-    				finish();//close this activity
+    				//finish();//close this activity
     				
     			
     			}
     		}
-    	}, DELAY, UPDATE_INTERVAL+1500);
+    	}, DELAY, UPDATE_INTERVAL+2500);
 	}
 	
 	@Override

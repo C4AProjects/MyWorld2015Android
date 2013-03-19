@@ -30,6 +30,8 @@ public class DB_Adapter {
 	private static final String KEY_VOTE_VoteId = "VoteId";
 	private static final String KEY_VOTE_VoterId = "VoterId";
 	private static final String KEY_VOTE_PartnerId = "PartnerID";
+	private static final String KEY_VOTE_FlagUploaded = "FlagUploaded";
+	private static final String KEY_VOTE_FlagExported = "FlagExported";
 	private static final String KEY_VOTE_Country = "Country";
 	private static final String KEY_VOTE_Region = "Region_state";
 	private static final String KEY_VOTE_City = "City";
@@ -37,13 +39,15 @@ public class DB_Adapter {
 	private static final String KEY_VOTE_Longitude = "Longitude";
 	private static final String KEY_VOTE_VotedDate = "VotedDate";
 	private static final String KEY_VOTE_Gender = "Gender";
-	private static final String KEY_VOTE_YearOfBirth = "YearOfBirth";
+	private static final String KEY_VOTE_YearOfBirth = "Age";
 	private static final String KEY_VOTE_Education = "Education";
 	private static final String KEY_VOTE_PriorityListId = "PriorityListId";
 	private static final String KEY_VOTE_Reason = "Reason";
 	
 	private static final String TBL_PriorityList = "PriorityList";
 	private static final String KEY_PRIORITY_PriorityListId = "PriorityListId";
+	private static final String KEY_PRIORITY_FlagUploaded = "FlagUploaded";
+	private static final String KEY_PRIORITY_FlagExported = "FlagExported";
 	private static final String KEY_PRIORITY_VoteIDCorePriorities = "VoteIDCorePriorities";//From priority Ids.
 	private static final String KEY_PRIORITY_SuggestedPriority = "SuggestedPriority";
 	
@@ -142,7 +146,7 @@ public class DB_Adapter {
 		public JSONObject get_vote(String key,long vote_id) throws JSONException{ //live params
 		//this.open();
 		database = db.getWritableDatabase();
-		Cursor cursor = database.query(TBL_VOTE, new String [] {KEY_VOTE_VoteId,KEY_VOTE_VoterId,KEY_VOTE_PartnerId,KEY_VOTE_Country,KEY_VOTE_City,KEY_VOTE_Region,KEY_VOTE_Latitude,KEY_VOTE_Longitude,KEY_VOTE_VotedDate,KEY_VOTE_Gender,KEY_VOTE_YearOfBirth,KEY_VOTE_Education,KEY_VOTE_Reason},KEY_VOTE_PriorityListId+"="+vote_id, null, null, null, null);
+		Cursor cursor = database.query(TBL_VOTE, new String [] {KEY_VOTE_VoteId,KEY_VOTE_VoterId,KEY_VOTE_PartnerId,KEY_VOTE_Country,KEY_VOTE_City,KEY_VOTE_Region,KEY_VOTE_Latitude,KEY_VOTE_Longitude,KEY_VOTE_VotedDate,KEY_VOTE_Gender,KEY_VOTE_YearOfBirth,KEY_VOTE_Education,KEY_VOTE_Reason},KEY_VOTE_PriorityListId+"="+vote_id+" AND "+KEY_VOTE_FlagUploaded+"='N'", null,null, null, null);
 		
 		String votes = null;
 		String suggested_p = null;
@@ -242,6 +246,39 @@ public class DB_Adapter {
 		this.close();
 		return  action > 0;
 	}
+	
+	/**
+	 * @description - set upload flag in vote table to Y if vote has been uploaded
+	 * @param id
+	 * @return
+	 */
+	public boolean setUploadFlagOnVote(long id,String newValue){
+		this.open();
+		//database = db.getWritableDatabase();
+		ContentValues values = new ContentValues();
+		values.put(KEY_VOTE_FlagUploaded,newValue);
+		int action=database.update(TBL_VOTE, values, KEY_VOTE_PriorityListId+"="+id, null);
+		
+		this.close();
+		return  action > 0;
+	}
+	
+	/**
+	 * @description - set export flag in vote table to Y if vote has been exported
+	 * @param id
+	 * @return
+	 */
+	public boolean setExportFlagOnVote(long id,String newValue){
+		this.open();
+		//database = db.getWritableDatabase();
+		ContentValues values = new ContentValues();
+		values.put(KEY_VOTE_FlagExported,newValue);
+		int action=database.update(TBL_VOTE, values, KEY_VOTE_PriorityListId+"="+id, null);
+		this.close();
+		return  action > 0;
+	}
+	
+	
 	/**
 	 * @description - save prioritylist to the database
 	 * @param prioritylistid
@@ -320,12 +357,13 @@ public class DB_Adapter {
 	 * @param none
 	 * @return rowCount
 	 */
-	public int getTotalVotes(){
+	public int getTotalVotes(){//return total votes with the export flag set to N
 		//this.open();
 		//database = db.getWritableDatabase();
 		 Cursor cursor=database.query(TBL_PriorityList, 
 					new String[] {KEY_PRIORITY_PriorityListId
-		}, null, null, null, null, null);
+		}, KEY_PRIORITY_FlagUploaded+"='N'", null, null, null, null);
+		
 		rowCount = cursor.getCount();
 		//db.close();
 		cursor.close();
@@ -342,6 +380,37 @@ public class DB_Adapter {
 		this.open();
 		//database = db.getWritableDatabase();
 		int action=database.delete(TBL_PriorityList, KEY_PRIORITY_PriorityListId+"="+id, null);
+		this.close();
+		return  action > 0;
+	}
+	
+	/**
+	 * @description - set upload flag in prioritylist table to Y if vote has been uploaded
+	 * @param id
+	 * @return
+	 */
+	public boolean setUploadFlagOnPrioritylist(long id,String newValue){
+		this.open();
+		//database = db.getWritableDatabase();
+		ContentValues values = new ContentValues();
+		values.put(KEY_PRIORITY_FlagUploaded,newValue);
+		int action=database.update(TBL_PriorityList, values, KEY_PRIORITY_PriorityListId+"="+id, null);
+		
+		this.close();
+		return  action > 0;
+	}
+	
+	/**
+	 * @description - set export flag in prioritylist table to Y if vote has been exported
+	 * @param id
+	 * @return
+	 */
+	public boolean setExportFlagOnPrioritylist(long id,String newValue){
+		this.open();
+		//database = db.getWritableDatabase();
+		ContentValues values = new ContentValues();
+		values.put(KEY_PRIORITY_FlagExported,newValue);
+		int action=database.update(TBL_PriorityList, values, KEY_PRIORITY_PriorityListId+"="+id, null);
 		this.close();
 		return  action > 0;
 	}
@@ -400,5 +469,15 @@ public class DB_Adapter {
 	 */
 	public boolean deletePriority(){
 		return database.delete(TBL_PRIORITY, null, null) > 0;
+	}
+	
+	/**
+	 * @description -returns a join of voteinfo and prioritylist in preparation for a csv file
+	 * */
+	public Cursor getCSVFriendlyResultSet(String eFlag,String uFlag){
+		final String myQuery="SELECT v.VoteId,v.PartnerId,v.Country,v.Gender,v.Age,p.VoteIDCorePriorities,p.SuggestedPriority,v.VotedDate FROM VoteInfo v, PriorityList p WHERE p.PriorityListId=v.PriorityListId AND v.FlagExported=? AND p.FlagUploaded=?";
+		 Cursor cursor=database.rawQuery(myQuery, new String[]{eFlag,uFlag});
+		 
+		return cursor;
 	}
 }

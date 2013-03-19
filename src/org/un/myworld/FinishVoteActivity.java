@@ -5,7 +5,7 @@
  * */
 package org.un.myworld;
 
-import java.util.Date;
+import java.util.Calendar;
 import java.util.HashMap;
 
 import org.un.myworld.data.sync.DB_Adapter;
@@ -202,9 +202,14 @@ public class FinishVoteActivity extends Activity {
 			
 			String r_id=String.valueOf(random_id).substring(String.valueOf(random_id).lastIndexOf(".")+2, String.valueOf(random_id).length());
 			
-			Date vote_date=new Date();
+			//Date vote_date=new Date();
 			
-			//Calendar now = Calendar.getInstance();   // This gets the current date and time.
+			Calendar now = Calendar.getInstance();   // This gets the current date and time.
+			String vote_date=String.valueOf(now.get(Calendar.DAY_OF_MONTH)+"/"+(now.get((Calendar.MONTH))+1)+"/"+now.get(Calendar.YEAR)+" "
+							  +now.get(Calendar.HOUR_OF_DAY)+":"+now.get(Calendar.MINUTE)+":"+now.get(Calendar.SECOND));
+			//String vote_date=String.valueOf(now);
+			
+			
 			//int DOB=now.get(Calendar.YEAR); //get current year in int
 			
 			//DOB=DOB-Integer.valueOf((spinnerAge.getSelectedItem().toString()));
@@ -214,7 +219,7 @@ public class FinishVoteActivity extends Activity {
 			//Toast.makeText(getApplicationContext(), "Random: "+r_id, Toast.LENGTH_LONG).show();
 			
 			Log.i("Random ID",""+r_id);
-			
+			Log.i(TAG,"Vote Timestamp: "+vote_date);
 			
 			
 			db=new DB_Adapter(getApplicationContext());
@@ -278,6 +283,14 @@ public class FinishVoteActivity extends Activity {
 				return false;
 			}
 			return true;
+		}
+		
+		@Override
+		public void onBackPressed(){
+			Intent intentBack = new Intent(getApplicationContext(), VotesListAdapter.class);
+			intentBack.addFlags(Intent.FLAG_ACTIVITY_LAUNCHED_FROM_HISTORY);
+			startActivityForResult(intentBack,HomeActivity.START_ANY_ACTIVITY_REQUEST);
+			finish();
 		}
 
 }

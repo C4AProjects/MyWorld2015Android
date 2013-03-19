@@ -8,8 +8,10 @@ import java.util.Date;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.un.imports.JSONParser;
+import org.un.myworld.R;
 
 
+import android.app.IntentService;
 import android.app.Service;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -21,15 +23,18 @@ import android.location.LocationManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.NetworkInfo.State;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.Looper;
 import android.util.Log;
+import android.widget.Toast;
 
 
 /**
  * 
- * @author kinyua
+ * @author kinyua, Adamsy
+ * @lastmodified Adamsy, March 19th 2012
  * @description -  Service that saves vote data based on internet connectivity
  * 				** First check for unsynced data, if existent.. sync it if net available.. if not register receiver.
  * 				** When connectivity is available, data posted to the server, otherwise
@@ -39,7 +44,13 @@ import android.util.Log;
  * 				
  * ********* Unimplemented --> Checker for whether voter has voted b4.
  */
-public class Sync extends Service {
+public class Sync extends IntentService {
+	public Sync() {
+		super(String.valueOf(R.string.title_service_name));
+		// TODO Auto-generated constructor stub
+	}
+
+
 	private static final String TAG = "com.data.sync";
 	private BroadcastReceiver broadcastReceiver = null;
 	private double latitude;
@@ -48,11 +59,14 @@ public class Sync extends Service {
 	private final String API_ACCESS_KEY="API_ACCESS_KEY";//the app key
 	private final int TEST_CODE=1; //1-for testing..other for posting
 	public static boolean sync_done=false;
-	private int loop_value,total_votes;
+	private int loop_value,total_votes,progressCount,service_result=0;
 	JSONParser jsonParser = new JSONParser();
 	
 	public static int server_reponse=0;
 	public static final String POST_URL = "https://apps.myworld2015.org/vote.php";
+	
+	
+	
 	@Override
 	public IBinder onBind(Intent arg0) {
 		// TODO Auto-generated method stub
@@ -87,15 +101,7 @@ public class Sync extends Service {
 		this.longitude = longitude;
 	}
 
-	/* (non-Javadoc)
-	 * @see android.app.Service#onCreate()
-	 */
-	@Override
-	public void onCreate() {
-		Log.d(TAG, "created");
 	
-	
-	}
 	/**
 	 * @description - get location -- single location
 	 * @author kinyua
@@ -180,33 +186,7 @@ public class Sync extends Service {
 	    
 	}
 	
-	/* (non-Javadoc)
-	 * @see android.app.Service#onStart(android.content.Intent, int)
-	 */
-	@Override
-	public void onStart(Intent intent, int startId) {
-		Log.d(TAG, "on-start");
-		db = new DB_Adapter(this);
-		
-		/*If there is any unsynced data..*/
-		try {
-			db.open();
-			if(db.getTotalVotes()>0){
-				db.close();
-				if(is_connected())
-				do_sync();
-			}
-			
-		} catch (JSONException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			Log.e(TAG,e.toString());
-		}
-		
-		
-		do_save();
-		
-	}
+	
 	
 	private void installListener() {
 		
@@ -223,12 +203,12 @@ public class Sync extends Service {
 	                 if (state == State.CONNECTED) {
 	                	/*If internet available... sync*/	
 	                	Log.d(TAG, "Connection-Acquired");
-	                	try {
+	                	/*try {
 							do_sync();
 						} catch (JSONException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
-						}
+						}*/
 	                 }
 				}
             };
@@ -246,88 +226,7 @@ public class Sync extends Service {
 		NetworkInfo active_mobile_connection = connectivityManager.getActiveNetworkInfo();
 		return active_mobile_connection != null && active_mobile_connection.isConnectedOrConnecting();
 	}
-		
-	/*Synchronize if available.*/
-	public void do_sync() throws JSONException{
-		db.open(); //open db
-		total_votes=db.getTotalVotes();
-		db.close();
-		loop_value=0;
-		
-		
-		jsonParser.threadJSONWorker=new Thread(){
-			JSONObject vote_details;	 
-            public void run() {
-                Looper.prepare(); //For Preparing Message Pool for the child Thread
-               // db.open(); //open db again incase it's been closed
-               
-		for(long vote:db.getAllPriorityIds()){//loop thru all the votes
-			loop_value++;
-			//Log.i(TAG,"P_Id: "+vote);
-		//}
-		
-		try {
-			//db.open();
-			//vote_details = db.get_vote(API_ACCESS_KEY, TEST_CODE,vote); //--test params
-			vote_details = db.get_vote(API_ACCESS_KEY,vote); //--live params
-		    
-		
-		
-		//Log.i(TAG,"Vote_Details: "+vote_details.toString());
-		
-		//if not null..
-		if( vote_details != null ){
-			//pull data from sqlite db --> the data is in vote_details. POST_URL(Private final string)
-			
-			//post them
-			jsonParser.sendJson(POST_URL, vote_details, vote,total_votes);
-			
-			//on success delete the sent vote from sqlite db call 
-		/*if(Sync.server_reponse==1){
-				Log.i("API: ", "Vote: "+vote+" Sent");
-			}else{
-				Log.i("API: ", "Vote: "+vote+" Not Sent");
-			}*/
-			
-			  //Db_Adapter.deletePrioritylist();
-			  //Db_Adapter.deleteVote();
-		}
-		
-		 if(loop_value>=total_votes){
-	 			stopSelf();
-	 			jsonParser.threadJSONWorker.interrupt();
-	         }
-		
-		} catch (JSONException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		}//end of the for each vote loop
-		// db.close(); //close any open db in this context
-		 Looper.loop(); //Loop in the message queue
-		
-            }
-            
-           
-           
-        };//end of the runnable threadJSONWorker
-       
-        	 jsonParser.threadJSONWorker.start();
-        	 
-		
-		//unregister the receiver once we update vote on the server
-			Log.d(TAG, "sync-done-receiver-uregistered");
-		if( broadcastReceiver != null ){
-			unregisterReceiver(broadcastReceiver);
-			broadcastReceiver = null;
-		}
-		Log.d(TAG, "sync-method");
-		
-		//db.close(); //close db
-	}
-	
-	
+
 	
 	/**
 	 * @description - If net available, save local,
@@ -363,4 +262,137 @@ public class Sync extends Service {
 		
 	}
 	
+	/**
+	 * @desscription -an async task to help with the votes upload easily
+	 * @author John Adamsy
+	 * */
+	/*class DoPushVotesToServer: defines an assynchronous task*/
+    private class DoPushVotesToServer extends AsyncTask<Void, Integer, Integer>{/*our methods will need these types specified here as params*/
+    	
+    	/**
+		 * Before starting background thread Start the sending vote activity
+		 * */
+		@Override
+		protected void onPreExecute() {
+			super.onPreExecute();
+			Toast.makeText(getBaseContext(), "Initiating process...", Toast.LENGTH_LONG).show();
+		}
+    	
+    	@Override
+    	protected Integer doInBackground(Void... sendJSON){
+    		int count=progressCount;
+    		Log.d(TAG, "Connection-Acquired");
+        	try {
+				this.do_sync();
+				
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+    		//for(int i=0;i<count;i++){
+    			//calculate the percentage uploaded and report its progress
+    			//publishProgress((int) (((i+1)/(float)total_votes)*100));
+    		//}
+    		return JSONParser.vote_sent_count;
+    	}
+    	
+    	@Override
+    	 protected void onProgressUpdate(Integer... progress){
+    	    	Log.i(TAG, String.valueOf(progress[0])+"% uploaded");
+    	    	
+    	    	//Toast.makeText(getBaseContext(), String.valueOf(progress[0])+"% complete", Toast.LENGTH_LONG).show();
+    	    }
+    	 
+    	@Override
+    	 protected void onPostExecute(Integer result){
+    		
+    	    	service_result=result;
+    	    	if(service_result>0){//send a broadcast that the upload is complete
+    	    		Intent broadcastIntent = new Intent();
+    	    		broadcastIntent.setAction("VOTES_UPLOAD_ACTION");
+    	    		getBaseContext().sendBroadcast(broadcastIntent);
+    	    		}
+    	    	Toast.makeText(getBaseContext(), "Uploaded "+result+" votes", Toast.LENGTH_LONG).show();
+    	    	stopSelf(); //<--equivalent to the stopService() method
+    	    }
+    	
+    	 /*Synchronize if available.*/
+    	private void do_sync() throws JSONException{
+    		db.open(); //open db
+    		total_votes=db.getTotalVotes();
+    		db.close();
+    		loop_value=0;
+    		
+    			JSONObject vote_details;	 
+                   
+    		for(long vote:db.getAllPriorityIds()){//loop thru all the votes
+    			loop_value++;
+    		
+    		try {
+    			//db.open();
+    			//vote_details = db.get_vote(API_ACCESS_KEY, TEST_CODE,vote); //--test params
+    			vote_details = db.get_vote(API_ACCESS_KEY,vote); //--live params
+    		 
+    		//Log.i(TAG,"Vote_Details: "+vote_details.toString());
+    		
+    		//if not null..
+    		if( vote_details != null ){
+    			//pull data from sqlite db --> the data is in vote_details. POST_URL(Private final string)
+    			
+    			//post them
+    			jsonParser.sendJson(POST_URL, vote_details, vote,total_votes);
+    		
+    		}
+    		
+    		} catch (JSONException e) {
+    			// TODO Auto-generated catch block
+    			e.printStackTrace();
+    		}
+    		
+    		}//end of the for each vote loop
+    		
+    		//unregister the receiver once we update vote on the server
+    			Log.d(TAG, "sync-done-receiver-uregistered");
+    		if( broadcastReceiver != null ){
+    			unregisterReceiver(broadcastReceiver);
+    			
+    			broadcastReceiver = null;
+    		}
+    		//Log.d(TAG, "sync-method");
+    		
+    		//db.close(); //close db
+    	}//close public void do_sync()
+    }/*end of inner class DoBackgroundTask*/
+
+
+	@Override
+	protected void onHandleIntent(Intent intent) {
+		//---send a broadcast to inform the activity
+		// that the votes have been uploaded---
+		Log.d(TAG, "on-start");
+		db = new DB_Adapter(this);
+		
+		//If there is any unsynced data..
+		//try {
+			db.open();
+			if(db.getTotalVotes()>0){
+				progressCount=db.getTotalVotes();
+				db.close();
+				if(is_connected())
+				new DoPushVotesToServer().execute();//start the async task for pushing votes
+			}
+			
+		//} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			//e.printStackTrace();
+			//Log.e(TAG,e.toString());
+		//}
+		
+		
+		do_save();
+		Log.i(TAG,"Service Done: "+service_result);
+		
+	}
+    
+   
 }

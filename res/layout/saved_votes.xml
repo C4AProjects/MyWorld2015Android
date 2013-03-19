@@ -47,9 +47,11 @@
             android:textSize="15sp" />
     </LinearLayout>
 
+    <!-- Partner Info ribbon -->
+
     <TextView
         android:id="@+id/parterid_label"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#ffffff"
         android:padding="5dp"
@@ -60,7 +62,7 @@
 
     <TextView
         android:id="@+id/partercountry_label"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#ffffff"
         android:padding="5dp"
@@ -68,6 +70,7 @@
         android:textColor="#000000"
         android:textSize="16sp"
         android:textStyle="bold" />
+    
 
     <TextView
         android:id="@+id/section_description"
@@ -104,6 +107,7 @@
         android:textColor="#ff0000"
         android:textSize="16sp"
         android:visibility="gone" />
+  
 
     <ProgressBar
         android:id="@+id/progressIcon"
@@ -148,6 +152,17 @@
                 android:drawableLeft="@drawable/upload"
                 android:onClick="btnSyncVotes_Click"
                 android:text="@string/text_upload_votes" />
+            
+             <Button
+                android:id="@+id/export_votes"
+                style="@style/ButtonText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/btn_blue"
+                android:drawableLeft="@drawable/share"
+                android:onClick="btnEmailVotes_Click"
+                android:text="@string/text_export_votes"/>
         </LinearLayout>
     </LinearLayout>
 

@@ -30,6 +30,8 @@ Answers will be shared with governments and decision makers in setting the next 
     <string name="menu_report">Results</string>
     <string name="title_preferences_activity">MyWorld Settings</string>
     <string name="title_activity_home">MyWorld</string>
+    <string name="title_service_name">UploadService</string>
+    <string name="text_export_votes">Export Votes</string>
     <string name="title_activity_vote">Vote</string>
     <string name="welcome_message">MY World Offline Canvasser</string>
     <string name="title_settings_button_text">Settings</string>

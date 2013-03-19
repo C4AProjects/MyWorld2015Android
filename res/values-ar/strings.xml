@@ -34,6 +34,8 @@ Answers will be shared with governments and decision makers in setting the next 
     <string name="menu_report">Results</string>
     <string name="title_preferences_activity">MyWorld Settings</string>
     <string name="title_activity_home">MyWorld</string>
+    <string name="title_service_name">UploadService</string>
+    <string name="text_export_votes">Email Votes</string>
     <string name="title_activity_vote">Vote</string>
     <string name="title_finish_vote_button_text">Next</string>
     <string name="title_submit_vote_button_text">Vote</string>

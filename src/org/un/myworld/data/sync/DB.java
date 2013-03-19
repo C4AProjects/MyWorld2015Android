@@ -14,8 +14,8 @@ import android.util.Log;
  *						-VoteId(INT)			 -PriorityListId(LONG)								-PriorityId(INT) 
  *						-VoterId(INT)			 -VoteIDCorePriorities(TEXT)//From priority Ids.	-Title(TEXT)
  *						-PartnerID(INT)			 -SuggestedPriority(TEXT)							-Description(TEXT)
- *						-Country(TEXT)	
- *						-Region_state(TEXT)	
+ *						-Country(TEXT)			 -FlagUploaded (TEXT) Y/N	
+ *						-Region_state(TEXT)		 -FlagExported (TEXT) Y/N	
  *						-City(TEXT)
  *					 	-Latitude(DOUBLE)
  *						-Longitude(DOUBLE)
@@ -25,10 +25,12 @@ import android.util.Log;
  *						-Education(TEXT)
  *						-Reason(TEXT)
  *						-PriorityListId(LONG)
+ *						-FlagUploaded (TEXT) Y/N
+ *						-FlagExported (TEXT) Y/N
  */								
 public class DB extends SQLiteOpenHelper {
 	private static final String DB_NAME = "DbMyWorld";
-	public static final int DB_VERSION = 2;
+	public static final int DB_VERSION = 3;
 	
 	private static final String TBL_VOTE = "VoteInfo";
 	private static final String TBL_PRIORITYLIST = "PriorityList";
@@ -42,20 +44,21 @@ public class DB extends SQLiteOpenHelper {
 	  */
 	public DB(Context context) {
 		 super(context, DB_NAME, null, DB_VERSION);
+		 
 	}
 
 	@Override
 	public void onCreate(SQLiteDatabase db) {
 
-		String sql_tbl_vote = "CREATE TABLE VoteInfo('VoteId' LONG PRIMARY KEY NOT NULL,'VoterId' LONG NOT NULL,'PartnerID' TEXT NOT NULL, 'Country' TEXT,'City' TEXT NOT NULL,'Region_state' TEXT NOT NULL,'Latitude' TEXT NOT NULL,'Longitude' TEXT NOT NULL,'Gender' TEXT NOT NULL,'VotedDate' TEXT NOT NULL,'YearOfBirth' INTEGER NOT NULL,'Education' TEXT NOT NULL,'PriorityListId' LONG NOT NULL,'Reason' TEXT)";
-		String sql_tbl_proritylist = "CREATE TABLE PriorityList('PriorityListId' LONG PRIMARY KEY NOT NULL,'VoteIDCorePriorities' TEXT NOT NULL,'SuggestedPriority' TEXT)";
+		String sql_tbl_vote = "CREATE TABLE VoteInfo('VoteId' LONG PRIMARY KEY NOT NULL,'VoterId' LONG NOT NULL,'PartnerID' TEXT NOT NULL, 'FlagUploaded' TEXT DEFAULT 'N','FlagExported' TEXT DEFAULT 'N', 'Country' TEXT,'City' TEXT NOT NULL,'Region_state' TEXT NOT NULL,'Latitude' TEXT NOT NULL,'Longitude' TEXT NOT NULL,'Gender' TEXT NOT NULL,'VotedDate' TEXT NOT NULL,'Age' INTEGER NOT NULL,'Education' TEXT NOT NULL,'PriorityListId' LONG NOT NULL,'Reason' TEXT)";
+		String sql_tbl_proritylist = "CREATE TABLE PriorityList('PriorityListId' LONG PRIMARY KEY NOT NULL,'VoteIDCorePriorities' TEXT NOT NULL,'SuggestedPriority' TEXT,'FlagUploaded' TEXT DEFAULT 'N','FlagExported' TEXT DEFAULT 'N')";
 		String sql_tbl_prority = "CREATE TABLE Priority('PriorityId' INTEGER PRIMARY KEY NOT NULL,'Title' TEXT,'Description' TEXT)";
 		
 		db.execSQL(sql_tbl_vote);
 		db.execSQL(sql_tbl_proritylist);
 		db.execSQL(sql_tbl_prority);
 		
-		Log.d(TAG, "Db+Tables created");
+		Log.i(TAG, "Db+Tables created");
 
 	}
 
@@ -66,6 +69,6 @@ public class DB extends SQLiteOpenHelper {
 		db.execSQL("drop table if exists " + TBL_VOTE);
 		
 		this.onCreate(db);
-		Log.d(TAG, "Upgraded");
+		Log.i(TAG, "Upgraded");
 	}
 }

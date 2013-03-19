@@ -102,7 +102,7 @@ public class VotesListAdapter extends ListActivity{
       //show hidden views
        if(lowerBar.getVisibility()==View.GONE){lowerBar.setVisibility(View.VISIBLE);}
        if(voteInstruction.getVisibility()==View.GONE){voteInstruction.setVisibility(View.VISIBLE);}
-        
+       countVotes=0;
     }
 
     @Override
@@ -309,7 +309,7 @@ public class VotesListAdapter extends ListActivity{
   		intentVote.putExtra("chosen_priorities", userVotes);
   		intentVote.putExtra("own_priority", this.userPriority.getText().toString());
   		
-  		intentVote.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+  		intentVote.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
 		startActivityForResult(intentVote,HomeActivity.START_ANY_ACTIVITY_REQUEST);
 		countVotes=0; //reset count votes value
 		
@@ -324,7 +324,7 @@ public class VotesListAdapter extends ListActivity{
   	@Override
   	public void onBackPressed(){
   		Intent intentBackHome = new Intent(getApplicationContext(), HomeActivity.class);
-  		intentBackHome.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+  		intentBackHome.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
 		startActivityForResult(intentBackHome,HomeActivity.START_ANY_ACTIVITY_REQUEST);
   	}
   	
