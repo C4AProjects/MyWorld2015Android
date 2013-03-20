@@ -31,6 +31,7 @@ public class DB_Adapter {
 	private static final String KEY_VOTE_VoterId = "VoterId";
 	private static final String KEY_VOTE_PartnerId = "PartnerID";
 	private static final String KEY_VOTE_FlagUploaded = "FlagUploaded";
+	private static final String KEY_VOTE_BallotID = "BallotID";//returned from the server on a successful vote cast
 	private static final String KEY_VOTE_FlagExported = "FlagExported";
 	private static final String KEY_VOTE_Country = "Country";
 	private static final String KEY_VOTE_Region = "Region_state";
@@ -135,7 +136,8 @@ public class DB_Adapter {
      *		age: 25,
      *		country: 185,
      *		education: 3,
-     *		test: 1
+     *		test: 1,
+     *		partner:"apptest"
 	 *     }
 	 * @param key
 	 * @param test
@@ -150,7 +152,7 @@ public class DB_Adapter {
 		
 		String votes = null;
 		String suggested_p = null;
-
+		String partner_id=null;
 		//String reason = null;
 		String gender = null;
 		String age = null;
@@ -168,6 +170,7 @@ public class DB_Adapter {
 			age = cursor.getString( cursor.getColumnIndex(KEY_VOTE_YearOfBirth) );
 			country = cursor.getString( cursor.getColumnIndex(KEY_VOTE_Country) );
 			education = cursor.getString( cursor.getColumnIndex(KEY_VOTE_Education) );
+			partner_id= cursor.getString( cursor.getColumnIndex(KEY_VOTE_PartnerId) );
 			//priority_list_id = cursor.getLong( cursor.getColumnIndex(KEY_VOTE_PriorityListId) );
 			
 			//Log.i(TAG,"PriorityList IDs: "+priority_list_id);
@@ -176,7 +179,6 @@ public class DB_Adapter {
 			
 			votes = my_votes[0];
 			Log.i(TAG,"Votes: "+votes);
-			//String votes_ = votes.replace(",",",");
 			//Log.i(TAG,"Votes_: "+votes_);
 			String[] vote_to_post = votes.split(",");
 			int [] votes_array=new int [6];
@@ -208,6 +210,7 @@ public class DB_Adapter {
 			singleVote.put("age", Integer.valueOf(age));
 			singleVote.put("country", Integer.valueOf(country));
 			singleVote.put("education", Integer.valueOf(education));
+			singleVote.put("partner", String.valueOf(partner_id));
 			//singleVote.put("test", Integer.valueOf(test)); //--not needed for the live posting
 			//json = new JSONObject("{\"key\":\""+key+"\",\"votes\":\"["+votes+"]\",\"suggested\":\""+suggested_p+"\",\"reason\":\""+reason+"\",gender:\""+gender+"\",age:\""+age+"\",country:\""+country+"\",education:\""+education+"\",test:\""+test+"\"}");
 			//Log.i(TAG,"JSONObject: "+json.toString());

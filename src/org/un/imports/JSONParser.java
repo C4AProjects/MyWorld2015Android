@@ -174,7 +174,7 @@ public class JSONParser {
 	                HttpResponse response;
 	                JSONParser.jObj = json;
 	                //JSONParser.vote_sent_count=total;
-	               //Log.i(TAG,"JSON Out: "+jObj.toString());
+	               Log.i(TAG,"Outgoing Vote: "+jObj.toString());
 
 	                try {
 	                    HttpPost post = new HttpPost(URL);
@@ -214,18 +214,16 @@ public class JSONParser {
 	            				
 	            						//Log.d("API: ", "Sucess: "+JSONParser.MyWorldServerJSON.getInt("success"));
 	            					Sync.server_reponse=JSONParser.MyWorldServerJSON.getInt("success");
-	            					//on success delete the sent vote from sqlite db call 
-	            					if(Sync.server_reponse==1){
-	            						//call DB_Adapter function to delete record
-	            						//Sync.db.deletePrioritylist(vote_id);
-	            						//Sync.db.deleteVote(vote_id);
+	            					Sync.id_returned=JSONParser.MyWorldServerJSON.getString("_id");
+	            					//on success flag the sent vote as uploaded=y in the local db 
+	            					if(Sync.server_reponse==1 && Sync.id_returned!=""){
 	            						
-	            						//call db function to set export flag
+	            						//call db function to set upload flag
 	            						Sync.db.setUploadFlagOnPrioritylist(vote_id, "Y");
 	            						Sync.db.setUploadFlagOnVote(vote_id, "Y");
 	            						
 	            						//Sync.db.close();
-            							Log.i(TAG, "Vote: Sent");
+            							Log.i(TAG, "Sent Vote--> _id:"+Sync.id_returned);
             							Sync.db.open();
             							vote_count=Sync.db.getTotalVotes();
             							Sync.db.close();

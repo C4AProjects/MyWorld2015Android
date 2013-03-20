@@ -63,6 +63,7 @@ public class Sync extends IntentService {
 	JSONParser jsonParser = new JSONParser();
 	
 	public static int server_reponse=0;
+	public static String id_returned="";
 	public static final String POST_URL = "https://apps.myworld2015.org/vote.php";
 	
 	
