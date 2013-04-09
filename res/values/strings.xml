@@ -3,13 +3,13 @@
     <string name="app_name">MyWorld</string>
     <string name="title_exit_app_button_text">Exit Application</string>
     <string name="myworld_message">VOTE FOR THE CHANGES THAT WOULD MAKE THE MOST DIFFERENCE TO YOUR WORLD</string>
-    <string name="welcome_message">MY World Offline Canvasser</string>
+    <string name="welcome_message">MY World Ballot Collector</string>
     <string name="title_settings_button_text">Settings</string>
     <string name="title_saved_votes_button_text">Saved Votes</string>
      <string name="title_vote_button_text">Start Vote</string>
-    <string name="myworld_thank_you">THANK YOU\nFOR THE VOTE(S) PARTNER!</string>
+    <string name="myworld_thank_you">Thanks for voting! \n\nYou still have to send us your vote(s): \n\n (1)Go back to the main menu to \'Saved Votes\' \n\n (2)Press \'Send Votes\' when you\'ve gathered all your votes for this round</string>
     <string name="text_upload_votes">Send Votes </string>
-    <string name="text_more_votes">Add Vote</string>
+    <string name="text_more_votes">Vote Again</string>
     <string name="text_synchronized_votes">All Votes Uploaded</string>
     <string name="text_votes_count_label">You have <b>%1$s</b> vote(s) saved and not sent yet</string>
     <string name="language_title_1">Language</string>
@@ -57,6 +57,10 @@ create the world we want focused on the issues that would make the
 most difference to our lives</string>
     <string name="dialog_less_priority_title">Must Select 6 Votes</string>
     <string name="pref_partner_info_reminder">Set Country and Partner ID</string>
+    <string name="alert_dialog_upload_error_title">Error</string>
+    <string name="alert_dialog_upload_sucess_title">Success</string>
+    <string name="alert_dialog_upload_error_msg">Sorry, encountered an error. Try sending the votes later</string>
+    <string name="alert_dialog_upload_success_msg">%1$d vote(s) been sent to the Global Database</string>
     <string name="pref_partner_info_change">Change Partner information</string>
     <string name="pref_partner_info_set_button">Set</string>
     <string name="pref_partner_info_change_button">Change</string>
@@ -722,10 +726,10 @@ most difference to our lives</string>
     <string name="title_activity_saved_votes">Saved Votes</string>
     <string name="title_activity_voting_complete">VotingCompleteActivity</string>
     <string name="partner_id_required">Enter Partner ID</string>
-    <string name="gender_required">Select your gender</string>
-    <string name="age_required">Select your age</string>
-    <string name="country_required">Select your country</string>
-    <string name="education_required">Select your education level</string>
+    <string name="gender_required">Select gender</string>
+    <string name="age_required">Select age</string>
+    <string name="country_required">Select country</string>
+    <string name="education_required">Select education level</string>
 
     <!-- preference file strings -->
     <string-array name="pref_language_item">
@@ -757,12 +761,12 @@ most difference to our lives</string>
 
     <string name="pref_partner_info_title">Partner Information</string>
     <string name="pref_partner_info_summary">The information (Country, Partner ID) is filled once for all the subsequent votes submitted</string>
-    <string name="pref_canvassing_country">Country in which you are canvassing</string>
+    <string name="pref_canvassing_country">Country in which you are collecting votes</string>
     <string name="pref_language_list_title">Language</string>
-    <string name="pref_language_list_summary">Canvassing Language</string>
+    <string name="pref_language_list_summary">Your Language</string>
     <string name="pref_country_list_title">Country</string>
     <string name="pref_partner_id_title">Partner ID</string>
-    <string name="pref_partner_id_summary">If you don\'t have a Partner ID, contact your local MyWorld Office to get one</string>
+    <string name="pref_partner_id_summary">Need a Partner ID? Send an Email to: support@myworld.org or you can Visit: http://partner.myworld2015.org</string>
     <string name="title_activity_my_world_launcher">MyWorld</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="use_language_button">Use English</string>
@@ -772,8 +776,10 @@ most difference to our lives</string>
     <string name="pref_partner_info_set">OK</string>
     <string name="saved_votes_partner_id_label">PartnerID: %1$s</string>
     <string name="saved_votes_partner_country_label">Country: %1$s</string>
-    <string name="saved_votes_section_description_label">Use this section to :\n(i) View the number of votes you collected\n(ii) Send your saved votes to the centralized Database</string>
+    <string name="saved_votes_section_description_label">Use this section to :\n(i) View the number of votes you collected\n(ii) Send your saved votes to the Global Database</string>
     <string name="saved_votes_not_sent_count_label">As of: %1$s - You have %2$d vote(s) saved and not sent yet.</string>
+    <string name="reminder_send_saved_votes">You need to send us your votes once you\'ve finished collecting them. \n \nNote:\n (1) Press \'Send Votes\' to add them to the Global Database.\n (2) Press \'Export Votes\' to store them on local file in your phone\'s memory.\nThis is useful incase there is failure in step (1)</string>
     <string name="saved_votes_upload_process_label">%1$s vote(s) being uploaded now.\n\t\t\tPlease wait… \nDo NOT disconnect device from Internet.</string>
+    <string name="sending_votes_process_dialog">Sending Votes</string>
     <string name="saved_votes_no_internet_reminder">No Network Connection</string>
 </resources>

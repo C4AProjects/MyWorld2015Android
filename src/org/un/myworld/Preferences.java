@@ -60,10 +60,11 @@ public class Preferences extends PreferenceActivity implements OnPreferenceChang
 		//configureLanguage(this);
         super.onCreate(savedInstanceState);
         if(Build.VERSION.SDK_INT >= 11){//target honeycomb and above
-        	setContentView(R.layout.settings_window);
+        	//setContentView(R.layout.settings_window);
+        	//setTheme(R.style.FullscreenTheme);
         getFragmentManager().beginTransaction().replace(android.R.id.content, new MyPreferenceFragment()).commit();
         }else{
-        	setContentView(R.layout.settings_window);
+        	//setContentView(R.layout.settings_window);
         	addPreferencesFromResource(R.xml.preferences);
         }
         //initialize preference items
@@ -118,13 +119,15 @@ public class Preferences extends PreferenceActivity implements OnPreferenceChang
 		    getPreferenceManager().getSharedPreferences().unregisterOnSharedPreferenceChangeListener(this);
 		    super.onPause();
 		}
+		
+		
     }
 	
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		MenuInflater inflate = new MenuInflater(this);
-		inflate.inflate(R.menu.home, menu);
+		inflate.inflate(R.menu.settings, menu);
 		return super.onCreateOptionsMenu(menu);
 	}
 
@@ -132,11 +135,11 @@ public class Preferences extends PreferenceActivity implements OnPreferenceChang
 	public boolean onMenuItemSelected(int featureId, MenuItem item) {
 		switch (item.getItemId()) {
 		case R.id.menu_home:
-			setResult(RESULT_CANCELED);
-			finish();
+			//setResult(RESULT_CANCELED);
+			menuItemSave_Clicked();
 			break;
-		case R.id.menu_report:			
-			finish();
+		case R.id.menu_save:			
+			menuItemHome_Clicked();
 			break;
 
 		default:
@@ -197,6 +200,11 @@ public class Preferences extends PreferenceActivity implements OnPreferenceChang
         sharedPrefs.unregisterOnSharedPreferenceChangeListener(this);    
     }
 	
+	@Override
+	public void onBackPressed(){
+		menuItemHome_Clicked();
+	}
+	
 	public static void configureLanguage(Context context){
 		//language config
 		locale = new Locale(languagePrefix);
@@ -206,20 +214,24 @@ public class Preferences extends PreferenceActivity implements OnPreferenceChang
 	    context.getResources().updateConfiguration(config,context.getResources().getDisplayMetrics());
 	}
 
-   public void btnBack_Clicked(View v){
+   private void menuItemHome_Clicked(){
 	   //check if settings are not blank
-	   if(Preferences.sharedPrefs.getString(KEY_PARTNER_ID_EDIT_TEXT_PREFERENCE, null)=="" || Preferences.sharedPrefs.getString(KEY_COUNTRY_LIST_PREFERENCE, null)==""){
+	   Log.i(TAG,"Pref PartnerID: "+Preferences.sharedPrefs.getString(KEY_PARTNER_ID_EDIT_TEXT_PREFERENCE, null));
+	   Log.i(TAG,"Pref Country: "+Preferences.sharedPrefs.getString(KEY_COUNTRY_LIST_PREFERENCE, null));
+	   if(Preferences.sharedPrefs.getString(KEY_PARTNER_ID_EDIT_TEXT_PREFERENCE, null)==null || Preferences.sharedPrefs.getString(KEY_COUNTRY_LIST_PREFERENCE, null)==null|| Preferences.sharedPrefs.getString(KEY_PARTNER_ID_EDIT_TEXT_PREFERENCE, null)=="" || Preferences.sharedPrefs.getString(KEY_COUNTRY_LIST_PREFERENCE, null)==""){
 		   this.missingSettingsAlert();
-	   }else{
+		   }else{
 		  // do nothing and go back
 		   setResult(RESULT_CANCELED);
 		   finish();
 	   }
    }
    
-   public void btnSave_Clicked(View v){
+   private void menuItemSave_Clicked(){
 	   //check if settings are not blank
-	   if(Preferences.sharedPrefs.getString(KEY_PARTNER_ID_EDIT_TEXT_PREFERENCE, null) =="" || Preferences.sharedPrefs.getString(KEY_COUNTRY_LIST_PREFERENCE, null)==""){
+	   Log.i(TAG,"Pref PartnerID: "+Preferences.sharedPrefs.getString(KEY_PARTNER_ID_EDIT_TEXT_PREFERENCE, null));
+	   Log.i(TAG,"Pref Country: "+Preferences.sharedPrefs.getString(KEY_COUNTRY_LIST_PREFERENCE, null));
+	   if(Preferences.sharedPrefs.getString(KEY_PARTNER_ID_EDIT_TEXT_PREFERENCE, null)==null || Preferences.sharedPrefs.getString(KEY_COUNTRY_LIST_PREFERENCE, null)==null|| Preferences.sharedPrefs.getString(KEY_PARTNER_ID_EDIT_TEXT_PREFERENCE, null)=="" || Preferences.sharedPrefs.getString(KEY_COUNTRY_LIST_PREFERENCE, null)==""){
 		 this.missingSettingsAlert();
 	   }else{
 		  // save current settings and go back
@@ -228,7 +240,6 @@ public class Preferences extends PreferenceActivity implements OnPreferenceChang
 		   finish();
 	   }
    }
-   
    
    
    private void missingSettingsAlert() {

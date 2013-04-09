@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  android:id="@+id/MyWorldSplashLayout"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent" 
-  android:layout_gravity="center"
-  android:background="#ffffff"
-  >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/MyWorldSplashLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="#ffffff"
+    android:gravity="center_vertical|center_horizontal" >
 	
 	 <ProgressBar
         android:id="@+id/progressIcon"
@@ -14,6 +13,7 @@
         android:layout_height="50dip"
         android:layout_marginLeft="140dip"
         android:layout_marginRight="100dip"
+        android:layout_centerInParent="true"
         android:indeterminateDrawable="@drawable/loader"
         android:layout_below="@+id/splashImage"
        
@@ -23,10 +23,8 @@
 	     android:id="@+id/splashImage"
 	     android:layout_width="100dip"
 	     android:layout_height="100dip"
-	     android:layout_alignParentRight="true"
-	     android:layout_alignParentTop="true"
+	     android:layout_centerInParent="true"
 	     android:layout_marginRight="96dp"
-	     android:layout_marginTop="141dp"
 	     android:contentDescription="@string/logo_description" />
 
 </RelativeLayout>

@@ -6,8 +6,8 @@
     <string name="myworld_message">VOTE FOR THE CHANGES THAT WOULD MAKE THE MOST DIFFERENCE TO YOUR WORLD</string>
     <string name="myworld_brief">MY World is a global survey led by the United Nations asking YOU to chose your priorities for a better world. 
 Answers will be shared with governments and decision makers in setting the next development agenda for the world</string>
-    <string name="myworld_thank_you">THANK YOU\nFOR THE VOTES PARTNER!</string>
-     <string name="welcome_message">MY World Offline Canvasser</string>
+   <string name="myworld_thank_you">Thanks for voting! You still have to send us your vote(s). Go back to the main menu to \'Saved Votes\' and click \'Send Votes\' when you\'ve gathered all your votes for this round</string>
+     <string name="welcome_message">MY World Ballot Collector</string>
     <string name="title_settings_button_text">Settings</string>
     <string name="title_saved_votes_button_text">Saved Votes</string>
      <string name="title_vote_button_text">Start Vote</string>
@@ -58,6 +58,10 @@ create the world we want focused on the issues that would make the
 most difference to our lives</string>
     <string name="dialog_less_priority_title">Must Select 6 Votes</string>
     <string name="pref_partner_info_reminder">Set Country and Partner ID</string>
+     <string name="alert_dialog_upload_error_msg">Sorry, encountered an error. Try sending the votes later</string>
+    <string name="alert_dialog_upload_success_msg">%1$d vote(s) been sent to the Global Database</string>
+    <string name="alert_dialog_upload_error_title">Error</string>
+    <string name="alert_dialog_upload_sucess_title">Success</string>
     <string name="pref_partner_info_change">Change Partner information</string>
     <string name="pref_partner_info_set_button">Set</string>
     <string name="pref_partner_info_change_button">Change</string>
@@ -771,9 +775,11 @@ most difference to our lives</string>
     <string name="pref_partner_info_missing">You must set the Country/Partner ID</string>
     <string name="pref_partner_info_set">OK</string>
     <string name="saved_votes_partner_id_label">PartnerID: %1$s</string>
+    <string name="sending_votes_process_dialog">Sending Votes</string>
     <string name="saved_votes_partner_country_label">Country: %1$s</string>
     <string name="saved_votes_section_description_label">Use this section to :\n(i) View the number of votes you collected\n(ii) Send your saved votes to the centralized Database</string>
     <string name="saved_votes_not_sent_count_label">As of: %1$s - You have %1$s votes saved and not sent yet.</string>
+     <string name="reminder_send_saved_votes">You need to send us your votes once you\'ve finished collecting them. Click \'Send Votes\' to add them to the Global Database.</string>
     <string name="saved_votes_upload_process_label">%1$s votes being uploaded now.\n\t\t\tPlease wait… \nDo NOT disconnect device from Internet.</string>
     <string name="saved_votes_no_internet_reminder">No Network Connection</string>
     

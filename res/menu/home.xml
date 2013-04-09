@@ -9,19 +9,19 @@
         android:orderInCategory="100"
         android:showAsAction="never"
         android:icon="@drawable/home" />
-      <item android:id="@+id/menu_info"
+      <!--item android:id="@+id/menu_info"
         android:title="@string/menu_info"
         android:orderInCategory="400"
         android:showAsAction="never"
-        android:icon="@drawable/info" />
+        android:icon="@drawable/info" /-->
        <!--  item android:id="@+id/menu_info"
         android:title="@string/menu_info"
         android:orderInCategory="100"
         android:showAsAction="never"
         android:icon="@drawable/info" /-->
-       <item android:id="@+id/menu_report"
+       <!-- item android:id="@+id/menu_report"
         android:title="@string/menu_report"
         android:orderInCategory="200"
         android:showAsAction="never"
-        android:icon="@drawable/myworld_report" />
+        android:icon="@drawable/myworld_report" /-->
 </menu>

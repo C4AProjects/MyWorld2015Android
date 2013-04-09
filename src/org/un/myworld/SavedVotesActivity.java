@@ -26,13 +26,16 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.database.Cursor;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -45,13 +48,15 @@ public class SavedVotesActivity extends Activity {
 	
 	
 	static final String TAG="SavedVotesActivity" ;
-	public static String today;
+	public static String today,intentErrorContentFromExtra="NaN";
+	public static int intentVotesCountFromExtra=-1;
 	public static ProgressBar progressSpinIcon;
-	public static TextView textSectionDescription,textUploadProcessLabel,textVotesNotSent,textPartnerID,textCanvasserCountry;
+	public static TextView textSectionDescription,textUploadProcessLabel,textVotesNotSent,textPartnerID,textCanvasserCountry,textSendVoteEmphasis;
 	public static Button btnSyncVotes,btnBack;
     private DB_Adapter db;
     public static String [] COUNTRY_NAME;
     public static String [] COLUMN_NAMES;
+    public static boolean votesBeenSend=false;
     private boolean exportComplete;
     IntentFilter intentFilter; //to receive service intent completion intents
 	
@@ -69,18 +74,19 @@ public class SavedVotesActivity extends Activity {
 		setTheme(android.R.style.Theme);
 		
 		
-		//---intent to filter for file downloaded intent---
+		//---intent to filter for the broadcast intent---
 		intentFilter = new IntentFilter();
 		intentFilter.addAction("VOTES_UPLOAD_ACTION");
 		//---register the receiver---
 		registerReceiver(intentReceiver, intentFilter);
 		
 		COUNTRY_NAME=this.getResources().getStringArray(R.array.countries_un);
-		COLUMN_NAMES=new String[]{"VoteID","PartnerID","Country","Gender","Age","SuggestedPriority","Votes","DateCollected"};
+		COLUMN_NAMES=new String[]{"VoteID","PartnerID","Country","Gender","Age","Votes","SuggestedPriority","DateCollected"};
 	
 		progressSpinIcon=(ProgressBar)findViewById(R.id.progressIcon);
 		textUploadProcessLabel=(TextView)findViewById(R.id.section_votes_upload_process);
 		textVotesNotSent=(TextView)findViewById(R.id.section_votes_not_sent);
+		textSendVoteEmphasis=(TextView)findViewById(R.id.section_send_vote_emphasis);
 		textSectionDescription=(TextView)findViewById(R.id.section_description);
 		textPartnerID=(TextView)findViewById(R.id.parterid_label);
 		textCanvasserCountry=(TextView)findViewById(R.id.partercountry_label);
@@ -94,8 +100,27 @@ public class SavedVotesActivity extends Activity {
 		Log.i(TAG,"Date: "+today);
 		textUploadProcessLabel.setText(getString(R.string.saved_votes_upload_process_label,String.valueOf(db.getTotalVotes())));
 		textVotesNotSent.setText(getString(R.string.saved_votes_not_sent_count_label,SavedVotesActivity.today,db.getTotalVotes()));
+		if(Preferences.sharedPrefs.getString(Preferences.KEY_PARTNER_ID_EDIT_TEXT_PREFERENCE, null).trim()!=null && Preferences.sharedPrefs.getString(Preferences.KEY_COUNTRY_LIST_PREFERENCE, null)!=null){
 		textPartnerID.setText(getString(R.string.saved_votes_partner_id_label,Preferences.sharedPrefs.getString(Preferences.KEY_PARTNER_ID_EDIT_TEXT_PREFERENCE, null).trim()));
 		textCanvasserCountry.setText(getString(R.string.saved_votes_partner_country_label,COUNTRY_NAME[Integer.valueOf(Preferences.sharedPrefs.getString(Preferences.KEY_COUNTRY_LIST_PREFERENCE, null))-1]));
+		}
+		
+		//display alert dialog
+		if(votesBeenSend==true){
+			if(intentErrorContentFromExtra.equals("OK")){
+				//display success alert
+				Log.i(TAG,"Success!");
+				uploadSuccessAlert(this,intentVotesCountFromExtra);
+				}else{
+				//display error alert
+					Log.i(TAG,"Error!");
+			        uploadErrorAlert(this);
+			}
+		}
+		
+		//reset votesBeenSend
+		votesBeenSend=false;
+		
 		
 		if(db.getTotalVotes()==0){//hide sync button on zero votes found
 			btnSyncVotes.setVisibility(View.GONE);
@@ -108,22 +133,50 @@ public class SavedVotesActivity extends Activity {
 		@Override
 		public void onReceive(Context context, Intent intent) {
 		Log.i(TAG, "IntentService complete");
-		//Toast.makeText(getBaseContext(), "Upload Complete",Toast.LENGTH_LONG).show();
-		//finish(); //close the current activity
 		
 		//and start a fresh copy
 		//restart the savedvotes activity
+		//finish();
   		Intent intentSavedVote = new Intent(getBaseContext(), SavedVotesActivity.class);
   		intentSavedVote.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		
+		intentErrorContentFromExtra=intent.getStringExtra("Error").toString();
+		intentVotesCountFromExtra=Integer.valueOf(intent.getIntExtra("Sent_Vote_Count", 0));
+		votesBeenSend=true;
 		startActivity(intentSavedVote);
+		
+		//Log.i(TAG,"Extra: "+intent.getIntExtra("Sent_Vote_Count", 0));
+		//Log.i(TAG,"Extra: "+intent.getStringExtra("Error"));
+		
+		
 		}
 		};
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.home, menu);
+		getMenuInflater().inflate(R.menu.saved_votes, menu);
 		return true;
+	}
+	
+	@Override //to know which menu item was clicked
+	public boolean onMenuItemSelected(int featureId, MenuItem item) {
+		switch (item.getItemId()) {
+		case R.id.menu_home:
+			//setResult(RESULT_CANCELED);
+			Intent intentBackHome = new Intent(getApplicationContext(), HomeActivity.class);
+	  		intentBackHome.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+			startActivityForResult(intentBackHome,HomeActivity.START_ANY_ACTIVITY_REQUEST);
+			break;
+		case R.id.menu_settings:			
+			Intent i = new Intent(this, Preferences.class);
+			startActivityForResult(i,HomeActivity.START_PREFERENCES_REQUEST);
+			break;
+
+		default:
+			break;
+		}
+		return super.onMenuItemSelected(featureId, item);
 	}
 	
 	@Override
@@ -169,6 +222,7 @@ public class SavedVotesActivity extends Activity {
 				//start sync service
 				startService(new Intent(SavedVotesActivity.this,Sync.class));
 				textVotesNotSent.setVisibility(View.GONE);
+				textSendVoteEmphasis.setVisibility(View.GONE);
 				textSectionDescription.setVisibility(View.GONE);
 				textUploadProcessLabel.setVisibility(View.VISIBLE);
 				db.open(); //open db
@@ -183,6 +237,7 @@ public class SavedVotesActivity extends Activity {
 				textUploadProcessLabel.setVisibility(View.VISIBLE);
 				textUploadProcessLabel.setText(R.string.saved_votes_no_internet_reminder);
 				textVotesNotSent.setVisibility(View.GONE);
+				textSendVoteEmphasis.setVisibility(View.GONE);
 				textSectionDescription.setVisibility(View.GONE);
 				progressSpinIcon.setVisibility(View.VISIBLE);
 				btnSyncVotes.setVisibility(View.VISIBLE);
@@ -313,5 +368,40 @@ public class SavedVotesActivity extends Activity {
 			NetworkInfo active_mobile_connection = connectivityManager.getActiveNetworkInfo();
 			return active_mobile_connection != null && active_mobile_connection.isConnectedOrConnecting();
 		}
+		
+		//upload error alert dialog
+    	private void uploadErrorAlert(Context context) {
+    	/**/	AlertDialog.Builder builder_error = new AlertDialog.Builder(context);
+    		builder_error.setMessage(R.string.alert_dialog_upload_error_msg)
+    				.setCancelable(false)
+    				.setIcon(R.drawable.info)
+    				.setTitle(R.string.alert_dialog_upload_error_title)
+    				.setPositiveButton(R.string.pref_partner_info_set,
+    						new DialogInterface.OnClickListener() {
+    							public void onClick(DialogInterface dialog_error, int id) {
+    								dialog_error.cancel();
+    								
+    							}
+    						});
+    		AlertDialog alert_error = builder_error.create();
+    		alert_error.show();
+    	}
+    	
+    	//upload success alert dialog
+    	private void uploadSuccessAlert(Context context,int num_of_votes) {
+    		AlertDialog.Builder builder_success = new AlertDialog.Builder(context);
+    		builder_success.setMessage(getString(R.string.alert_dialog_upload_success_msg,num_of_votes))
+    				.setCancelable(false)
+    				.setIcon(R.drawable.info)
+    				.setTitle(R.string.alert_dialog_upload_sucess_title)
+    				.setPositiveButton(R.string.pref_partner_info_set,
+    						new DialogInterface.OnClickListener() {
+    							public void onClick(DialogInterface dialog_success, int id) {
+    								dialog_success.cancel();	
+    							}
+    						});
+    		AlertDialog alert_success = builder_success.create();
+    		alert_success.show();
+    	}
 
 }

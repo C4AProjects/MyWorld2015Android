@@ -1,7 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-android:gravity="center|top|bottom|left|right" >
+android:gravity="center|top|bottom|left|right|center_vertical|center_horizontal" >
 
 <ListView
     android:id="@android:id/list"
@@ -12,10 +12,11 @@ android:gravity="center|top|bottom|left|right" >
   android:id="@+id/linearLayoutButtons"
   android:layout_width="match_parent"
   android:layout_height="wrap_content"
-  android:layout_alignParentBottom="true">
+  android:layout_centerInParent="true"
+  android:layout_below="@android:id/list">
 
     <Button
-         android:id="@+id/back_to_main"
+        android:id="@+id/back_to_main"
         style="@style/ButtonText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

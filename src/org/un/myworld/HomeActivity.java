@@ -37,7 +37,7 @@ public class HomeActivity extends Activity {
         Log.i(TAG,"PartnerID config: "+Preferences.sharedPrefs.getString("partID", null));
         
         //check if partner info has already been set before
-        if(Preferences.sharedPrefs.getString("country", null)==null || Preferences.sharedPrefs.getString("partID", null)==null){
+        if(Preferences.sharedPrefs.getString("country", null)=="" || Preferences.sharedPrefs.getString("partID", null)=="" ||Preferences.sharedPrefs.getString("country", null)==null || Preferences.sharedPrefs.getString("partID", null)==null){
         	 Log.i(TAG,"Settings Found: FALSE ");
         	settingsAlert();
         	
@@ -122,11 +122,14 @@ public class HomeActivity extends Activity {
   //go to the voting activity
   	public void btnBeginVote_Click(View view)
   	{
+  		/**/if(Preferences.sharedPrefs.getString("partID", null)==null || Preferences.sharedPrefs.getString("country", null)==null || Preferences.sharedPrefs.getString("partID", null)=="" || Preferences.sharedPrefs.getString("country", null)==""){
+  			settingsAlert();
+  		}else{
   		//start the vote entry activity
   		Intent vote = new Intent(getApplicationContext(), VotesListAdapter.class);
 		vote.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 		startActivityForResult(vote,START_ANY_ACTIVITY_REQUEST);
-		
+  		}
 		//close the home activity
 		finish();
   	}
@@ -134,14 +137,20 @@ public class HomeActivity extends Activity {
   //go to the saved votes activity
   	public void btnSavedVotes_Click(View view)
   	{
+  		/**/if(Preferences.sharedPrefs.getString("partID", null)==null || Preferences.sharedPrefs.getString("country", null)==null ||Preferences.sharedPrefs.getString("partID", null)=="" || Preferences.sharedPrefs.getString("country", null)==""){
+  			Intent i = new Intent(this, Preferences.class);
+  			startActivityForResult(i,START_PREFERENCES_REQUEST);
+  		}else{
   		//start the savedvotes activity
-  		Intent intentSavedVote = new Intent(getApplicationContext(), SavedVotesActivity.class);
-  		intentSavedVote.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-		//startActivity(vote);
-		startActivityForResult(intentSavedVote,START_ANY_ACTIVITY_REQUEST);
-		
-		//close the home activity
-		finish();
+  	  		Intent intentSavedVote = new Intent(getApplicationContext(), SavedVotesActivity.class);
+  	  		intentSavedVote.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+  			//startActivity(vote);
+  			startActivityForResult(intentSavedVote,START_ANY_ACTIVITY_REQUEST);
+  		}
+  		
+
+			//close the home activity
+			finish();
   	}
   	
   	//open settings window

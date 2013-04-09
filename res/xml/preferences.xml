@@ -18,18 +18,17 @@
              android:title="@string/pref_partner_id_title"
             android:summary="@string/pref_partner_id_summary"
             android:persistent="true"
-            android:defaultValue=""
             />
         <ListPreference
             android:entries="@array/countries_un"
             android:entryValues="@array/pref_country_entry_values"
             android:key="country"
             android:persistent="true"
-            android:defaultValue="Select"
             android:title="@string/pref_country_list_title"
             android:summary="@string/pref_canvassing_country" >
         </ListPreference>
-
+       
+        
         
     
     

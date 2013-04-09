@@ -11,7 +11,9 @@ import org.un.imports.JSONParser;
 import org.un.myworld.R;
 
 
+
 import android.app.IntentService;
+import android.app.ProgressDialog;
 import android.app.Service;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -28,7 +30,6 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.os.Looper;
 import android.util.Log;
-import android.widget.Toast;
 
 
 /**
@@ -58,12 +59,12 @@ public class Sync extends IntentService {
 	public static DB_Adapter db;
 	private final String API_ACCESS_KEY="API_ACCESS_KEY";//the app key
 	private final int TEST_CODE=1; //1-for testing..other for posting
-	public static boolean sync_done=false;
-	private int loop_value,total_votes,progressCount,service_result=0;
+	public static boolean sync_done=false,sync_cancelled=false;
+	private int loop_value,total_votes,progressCount=0,service_result=0;
 	JSONParser jsonParser = new JSONParser();
-	
+	private ProgressDialog pDialog;
 	public static int server_reponse=0;
-	public static String id_returned="";
+	public static String id_returned="",error_via_intent="";
 	public static final String POST_URL = "https://apps.myworld2015.org/vote.php";
 	
 	
@@ -276,7 +277,14 @@ public class Sync extends IntentService {
 		@Override
 		protected void onPreExecute() {
 			super.onPreExecute();
-			Toast.makeText(getBaseContext(), "Initiating process...", Toast.LENGTH_LONG).show();
+			//Toast.makeText(getBaseContext(), "Initiating process...", Toast.LENGTH_LONG).show();
+			/*pDialog = new ProgressDialog(getBaseContext());
+			pDialog.setTitle("Sending Votes");
+			pDialog.setIcon(R.drawable.info);
+			pDialog.setMessage(getString(R.string.saved_votes_upload_process_label,total_votes));
+			pDialog.setIndeterminate(false);
+			pDialog.setCancelable(false);
+			pDialog.show();*/
 		}
     	
     	@Override
@@ -284,17 +292,19 @@ public class Sync extends IntentService {
     		int count=progressCount;
     		Log.d(TAG, "Connection-Acquired");
         	try {
-				this.do_sync();
+        		//while(Sync.sync_cancelled==false){
+        			this.do_sync();
+        			
+        			//if(Sync.sync_cancelled==true) break;
+        		//}
 				
+        		
 			} catch (JSONException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-    		//for(int i=0;i<count;i++){
-    			//calculate the percentage uploaded and report its progress
-    			//publishProgress((int) (((i+1)/(float)total_votes)*100));
-    		//}
-    		return JSONParser.vote_sent_count;
+    		
+        	return JSONParser.vote_sent_count;
     	}
     	
     	@Override
@@ -305,16 +315,26 @@ public class Sync extends IntentService {
     	    }
     	 
     	@Override
-    	 protected void onPostExecute(Integer result){
-    		
-    	    	service_result=result;
+    	 protected void onPostExecute(Integer result){//un used
+    		//pDialog.dismiss();
+    			/**/service_result=result;
     	    	if(service_result>0){//send a broadcast that the upload is complete
     	    		Intent broadcastIntent = new Intent();
     	    		broadcastIntent.setAction("VOTES_UPLOAD_ACTION");
+    	    		broadcastIntent.putExtra("Sent_Vote_Count", result);
+    	    		broadcastIntent.putExtra("Error","OK");
     	    		getBaseContext().sendBroadcast(broadcastIntent);
+    	    		//Toast.makeText(getBaseContext(), "Uploaded "+result+" vote(s)", Toast.LENGTH_LONG).show();
+    	    		//uploadSuccessAlert(getBaseContext(),result);
+    	    		}else{
+    	    			Intent broadcastIntent = new Intent();
+        	    		broadcastIntent.setAction("VOTES_UPLOAD_ACTION");
+        	    		broadcastIntent.putExtra("Error",Sync.error_via_intent);
+        	    		getBaseContext().sendBroadcast(broadcastIntent);
     	    		}
-    	    	Toast.makeText(getBaseContext(), "Uploaded "+result+" votes", Toast.LENGTH_LONG).show();
-    	    	stopSelf(); //<--equivalent to the stopService() method
+    	    	
+    	    	stopSelf(); //<--equivalent to the stopService() method  
+    		
     	    }
     	
     	 /*Synchronize if available.*/
@@ -342,13 +362,25 @@ public class Sync extends IntentService {
     			
     			//post them
     			jsonParser.sendJson(POST_URL, vote_details, vote,total_votes);
-    		
     		}
     		
     		} catch (JSONException e) {
     			// TODO Auto-generated catch block
     			e.printStackTrace();
     		}
+    		
+    		if(JSONParser.error_caught!=""){
+				Sync.error_via_intent=JSONParser.error_caught;
+				Log.i(TAG,JSONParser.error_caught+" occured");
+				Sync.sync_cancelled=true;
+				for(int i=0;i<total_votes;i++){
+        			//calculate the percentage uploaded and report its progress
+        			publishProgress((int) (((i+1)/(float)total_votes)*100));
+        		}
+				//break;
+			}else{
+				Sync.sync_cancelled=false;
+			}
     		
     		}//end of the for each vote loop
     		
@@ -394,6 +426,8 @@ public class Sync extends IntentService {
 		Log.i(TAG,"Service Done: "+service_result);
 		
 	}
+	
+	
     
    
 }

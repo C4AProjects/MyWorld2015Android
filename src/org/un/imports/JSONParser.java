@@ -8,6 +8,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
+import java.net.ConnectException;
+import java.net.UnknownHostException;
 import java.util.List;
 
 import org.apache.http.HttpEntity;
@@ -19,6 +21,7 @@ import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.utils.URLEncodedUtils;
+import org.apache.http.conn.ConnectTimeoutException;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicHeader;
@@ -51,6 +54,7 @@ public class JSONParser {
 	public int RESPONSE_CODE=0;
 	public static int vote_count,vote_sent_count;
 	public static boolean sent,sync_done=false;
+	public static String error_caught;
 	public Thread threadJSONWorker;
 
 	// constructor
@@ -58,6 +62,7 @@ public class JSONParser {
 		JSONParser.vote_count=-1;
 		JSONParser.vote_sent_count=0;
         JSONParser.sent=false;
+        JSONParser.error_caught="";
         this.threadJSONWorker=new Thread();
 	}
 
@@ -249,11 +254,27 @@ public class JSONParser {
 	            				Log.e("JSON Parser", "Error parsing data " + e.toString());
 	            			}
 	            			//Log.i(TAG,"API Response: "+MyWorldServerJSON.toString()); 
+	                    }//if Http.SC_OK is true
+	                    else{//Http.SC_OK if false or response is null
+	                    	Log.i(TAG, "STATUS:"+RESPONSE_CODE);
 	                    }
 
-	                } catch(Exception e) {
+	                }catch(UnknownHostException e){
+	                	JSONParser.sent=false;
+	                	JSONParser.error_caught="UnknownHost";
+	                	
+	                }catch(ConnectException e){
+	                	JSONParser.sent=false;
+	                	JSONParser.error_caught="ConnectionRefused";
+	                }catch(ConnectTimeoutException e){
+	                	JSONParser.sent=false;
+	                	JSONParser.error_caught="ConnectTimeout";
+	                }
+	                catch(Exception e) {
 	                    e.printStackTrace();
-	                    //Log.e(TAG,e.toString());
+	                    JSONParser.sent=false;
+	                	JSONParser.error_caught="ConnectError";
+	                   // Log.e(TAG,e.toString());
 	                    //createDialog("Error", "Cannot Establish Connection");
 	                }
 
