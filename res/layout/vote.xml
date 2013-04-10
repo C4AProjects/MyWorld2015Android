@@ -105,8 +105,8 @@
             android:layout_alignBottom="@+id/finishVote"
             android:layout_toRightOf="@+id/finishVote"
             android:background="@drawable/text_border"
-            android:textSize="14sp"
-            android:text="0/6"
+            android:textSize="20sp"
+            android:text="0"
             android:textColor="#ff0000" />
 
     </RelativeLayout>

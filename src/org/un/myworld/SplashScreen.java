@@ -57,7 +57,7 @@ public class SplashScreen extends Activity {
     			
     			// Now run the home activity
     			Intent intent = new Intent();
-    			intent.setClass(sPlashScreen, HomeActivity.class);
+    			intent.setClass(sPlashScreen, MyWorldLauncher.class);
     			startActivity(intent);
     			finish();     				
     		}

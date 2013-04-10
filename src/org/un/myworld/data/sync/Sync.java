@@ -312,6 +312,10 @@ public class Sync extends IntentService {
     	    	Log.i(TAG, String.valueOf(progress[0])+"% uploaded");
     	    	
     	    	//Toast.makeText(getBaseContext(), String.valueOf(progress[0])+"% complete", Toast.LENGTH_LONG).show();
+    	    	/*for(int i=0;i<total_votes;i++){
+        			//calculate the percentage uploaded and report its progress
+        			publishProgress((int) (((i+1)/(float)total_votes)*100));
+        		}*/
     	    }
     	 
     	@Override
@@ -373,10 +377,7 @@ public class Sync extends IntentService {
 				Sync.error_via_intent=JSONParser.error_caught;
 				Log.i(TAG,JSONParser.error_caught+" occured");
 				Sync.sync_cancelled=true;
-				for(int i=0;i<total_votes;i++){
-        			//calculate the percentage uploaded and report its progress
-        			publishProgress((int) (((i+1)/(float)total_votes)*100));
-        		}
+				
 				//break;
 			}else{
 				Sync.sync_cancelled=false;

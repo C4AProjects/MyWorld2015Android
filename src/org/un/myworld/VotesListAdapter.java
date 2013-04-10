@@ -64,7 +64,7 @@ public class VotesListAdapter extends ListActivity{
     public void onCreate(Bundle savedInstanceState) {
     	
     	//language config
-    	//Preferences.configureLanguage(this);
+    	Preferences.configureLanguage(this);
     	
         super.onCreate(savedInstanceState);
         setContentView(R.layout.vote);

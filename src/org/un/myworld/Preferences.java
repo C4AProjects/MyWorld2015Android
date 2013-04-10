@@ -42,12 +42,15 @@ public class Preferences extends PreferenceActivity implements OnPreferenceChang
 	protected static SharedPreferences sharedPrefs;
 	protected static ListPreference country,language;
 	protected static EditTextPreference partnerId;
+	protected static Context prefContext;
 	
 	public static final String KEY_COUNTRY_LIST_PREFERENCE="country";
 	public static final String KEY_LANGUAGE_LIST_PREFERENCE="language";
 	public static final String KEY_PARTNER_ID_EDIT_TEXT_PREFERENCE="partID";
 	
 	protected static Editor edit; //for the preferences
+	
+	static final int START_ANY_ACTIVITY_REQUEST=450;
 
 	/** Called when the activity is first created. */
 	@SuppressWarnings("deprecation")
@@ -56,12 +59,13 @@ public class Preferences extends PreferenceActivity implements OnPreferenceChang
     protected void onCreate(final Bundle savedInstanceState)
     {
 		//configure language
-		//languagePrefix=sharedPrefs.getString(KEY_LANGUAGE_LIST_PREFERENCE, "");
-		//configureLanguage(this);
+		languagePrefix=sharedPrefs.getString(KEY_LANGUAGE_LIST_PREFERENCE, "");
+		configureLanguage(this);
         super.onCreate(savedInstanceState);
         if(Build.VERSION.SDK_INT >= 11){//target honeycomb and above
         	//setContentView(R.layout.settings_window);
         	//setTheme(R.style.FullscreenTheme);
+        	prefContext=getApplication().getApplicationContext();
         getFragmentManager().beginTransaction().replace(android.R.id.content, new MyPreferenceFragment()).commit();
         }else{
         	//setContentView(R.layout.settings_window);
@@ -92,6 +96,11 @@ public class Preferences extends PreferenceActivity implements OnPreferenceChang
 				Log.i(TAG,"Country changed");
 			}else if(key.equals(KEY_LANGUAGE_LIST_PREFERENCE)){
 				//change locale settings
+				
+				//Restart Preferences Activity
+				Intent intentPreferences = new Intent(prefContext, Preferences.class);
+				intentPreferences.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				startActivityForResult(intentPreferences,START_ANY_ACTIVITY_REQUEST);
 				
 				Log.i(TAG,"Language changed");
 			}else if(key.equals(KEY_PARTNER_ID_EDIT_TEXT_PREFERENCE)){
@@ -177,6 +186,11 @@ public class Preferences extends PreferenceActivity implements OnPreferenceChang
 		}else if(key.equals(KEY_LANGUAGE_LIST_PREFERENCE)){
 			//change locale settings
 			languagePrefix=sharedPrefs.getString(key, "");
+			
+			//Restart Preferences Activity
+			Intent intentPreferences = new Intent(getApplicationContext(), Preferences.class);
+			intentPreferences.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+			startActivityForResult(intentPreferences,START_ANY_ACTIVITY_REQUEST);
 			Log.i(TAG,"Language changed");
 		}else if(key.equals(KEY_PARTNER_ID_EDIT_TEXT_PREFERENCE)){
 			Log.i(TAG,"Partner changed");
@@ -224,6 +238,10 @@ public class Preferences extends PreferenceActivity implements OnPreferenceChang
 		  // do nothing and go back
 		   setResult(RESULT_CANCELED);
 		   finish();
+		 //restart home activity incase of language change
+		    Intent intentPreferences = new Intent(getApplicationContext(), HomeActivity.class);
+			intentPreferences.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+			startActivityForResult(intentPreferences,START_ANY_ACTIVITY_REQUEST);
 	   }
    }
    
@@ -238,6 +256,10 @@ public class Preferences extends PreferenceActivity implements OnPreferenceChang
 		   storeSharedPrefs(KEY_PARTNER_ID_EDIT_TEXT_PREFERENCE, sharedPrefs.getString(KEY_PARTNER_ID_EDIT_TEXT_PREFERENCE, null));
 		   storeSharedPrefs(KEY_COUNTRY_LIST_PREFERENCE, sharedPrefs.getString(KEY_COUNTRY_LIST_PREFERENCE, null));
 		   finish();
+		   //restart home activity incase of language change
+		    Intent intentPreferences = new Intent(getApplicationContext(), HomeActivity.class);
+			intentPreferences.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+			startActivityForResult(intentPreferences,START_ANY_ACTIVITY_REQUEST);
 	   }
    }
    

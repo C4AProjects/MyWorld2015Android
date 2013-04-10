@@ -1,52 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <string name="app_name">MyWorld</string>
-    <string name="title_exit_app_button_text">Exit Application</string>
-    <string name="myworld_message">VOTE FOR THE CHANGES THAT WOULD MAKE THE MOST DIFFERENCE TO YOUR WORLD</string>
-    <string name="myworld_brief">MY World is a global survey led by the United Nations asking YOU to chose your priorities for a better world. 
-Answers will be shared with governments and decision makers in setting the next development agenda for the world</string>
-   <string name="myworld_thank_you">Thanks for voting! You still have to send us your vote(s). Go back to the main menu to \'Saved Votes\' and click \'Send Votes\' when you\'ve gathered all your votes for this round</string>
-     <string name="welcome_message">MY World Ballot Collector</string>
-    <string name="title_settings_button_text">Settings</string>
-    <string name="title_saved_votes_button_text">Saved Votes</string>
-     <string name="title_vote_button_text">Start Vote</string>
-    <string name="text_upload_votes">Upload</string>
-    <string name="text_more_votes">Add</string>
-    <string name="title_count_vote_on_selection">%1$d/6</string>
-    <string name="text_synchronized_votes">All Votes Uploaded</string>
-    <string name="text_votes_count_label">You have %1$s votes to upload</string>
+    <string name="app_name">ماي ورلد</string>
+    <string name="title_exit_app_button_text">الخروج من "ملف الطلب"</string>
+    <string name="myworld_message">صوت على الخيار الذي سيحدث أكبر تغيير في عالمك</string>
+    <string name="myworld_brief">عالمي استفتاء تقوده الامم المتحدة  لتحديد أولوياتك من اجل عالم افضل. ستعرض إجاباتكم على الحكومات و قادة الدول للتحضير لخطة التنمية العالمية القادمة</string>
+    <string name="myworld_thank_you">(2)اضغط على خانة "إرسال التصويتات" بعد الانتهاء من جمع كل التصويتات المتعلقة بتلك المرحلة\n\n(1)ارجع الى القائمة الرئيسية  و خانة "التصويتات المحفوظة"\n\n:لم يتبق عليك سوى أن ترسل لنا تصويتك\م\n\n!شكرًا على تصويتك</string>
+     <string name="welcome_message">صندوق اقتراع عالمي</string>
+    <string name="title_settings_button_text">إعدادات</string>
+    <string name="title_saved_votes_button_text">الأصوات  المحفوظة</string>
+     <string name="title_vote_button_text">ابدا "التصويت"</string>
+    <string name="text_upload_votes">ارسل التصويتات</string>
+    <string name="text_more_votes">صوت مجددا</string>
+    <string name="title_count_vote_on_selection">%1$s/6</string>
+    <string name="text_synchronized_votes">تم تحميل جميع التصويتات</string>
+    <string name="text_votes_count_label">تم حفظ التصويت\ التصويتات و لم ترسل بعد\u0020-%1$s لديك</string>
     <string name="logo_description">Logo</string>
     <string name="bottom_msg_col_1a">2000</string>
     <string name="bottom_msg_col_2a">NOW</string>
     <string name="bottom_msg_col_3a">2015</string>
     <string name="bottom_msg_col_1b">MDG</string>
-    <string name="bottom_msg_col_2b">VOTE</string>
+    <string name="bottom_msg_col_2b">تصويت</string>
     <string name="bottom_msg_col_3b">GOAL</string>
     <string name="mdg_color_desc">Color</string>
     <string name="mdg_checkbox_desc">Color</string>
-    <string name="mdg_title_1">Better Job Opportunities</string>
-    <string name="language_title_1">Language</string>
-    <string name="mdg_desc_1">This means that governments and private sector companies should do more to make sure that everyone can find a job where they earn a decent wage, and can contribute and feel valued as a productive member of society</string>
-    <string name="menu_settings">Settings</string>
+    <string name="mdg_title_1">فرص عمل أفضل</string>
+    <string name="language_title_1">اللغة</string>
+    <string name="mdg_desc_1">هذا يعني أنه ينبغي أن تبذل الحكومات وشركات القطاع الخاص المزيد من الجهد لضمان حصول جميع الأفراد على عمل يكتسبون منها أجرًا لائقًا، وتمكنهم من المشاركة والشعور بالقيمة كأفراد منتجين  في المجتمع</string>
+    <string name="menu_settings">إعدادات</string>
     <string name="menu_home">Home</string>
     <string name="menu_info">About</string>
     <string name="menu_report">Results</string>
-    <string name="title_preferences_activity">MyWorld Settings</string>
-    <string name="title_activity_home">MyWorld</string>
+    <string name="title_preferences_activity">ماي ورلد إعدادات</string>
+    <string name="title_activity_home">ماي ورلد</string>
     <string name="title_service_name">UploadService</string>
-    <string name="text_export_votes">Email Votes</string>
-    <string name="title_activity_vote">Vote</string>
-    <string name="title_finish_vote_button_text">Next</string>
-    <string name="title_submit_vote_button_text">Vote</string>
+    <string name="title_activity_vote">تصويت</string>
+    <string name="title_finish_vote_button_text">التالي</string>
+    <string name="title_submit_vote_button_text">تصويت</string>
     <string name="text_arrow_desc">arrow</string>
-    <string name="text_option_hint">Your own option (optional)</string>
-    <string name="text_partnerid_hint">Partner ID</string>
+    <string name="text_option_hint">الخيار الخاص بك -اختياري</string>
+    <string name="text_partnerid_hint">رقم هوية الشريك</string>
     <string name="text_gender_hint">I am</string>
     <string name="text_age_hint">age</string>
     <string name="text_country_hint">and live in</string>
-    <string name="text_vote_instructions">Which of these are most important for you and your family? Choose 6</string>
-    <string name="text_info_instructions">Lastly, please tell us a little about yourself</string>
+    <string name="text_vote_instructions">أي من هذه  الأكثر أهمية بالنسبة لك ولعائلتك؟ اختر 6</string>
+    <string name="text_info_instructions">أخيرا، من فضلك أخبرنا قليلا عن نفسك</string>
     <string name="bottom_note_col_1">World leaders agree on 8 development goals to 
 eradicate extreme poverty and disease by 2015</string>
     <string name="bottom_note_col_2">Important progress has been made, millions have been lifted out of 
@@ -57,17 +54,17 @@ for the next fifteen years.</string>
 create the world we want focused on the issues that would make the 
 most difference to our lives</string>
     <string name="dialog_less_priority_title">Must Select 6 Votes</string>
-    <string name="pref_partner_info_reminder">Set Country and Partner ID</string>
-     <string name="alert_dialog_upload_error_msg">Sorry, encountered an error. Try sending the votes later</string>
-    <string name="alert_dialog_upload_success_msg">%1$d vote(s) been sent to the Global Database</string>
-    <string name="alert_dialog_upload_error_title">Error</string>
-    <string name="alert_dialog_upload_sucess_title">Success</string>
+    <string name="pref_partner_info_reminder">يتعين عليك تحديد البلد/ رقم هوية الشريك</string>
+     <string name="alert_dialog_upload_error_msg">عذرا، خطأ. حاول إرسال الأصوات في وقت لاحق</string>
+    <string name="alert_dialog_upload_success_msg">%1$s تصويت (ق) تم إرسالها إلى قاعدة البيانات العالمية</string>
+    <string name="alert_dialog_upload_error_title">خطأ</string>
+    <string name="alert_dialog_upload_sucess_title">نجاح</string>
     <string name="pref_partner_info_change">Change Partner information</string>
-    <string name="pref_partner_info_set_button">Set</string>
-    <string name="pref_partner_info_change_button">Change</string>
-    <string name="pref_partner_info_change_ignore_button">No</string>
-    <string name="pref_canvassing_country">Country in which you are canvassing</string>
-
+    <string name="pref_partner_info_set_button">ضبط</string>
+    <string name="pref_partner_info_change_button">تغيير</string>
+    <string name="pref_partner_info_change_ignore_button">لا</string>
+    <string name="pref_canvassing_country">حدد البلد الذي تقوم فيه تجميع التصويتات</string>
+   
     <string-array name="pref_country_entry_values">
         <item>1</item>
         <item>2</item>
@@ -496,91 +493,82 @@ most difference to our lives</string>
         <item>16</item>
     </string-array>
     <string-array name="priority_title">
-        <item>Better job opportunities</item>
+        <item>فرص عمل أفضل</item>
         <!-- 1 -->
-        <item>A good education</item>
+        <item>التعليم الجيد</item>
         <!-- 2 -->
-        <item>Better healthcare</item>
+        <item>رعاية صحية أفضل</item>
         <!-- 3 -->
-        <item>Affordable and nutritious food</item>
+        <item>توفر الطعام المغذي وبأسعار معقولة</item>
         <!-- 4 -->
-        <item>Support for people who cant work</item>
+        <item>دعم الأشخاص غير القادرين على العمل</item>
         <!-- 5 -->
-        <item>Phone and Internet Access</item>
+        <item>توفير الوصول إلى الهواتف والإنترنت</item>
         <!-- 6 -->
-        <item>Access to clean water and sanitation</item>
+        <item>توفير مياه نظيفة ومرافق صحية</item>
         <!-- 7 -->
-        <item>Reliable energy at home</item>
+        <item>توفير طاقة موثوق بها في المنازل</item>
         <!-- 8 -->
-        <item>Protecting forests,rivers and oceans</item>
+        <item>حماية الغابات والأنهار والمحيطات</item>
         <!-- 9 -->
-        <item>Action taken on climate change</item>
+        <item>اتخاذ إجراءات بشأن التغيير المناخي</item>
         <!-- 10 -->
-        <item>An honest and responsive government</item>
+        <item>توافر حكومة أمينة ومستجيبة</item>
         <!-- 11 -->
-        <item>Political freedoms</item>
+        <item>الحريات السياسية</item>
         <!-- 12 -->
-        <item>Protection against crime and violence</item>
+        <item>الحماية من الجريمة والعنف</item>
         <!-- 13 -->
-        <item>Equality between men and women</item>
+        <item>المساواة بين الرجل والمرأة</item>
         <!-- 14 -->
-        <item>Freedom from discrimination and persecution</item>
+        <item>التحرر من التمييز والاضطهاد</item>
         <!-- 15 -->
-        <item>Better transport and roads</item>
+        <item>تحسين النقل والطرق</item>
         <!-- 16 -->
     </string-array>
     <string-array name="priority_description">
 
         <!-- 1 -->
-        <item>This means that governments and private sector companies should do more to make sure that everyone can find a job where they earn a decent wage, and can contribute and feel valued as a productive member of society</item>
+        <item>هذا يعني أنه ينبغي أن تبذل الحكومات وشركات القطاع الخاص المزيد من الجهد لضمان حصول جميع الأفراد على عمل يكتسبون منها أجرًا لائقًا، وتمكنهم من المشاركة والشعور بالقيمة كأفراد منتجين  في المجتمع</item>
         <!-- 2 -->
-        <item>This means that all children should have a high quality primary and secondary education that equips them for employment and an enjoyable life. Governments and the private sector should work together to provide opportunities for lifelong learning and skills development for adults</item>
+        <item>هذا يعني أنه ينبغي أن يحصل جميع الأطفال على مستوى عالي الجودة من التعليم الأساسي والثانوي يؤهلهم للتوظيف والحصول على حياة ممتعة.ويتعين على الحكومات والقطاع الخاص العمل معًا لتوفير فرص للتعليم مدى الحياة وتنمية المهارات لدى الأشخاص البالغين</item>
         <!-- 3 -->
-        <item>This means that good quality health services should be available to everyone when they need treatment. Efforts should be made to reduce the impact of infectious and other chronic diseases. Both the funding and the organization of health systems should suit the needs of the country and its citizens</item>
+        <item>.هذا يعني أنه ينبغي أن تتوافر الخدمات الصحية عالية الجودة للجميع عند الحاجة للعلاج.وينبغي بذل الجهود للتقليل من تأثير الأمراض المعدية والمزمنة.وينبغي أن يتناسب تمويل وتنظيم الأنظمة الصحية مع احتياجات الدولة ومواطنيها</item>
         <!-- 4 -->
-        <item>This means that everyone should get the food they need. No person in the world should be constantly hungry, and no person should become malnourished, especially pregnant women and children aged less than two</item>
+        <item>هذا يعني أنه ينبغي أن يحصل الجميع على الطعام الذي يحتاجون إليه.وينبغي ألا يكون هناك شخص في العالم جائع باستمرار، وينبغي ألا يعاني أي شخص من قلة التغذية، خاصة الحوامل من النساء والأطفال دون السنتين</item>
         <!-- 5 -->
-        <item>This means that every person should have enough money to live on, either through employment or government help. When people can’t work, or are affected by events like natural disasters or economic crises, governments should make sure that they and their families won’t go hungry, children won’t drop out of school, and they can get the healthcare and other essential services they need</item>
+        <item>هذا يعني أنه ينبغي أن يحصل كل شخص على المال الكافي للعيش، إما عن طريق التوظيف أو من خلال مساعدة الحكومة.وعندما لا يستطيع الأشخاص العمل، أو عند معاناتهم من أحداث من قبيل الكوارث الطبيعية أو الأزمات الاقتصادية، فينبغي أن تحرص الحكومات على ألا يكونوا هم  أو عائلاتهم عرضة للجوع، وألا ينقطع الأطفال عن الدراسة ، وأن يحصلوا على الرعاية الصحية والخدمات الأساسية الأخرى التي يحتاجونها</item>
         <!-- 6 -->
-        <item>This means that governments and the private sector should make sure that everyone has access to a minimum level of communications technology to get online information and participate in social networks</item>
+        <item>هذا يعني أنه ينبغي للحكومات والقطاع الخاص ضمان قدرة الجميع على الوصول إلى أدنى مستوى من تقنية الاتصالات والحصول على المعلومات عبر الإنترنت والمشاركة في الشبكات الاجتماعية</item>
         <!-- 7 -->
-        <item>This means that every person should have access to safe water for drinking, cooking and washing, and access to sanitation</item>
+        <item>هذا يعني أنه ينبغي أن يحصل كل شخص على المياه الآمنة للشرب والطهي والغسل والوصول إلى المرافق الصحية</item>
         <!-- 8 -->
-        <item>This means that all family members should have reliable and affordable electricity or other sources of energy at home for lighting, heating and cooking. More of that energy should be sustainably generated</item>
+        <item>هذا يعني أنه ينبغي أن يحصل جميع أفراد العائلة على الطاقة الكهربائية الموثوق بها وبأسعار معقولة أو على مصادر أخرى من الطاقة في المنزل من أجل الإضاءة والتدفئة والطهي.وينببغي توليد المزيد من هذه الطاقة بصورة مستدامة</item>
         <!-- 9 -->
-        <item>This means that natural resources should be looked after, because people depend on them for food, fuel and other resources. Governments should agree on plans to reduce pollution in oceans and rivers, plant new forests and preserve existing ones, and move towards sustainable agriculture and food systems. Global agreements should protect biodiversity and fragile ecosystems</item>
+        <item>هذا يعني أنه ينبغي  الاعتناء بالموارد الطبيعية، لأن الشعوب تعتمد عليها في الغذاء والوقود والموارد الأخرى.وينبغي أن توافق الحكومات على خطط تقليل التلوث في المحيطات والأنهار وزراعة غابات جديدة والحفاظ على الغابات الموجودة، والانتقال نحو أنظمة مستدامة للزراعة والطعام.وينبغي أن تعمل الاتفاقيات العالمية على حماية التنوع الحيوي والأنظمة البيئية الضعيفة</item>
 
         <!-- 10 -->
-        <item>This means that governments should take on binding commitments to reduce carbon emissions to levels which can keep the global temperature rise below 2 degrees, and invest in adaptation measures particularly involving vulnerable communities</item>
+        <item>هذا يعني أنه ينبغي أن تعقد الحكومات تعهدات ملزمة لتخفيض انبعاثات الكربون إلى المستويات التي يمكنها الحفاظ على ارتفاع درجات الحرارة العالمية دون درجتين، والاستثمار في تدابير التكيف وخاصة تلك التي تهم مجتمعات ضعيفة</item>
         <!-- 11 -->
-        <item>This means that governments should be effective, transparent, accountable and not corrupt. People should have a say on what the government’s priorities should be, and confidence that they will implement those priorities competently. Governments should agree and implement standards for making information available to all people on how public money is spent</item>
+        <item>وهذا يعني أنه ينبغي أن تتميز الحكومات بالفعالية والشفافية وتحمل المسؤولية وألا تكون فاسدة.وينبغي أن يكون للناس رأي في أولويات الحكومة، وينبغي أن يثقوا في أنها ستقوم بتنفيذ هذه الأولويات بكفاءة.و ينبغي أن توافق الحكومات على إتاحة المعلومات لكافة الناس حول كيفية إنفاق المال العام ووضع المعايير الخاصة بذلك</item>
         <!-- 12 -->
-        <item>This means that every person should be able to play a part in political processes in their own country, including through voting and forming or joining political parties. People should be able to exercise freedom of expression including through free media. People should be able to join and participate in trade unions and all aspects of civil society including diverse forms of civic engagement and voluntary action</item>
+        <item>هذا يعني أنه ينبغي  أن يتمكن كل شخص من القايم بدور في العمليات السياسية في بلده، وهذا يشمل التصويت وتشكيل أحزاب سياسية أو الانضمام إليها.وينبغي أن يتمكن الناس من التعبير عن رأيهم بحرية وذلك يشمل الإعلام الحر.وينبغي أن يتمكن الناس من الانضمام إلى النقابات العمالية وجميع جوانب المجتمع المدني والمشاركة فيها، وذلك يشمل الأشكال المختلفة من المشاركة المدنية والأعمال التطوعية</item>
         <!-- 13 -->
-        <item>This means that all people should expect to live in a community that protects them from the threat of crime and violence. This should include domestic violence and sexual assault against women and girls. Every person should be able to get justice through a court or other system if they are victims of a crime</item>
+        <item>هذا يعني أنه ينبغي أن تتوقع جميع الناس العيش في مجتمع يحميهم من تهديد الجريمة والعنف.وينبغي أن يشمل ذلك العنف الأسري والاعتداء الجنسي على النساء والفتيات.وينبغي أن يتمكن كل شخص من الحصول على العدالة من خلال المحكمة أو أي نظام آخر إذا كانوا ضحايا جريمة معينة</item>
         <!-- 14 -->
-        <item>This means that men and women should have the same rights and opportunities. Boys and girls should have equal access to school and the same quality of education; men and women should stand the same chance of getting elected to parliaments, have the same chances to be involved in political and social life, and experience the same opportunities and rewards in the workplace</item>
+        <item>هذا يعني أنه ينبغي أن يحصل الرجل والمرأة على نفس الحقوق والفرص.وينبغي أن يحصل الأولاد والبنات على فرص متساوية في الذهاب إلى المدرسة والحصول على نفس المستوى من الجودة من التعليم؛ وينبغي أن يحصل الرجل والمرأة على فرص متساوية في الترشح لمجالس النواب، والحصول على فرص متساوية للاشتراك في الحياة السياسية والاجتماعية، والحصول على نفس الفرص والمكافآت في مكان العمل</item>
         <!-- 15 -->
-        <item>This means that no person in the world should have their economic, social or political opportunities limited because of their race, ethnicity, religion, disability, sexual preference, or for any other reason, and that no person should fear for their personal safety for the same reasons</item>
+        <item>هذا يعني أنه ينبغي ألا تكون هناك حدود للفرص الاقتصادية أو الاجتماعية أو السياسية لأي شخص في العالم بسبب الجنس أو العرق أو الديانة أو الإعاقة أو التفضيل الجنسي أو لأي سبب آخر، وينبغي ألا يخشى أي شخص على سلامته الشخصية لنفس الأسباب</item>
         <!-- 16 -->
-        <item>This means that transport and roads should be improved so that people can move freely and easily to visit their friends and families, find new economic opportunities and use the services they need</item>
+        <item>هذا يعني أنه ينبغي تحسين النقل والطرق حتى يتمكن الناس  من التحرك بحرية وبسهولة لزيارة أصدقائهم وعائلاتهم، والعثور على فرص اقتصادية جديدة والاستفادة من الخدمات  التي يحتاجون إليها</item>
     </string-array>
     <string-array name="gender">
-        <item>Select gender</item>
-        <item>Male</item>
-        <item>Female</item>
+        <item>حدد جنسك</item>
+        <item>ذكر</item>
+        <item>أنثى</item>
     </string-array>
     <string-array name="age">
-        <item>Select age</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
+        <item>حدد عمرك</item>
         <item>10</item>
         <item>11</item>
         <item>12</item>
@@ -714,73 +702,78 @@ most difference to our lives</string>
         <item>140</item>
     </string-array>
     <string-array name="education_level">
-        <item>Select education level</item>
-        <item>Some Primary</item>
-        <item>Finished Primary</item>
-        <item>Finished Secondary</item>
-        <item>Beyond Secondary</item>
+        <item>اختر "المستوى التعليمي"</item>
+        <item>تلقيت قدرا من التعليم الابتدائي</item>
+        <item>أنهيت التعليم الابتدائي</item>
+        <item>أنهيت التعليم الثانوي</item>
+        <item>ما بعد المرحلة الثانوية</item>
     </string-array>
 
-    <string name="title_activity_voting">Vote</string>
-    <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="title_activity_main">MyWorld</string>
-    <string name="title_activity_finish_vote">Complete</string>
-     <string name="title_activity_saved_votes">Saved Votes</string>
+    <string name="title_activity_voting">تصويت</string>
+    <string name="action_settings">إعدادات</string>
+    <string name="hello_world">مرحبا بالعالم!</string>
+    <string name="title_activity_main">ماي ورلد</string>
+    <string name="title_activity_finish_vote">أكمل</string>
+     <string name="title_activity_saved_votes">الأصوات  المحفوظة</string>
     <string name="title_activity_voting_complete">VotingCompleteActivity</string>
-    <string name="partner_id_required">Enter Partner ID</string>
-    <string name="gender_required">Select your gender</string>
-    <string name="age_required">Select your age</string>
-    <string name="country_required">Select your country</string>
-    <string name="education_required">Select your education level</string>
-    <string name="use_language_button">Use العربية</string>
-
+    <string name="partner_id_required">أدخل رقم هوية الشريك</string>
+    <string name="gender_required">حدد جنسك</string>
+    <string name="age_required">حدد عمرك</string>
+    <string name="country_required">اختر "الدولة"</string>
+    <string name="education_required">اختر "المستوى التعليمي"</string>
+    <string name="use_language_button">استخدم العربية</string>
+    <!-- preference file strings -->
     <string-array name="pref_language_item">
         <item>English</item>
-        <item>Español</item>
-        <item>Français</item>
-        <item>Pусский</item>
+        <!--item>Español</item-->
+        <!--item>Français</item-->
+        <!--item>Pусский</item-->
         <item>العربية</item>
-        <item>中文</item>
-        <item>한국어</item>
-        <item>Português</item>
-        <item>ภาษาไทย</item>
-        <item>Bahasa Indonesia</item>
-        <item>Swahili</item>
+        <!--item>中文</item-->
+        <!--item>한국어</item-->
+        <!--item>Português</item-->
+        <!--item>ภาษาไทย</item-->
+        <!--item>Bahasa Indonesia</item-->
+        <!--item>Swahili</item-->
     </string-array>
     <string-array name="pref_language_value">
         <item>en</item>
-        <item>es</item>
-        <item>fr</item>
-        <item>ru</item>
+        <!--item>es</item-->
+        <!--item>fr</item-->
+        <!--item>ru</item-->
         <item>ar</item>
-        <item>ch</item>
-        <item>kr</item>
-        <item>pr</item>
-        <item>th</item>
-        <item>bi</item>
-        <item>sw</item>
+        <!--item>ch</item-->
+        <!--item>kr</item-->
+        <!--item>pr</item-->
+        <!--item>th</item-->
+        <!--item>bi</item-->
+        <!--item>sw</item-->
     </string-array>
-    <string name="title_activity_my_world_launcher">MyWorld</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
-    <string name="pref_partner_info_title">Partner Information</string>
-    <string name="pref_partner_info_summary">The information (Country, Partner ID) is filled once for all the subsequent votes submitted</string>
-    <string name="pref_language_list_title">Language</string>
-    <string name="pref_language_list_summary">Choose the appropriate language from the provided set</string>
-    <string name="pref_country_list_title">Partner Country</string>
-    <string name="pref_partner_id_title">Partner ID</string>
-    <string name="pref_partner_id_summary">If you don\'t have a Partner ID, contact your local MyWorld Office to get one</string>
-    <string name="pref_save_button">Save Settings</string>
-    <string name="pref_back_button">Main Menu</string>
-    <string name="pref_partner_info_missing">You must set the Country/Partner ID</string>
-    <string name="pref_partner_info_set">OK</string>
-    <string name="saved_votes_partner_id_label">PartnerID: %1$s</string>
-    <string name="sending_votes_process_dialog">Sending Votes</string>
-    <string name="saved_votes_partner_country_label">Country: %1$s</string>
-    <string name="saved_votes_section_description_label">Use this section to :\n(i) View the number of votes you collected\n(ii) Send your saved votes to the centralized Database</string>
-    <string name="saved_votes_not_sent_count_label">As of: %1$s - You have %1$s votes saved and not sent yet.</string>
-     <string name="reminder_send_saved_votes">You need to send us your votes once you\'ve finished collecting them. Click \'Send Votes\' to add them to the Global Database.</string>
-    <string name="saved_votes_upload_process_label">%1$s votes being uploaded now.\n\t\t\tPlease wait… \nDo NOT disconnect device from Internet.</string>
-    <string name="saved_votes_no_internet_reminder">No Network Connection</string>
     
+    <string name="title_activity_my_world_launcher">ماي ورلد</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="pref_partner_info_title"> معلومات عن الشريك</string>
+    <string name="pref_partner_info_summary">يتم تعبئة المعلومات (البلد،هوية الشريك) مرة واحدة لجميع الأصوات المدلاة لاحقا</string>
+    <string name="pref_language_list_title">اللغة</string>
+    <string name="pref_language_list_summary">اختر اللغة المناسبة ضمن المجموعة المقدمة</string>
+    <string name="pref_country_list_title">البلد الشريك</string>
+    <string name="pref_partner_id_title">رقم هوية الشريك</string>
+    <string name="pref_partner_id_summary">في حالة عدم توفر رقم هوية الشريك الرجاء  الاتصال بمكتب "ماي ورلد اوفيس" المحلي للحصول عليه</string>
+    <string name="pref_save_button">حفظ الإعدادات</string>
+    <string name="pref_back_button">القائمة الرئيسية</string>
+    <string name="pref_partner_info_missing">يتعين عليك تحديد  البلد أو رقم هوية الشريك</string>
+    <string name="pref_partner_info_set">موافق</string>
+    <string name="saved_votes_partner_id_label">%1$s:رقم هوية الشريك</string>
+    <!--string name="saved_votes_partner_id_value">%1$s</string-->
+    <string name="sending_votes_process_dialog">حفظ الإعدادات</string>
+    <string name="saved_votes_partner_country_label">%1$s:الدولة</string>
+    <!--  string name="saved_votes_partner_country_value">%1$s</string-->
+     <string name="saved_votes_section_description_label"> ارسل تصويتاتك المحفوظة  الى قاعدة البيانات العالمية(ii)\nمعرفة عدد التصويتات التي جمعتها(i)\n:استخدم هذا القسم لـ </string>
+    <!--string name="saved_votes_not_sent_count_label">.votes saved and not sent yet%1$sYou have- %1$s اعتبارا من؛</string-->
+     <string name="saved_votes_not_sent_count_label">.أصوات محفوظة ولكن لم ترسل بعد\u0020%2$s\u0020 :لديك -\u0020 %1$s اعتبارا من؛</string>
+     <string name="reminder_send_saved_votes">You need to send us your votes once you\'ve finished collecting them. Click \'Send Votes\' to add them to the Global Database.</string>
+     <!-- string name="reminder_send_saved_votes">.Click \'Send Votes\' to add them to the Global Database.You need to send us your votes once you\'ve finished collecting them</string-->
+    <string name="saved_votes_upload_process_label">.لا تفصل الجهاز من الإنترنت\nيرجى الانتظار\n\t\t\t.الأصوات في طور التحميل\u0020%1$s</string>
+    <string name="saved_votes_no_internet_reminder">الاتصال بشبكة الإنترنيت غير متوفر حاليا</string>
+    <string name="text_export_votes">Export Votes</string>
 </resources>

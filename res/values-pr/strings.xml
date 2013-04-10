@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">MyWorld</string>
     <string name="title_exit_app_button_text">Exit Application</string>
     <string name="myworld_message">VOTE FOR THE CHANGES THAT WOULD MAKE THE MOST DIFFERENCE TO YOUR WORLD</string>
-    <string name="myworld_thank_you">THANK YOU\nFOR THE VOTES PARTNER!</string>
-    <string name="text_upload_votes">Upload</string>
-    <string name="text_more_votes">Add</string>
+    <string name="welcome_message">MY World Ballot Collector</string>
+    <string name="title_settings_button_text">Settings</string>
+    <string name="title_saved_votes_button_text">Saved Votes</string>
+     <string name="title_vote_button_text">Start Vote</string>
+    <string name="myworld_thank_you">Thanks for voting! \n\nYou still have to send us your vote(s): \n\n (1)Go back to the main menu to \'Saved Votes\' \n\n (2)Press \'Send Votes\' when you\'ve gathered all your votes for this round</string>
+    <string name="text_upload_votes">Send Votes </string>
+    <string name="text_more_votes">Vote Again</string>
     <string name="text_synchronized_votes">All Votes Uploaded</string>
-    <string name="text_votes_count_label">You have %1$s votes to upload</string>
-    <string name="title_count_vote_on_selection">%1$d/6</string>
-    <string name="myworld_brief">MY World is a global survey led by the United Nations asking YOU to chose your priorities for a better world. 
-Answers will be shared with governments and decision makers in setting the next development agenda for the world</string>
+    <string name="text_votes_count_label">You have <b>%1$s</b> vote(s) saved and not sent yet</string>
+    <string name="language_title_1">Language</string>
+    <string name="myworld_brief">MY World is a global survey led by the United Nations asking YOU to choose your priorities for a better world. 
+Answers will be shared with governments and decision makers in setting the next development agenda for the world.</string>
     <string name="logo_description">Logo</string>
     <string name="bottom_msg_col_1a">2000</string>
     <string name="bottom_msg_col_2a">NOW</string>
@@ -22,23 +25,19 @@ Answers will be shared with governments and decision makers in setting the next 
     <string name="mdg_color_desc">Color</string>
     <string name="mdg_checkbox_desc">Color</string>
     <string name="mdg_title_1">Better Job Opportunities</string>
-    <string name="language_title_1">Language</string>
     <string name="mdg_desc_1">This means that governments and private sector companies should do more to make sure that everyone can find a job where they earn a decent wage, and can contribute and feel valued as a productive member of society</string>
-     <string name="menu_settings">Settings</string>
+    <string name="menu_settings">Settings</string>
     <string name="menu_home">Home</string>
     <string name="menu_info">About</string>
     <string name="menu_report">Results</string>
     <string name="title_preferences_activity">MyWorld Settings</string>
     <string name="title_activity_home">MyWorld</string>
     <string name="title_service_name">UploadService</string>
-    <string name="text_export_votes">Email Votes</string>
+    <string name="text_export_votes">Export Votes</string>
     <string name="title_activity_vote">Vote</string>
-     <string name="welcome_message">MY World Offline Canvasser</string>
-    <string name="title_settings_button_text">Settings</string>
-    <string name="title_saved_votes_button_text">Saved Votes</string>
-     <string name="title_vote_button_text">Start Vote</string>
+    <string name="title_count_vote_on_selection">%1$d/6</string>
     <string name="title_finish_vote_button_text">Next</string>
-    <string name="title_submit_vote_button_text">Vote</string>
+    <string name="title_submit_vote_button_text">Save Vote</string>
     <string name="text_arrow_desc">arrow</string>
     <string name="text_option_hint">Your own option (optional)</string>
     <string name="text_partnerid_hint">Partner ID</string>
@@ -57,7 +56,6 @@ for the next fifteen years.</string>
 create the world we want focused on the issues that would make the 
 most difference to our lives</string>
     <string name="dialog_less_priority_title">Must Select 6 Votes</string>
-
     <string name="pref_partner_info_reminder">Set Country and Partner ID</string>
      <string name="alert_dialog_upload_error_msg">Sorry, encountered an error. Try sending the votes later</string>
     <string name="alert_dialog_upload_success_msg">%1$d vote(s) been sent to the Global Database</string>
@@ -67,17 +65,194 @@ most difference to our lives</string>
     <string name="pref_partner_info_set_button">Set</string>
     <string name="pref_partner_info_change_button">Change</string>
     <string name="pref_partner_info_change_ignore_button">No</string>
-    <string name="pref_canvassing_country">Country in which you are canvassing</string>
-    
-    
-     <string-array name="pref_country_entry_values">
-        
-<item>1</item><item>2</item><item>3</item><item>4</item><item>5</item><item>6</item><item>7</item><item>8</item><item>9</item><item>10</item><item>11</item><item>12</item><item>13</item><item>14</item><item>15</item><item>16</item><item>17</item><item>18</item><item>19</item><item>20</item><item>21</item><item>22</item><item>23</item><item>24</item><item>25</item><item>26</item><item>27</item><item>28</item><item>29</item><item>30</item><item>31</item><item>32</item><item>33</item><item>34</item><item>35</item><item>36</item><item>37</item><item>38</item><item>39</item><item>40</item><item>41</item><item>42</item><item>43</item><item>44</item><item>45</item><item>46</item><item>47</item><item>48</item><item>49</item><item>50</item><item>51</item><item>52</item><item>53</item><item>54</item><item>55</item><item>56</item><item>57</item><item>58</item><item>59</item><item>60</item><item>61</item><item>62</item><item>63</item><item>64</item><item>65</item><item>66</item><item>67</item><item>68</item><item>69</item><item>70</item><item>71</item><item>72</item><item>73</item><item>74</item><item>75</item><item>76</item><item>77</item><item>78</item><item>79</item><item>80</item><item>81</item><item>82</item><item>83</item><item>84</item><item>85</item><item>86</item><item>87</item><item>88</item><item>89</item><item>90</item><item>91</item><item>92</item><item>93</item><item>94</item><item>95</item><item>96</item><item>97</item><item>98</item><item>99</item><item>100</item><item>101</item><item>102</item><item>103</item><item>104</item><item>105</item><item>106</item><item>107</item><item>108</item><item>109</item><item>110</item><item>111</item><item>112</item><item>113</item><item>114</item><item>115</item><item>116</item><item>117</item><item>118</item><item>119</item><item>120</item><item>121</item><item>122</item><item>123</item><item>124</item><item>125</item><item>126</item><item>127</item><item>128</item><item>129</item><item>130</item><item>131</item><item>132</item><item>133</item><item>134</item><item>135</item><item>136</item><item>137</item><item>138</item><item>139</item><item>140</item><item>141</item><item>142</item><item>143</item><item>144</item><item>145</item><item>146</item><item>147</item><item>148</item><item>149</item><item>150</item><item>151</item><item>152</item><item>153</item><item>154</item><item>155</item><item>156</item><item>157</item><item>158</item><item>159</item><item>160</item><item>161</item><item>162</item><item>163</item><item>164</item><item>165</item><item>166</item><item>167</item><item>168</item><item>169</item><item>170</item><item>171</item><item>172</item><item>173</item><item>174</item><item>175</item><item>176</item><item>177</item><item>178</item><item>179</item><item>180</item><item>181</item><item>182</item><item>183</item><item>184</item><item>185</item><item>186</item><item>187</item><item>188</item><item>189</item><item>190</item><item>191</item><item>192</item><item>193</item>
-        
+
+    <string-array name="pref_country_entry_values">
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+        <item>41</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
+        <item>45</item>
+        <item>46</item>
+        <item>47</item>
+        <item>48</item>
+        <item>49</item>
+        <item>50</item>
+        <item>51</item>
+        <item>52</item>
+        <item>53</item>
+        <item>54</item>
+        <item>55</item>
+        <item>56</item>
+        <item>57</item>
+        <item>58</item>
+        <item>59</item>
+        <item>60</item>
+        <item>61</item>
+        <item>62</item>
+        <item>63</item>
+        <item>64</item>
+        <item>65</item>
+        <item>66</item>
+        <item>67</item>
+        <item>68</item>
+        <item>69</item>
+        <item>70</item>
+        <item>71</item>
+        <item>72</item>
+        <item>73</item>
+        <item>74</item>
+        <item>75</item>
+        <item>76</item>
+        <item>77</item>
+        <item>78</item>
+        <item>79</item>
+        <item>80</item>
+        <item>81</item>
+        <item>82</item>
+        <item>83</item>
+        <item>84</item>
+        <item>85</item>
+        <item>86</item>
+        <item>87</item>
+        <item>88</item>
+        <item>89</item>
+        <item>90</item>
+        <item>91</item>
+        <item>92</item>
+        <item>93</item>
+        <item>94</item>
+        <item>95</item>
+        <item>96</item>
+        <item>97</item>
+        <item>98</item>
+        <item>99</item>
+        <item>100</item>
+        <item>101</item>
+        <item>102</item>
+        <item>103</item>
+        <item>104</item>
+        <item>105</item>
+        <item>106</item>
+        <item>107</item>
+        <item>108</item>
+        <item>109</item>
+        <item>110</item>
+        <item>111</item>
+        <item>112</item>
+        <item>113</item>
+        <item>114</item>
+        <item>115</item>
+        <item>116</item>
+        <item>117</item>
+        <item>118</item>
+        <item>119</item>
+        <item>120</item>
+        <item>121</item>
+        <item>122</item>
+        <item>123</item>
+        <item>124</item>
+        <item>125</item>
+        <item>126</item>
+        <item>127</item>
+        <item>128</item>
+        <item>129</item>
+        <item>130</item>
+        <item>131</item>
+        <item>132</item>
+        <item>133</item>
+        <item>134</item>
+        <item>135</item>
+        <item>136</item>
+        <item>137</item>
+        <item>138</item>
+        <item>139</item>
+        <item>140</item>
+        <item>141</item>
+        <item>142</item>
+        <item>143</item>
+        <item>144</item>
+        <item>145</item>
+        <item>146</item>
+        <item>147</item>
+        <item>148</item>
+        <item>149</item>
+        <item>150</item>
+        <item>151</item>
+        <item>152</item>
+        <item>153</item>
+        <item>154</item>
+        <item>155</item>
+        <item>156</item>
+        <item>157</item>
+        <item>158</item>
+        <item>159</item>
+        <item>160</item>
+        <item>161</item>
+        <item>162</item>
+        <item>163</item>
+        <item>164</item>
+        <item>165</item>
+        <item>166</item>
+        <item>167</item>
+        <item>168</item>
+        <item>169</item>
+        <item>170</item>
+        <item>171</item>
+        <item>172</item>
+        <item>173</item>
+        <item>174</item>
+        <item>175</item>
+        <item>176</item>
+        <item>177</item>
+        <item>178</item>
+        <item>179</item>
+        <item>180</item>
+        <item>181</item>
+        <item>182</item>
+        <item>183</item>
+        <item>184</item>
+        <item>185</item>
+        <item>186</item>
+        <item>187</item>
+        <item>188</item>
+        <item>189</item>
+        <item>190</item>
+        <item>191</item>
+        <item>192</item>
+        <item>193</item>
     </string-array>
-    
     <string-array name="countries_un">
-        <item>Select country</item>
         <item>Afghanistan</item>
         <item>Albania</item>
         <item>Algeria</item>
@@ -555,17 +730,16 @@ most difference to our lives</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_main">MyWorld</string>
     <string name="title_activity_finish_vote">Complete</string>
-     <string name="title_activity_saved_votes">Saved Votes</string>
+    <string name="title_activity_saved_votes">Saved Votes</string>
     <string name="title_activity_voting_complete">VotingCompleteActivity</string>
     <string name="partner_id_required">Enter Partner ID</string>
-    <string name="gender_required">Select your gender</string>
-    <string name="age_required">Select your age</string>
-    <string name="country_required">Select your country</string>
-    <string name="education_required">Select your education level</string>
-    
-     <string name="use_language_button">Use Português</string>
-    
-     <string-array name="pref_language_item">
+    <string name="gender_required">Select gender</string>
+    <string name="age_required">Select age</string>
+    <string name="country_required">Select country</string>
+    <string name="education_required">Select education level</string>
+
+    <!-- preference file strings -->
+    <string-array name="pref_language_item">
         <item>English</item>
         <item>Español</item>
         <item>Français</item>
@@ -578,8 +752,7 @@ most difference to our lives</string>
         <item>Bahasa Indonesia</item>
         <item>Swahili</item>
     </string-array>
-    
-     <string-array name="pref_language_value">
+    <string-array name="pref_language_value">
         <item>en</item>
         <item>es</item>
         <item>fr</item>
@@ -592,15 +765,18 @@ most difference to our lives</string>
         <item>bi</item>
         <item>sw</item>
     </string-array>
-    <string name="title_activity_my_world_launcher">MyWorld</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
+
     <string name="pref_partner_info_title">Partner Information</string>
     <string name="pref_partner_info_summary">The information (Country, Partner ID) is filled once for all the subsequent votes submitted</string>
+    <string name="pref_canvassing_country">Country in which you are collecting votes</string>
     <string name="pref_language_list_title">Language</string>
-    <string name="pref_language_list_summary">Choose the appropriate language from the provided set</string>
-    <string name="pref_country_list_title">Partner Country</string>
+    <string name="pref_language_list_summary">Your Language</string>
+    <string name="pref_country_list_title">Country</string>
     <string name="pref_partner_id_title">Partner ID</string>
-    <string name="pref_partner_id_summary">If you don\'t have a Partner ID, contact your local MyWorld Office to get one</string>
+    <string name="pref_partner_id_summary">Need a Partner ID? Send an Email to: support@myworld.org or you can Visit: http://partner.myworld2015.org</string>
+    <string name="title_activity_my_world_launcher">MyWorld</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="use_language_button">Use Português</string>
     <string name="pref_save_button">Save Settings</string>
     <string name="pref_back_button">Main Menu</string>
     <string name="pref_partner_info_missing">You must set the Country/Partner ID</string>
@@ -608,10 +784,9 @@ most difference to our lives</string>
     <string name="saved_votes_partner_id_label">PartnerID: %1$s</string>
     <string name="sending_votes_process_dialog">Sending Votes</string>
     <string name="saved_votes_partner_country_label">Country: %1$s</string>
-    <string name="saved_votes_section_description_label">Use this section to :\n(i) View the number of votes you collected\n(ii) Send your saved votes to the centralized Database</string>
-    <string name="saved_votes_not_sent_count_label">As of: %1$s - You have %1$s votes saved and not sent yet.</string>
-     <string name="reminder_send_saved_votes">You need to send us your votes once you\'ve finished collecting them. Click \'Send Votes\' to add them to the Global Database.</string>
-    <string name="saved_votes_upload_process_label">%1$s votes being uploaded now.\n\t\t\tPlease wait… \nDo NOT disconnect device from Internet.</string>
+    <string name="saved_votes_section_description_label">Use this section to :\n(i) View the number of votes you collected\n(ii) Send your saved votes to the Global Database</string>
+    <string name="saved_votes_not_sent_count_label">As of: %1$s - You have %2$d vote(s) saved and not sent yet.</string>
+    <string name="reminder_send_saved_votes">You need to send us your votes once you\'ve finished collecting them. \n \nNote:\n (1) Press \'Send Votes\' to add them to the Global Database.\n (2) Press \'Export Votes\' to store them on local file in your phone\'s memory.\nThis is useful incase there is failure in step (1)</string>
+    <string name="saved_votes_upload_process_label">%1$s vote(s) being uploaded now.\n\t\t\tPlease wait… \nDo NOT disconnect device from Internet.</string>
     <string name="saved_votes_no_internet_reminder">No Network Connection</string>
-    
 </resources>

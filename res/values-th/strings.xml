@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">MyWorld</string>
     <string name="title_exit_app_button_text">Exit Application</string>
     <string name="myworld_message">VOTE FOR THE CHANGES THAT WOULD MAKE THE MOST DIFFERENCE TO YOUR WORLD</string>
-    <string name="myworld_thank_you">THANK YOU\nFOR THE VOTES PARTNER!</string>
-    <string name="text_upload_votes">Upload</string>
-    <string name="text_more_votes">Add</string>
+    <string name="welcome_message">MY World Ballot Collector</string>
+    <string name="title_settings_button_text">Settings</string>
+    <string name="title_saved_votes_button_text">Saved Votes</string>
+     <string name="title_vote_button_text">Start Vote</string>
+    <string name="myworld_thank_you">Thanks for voting! \n\nYou still have to send us your vote(s): \n\n (1)Go back to the main menu to \'Saved Votes\' \n\n (2)Press \'Send Votes\' when you\'ve gathered all your votes for this round</string>
+    <string name="text_upload_votes">Send Votes </string>
+    <string name="text_more_votes">Vote Again</string>
     <string name="text_synchronized_votes">All Votes Uploaded</string>
-    <string name="text_votes_count_label">You have %1$s votes to upload</string>
-    <string name="title_count_vote_on_selection">%1$d/6</string>
+    <string name="text_votes_count_label">You have <b>%1$s</b> vote(s) saved and not sent yet</string>
     <string name="language_title_1">Language</string>
-    <string name="myworld_brief">MY World is a global survey led by the United Nations asking YOU to chose your priorities for a better world. 
-Answers will be shared with governments and decision makers in setting the next development agenda for the world</string>
+    <string name="myworld_brief">MY World is a global survey led by the United Nations asking YOU to choose your priorities for a better world. 
+Answers will be shared with governments and decision makers in setting the next development agenda for the world.</string>
     <string name="logo_description">Logo</string>
     <string name="bottom_msg_col_1a">2000</string>
     <string name="bottom_msg_col_2a">NOW</string>
@@ -31,15 +33,11 @@ Answers will be shared with governments and decision makers in setting the next 
     <string name="title_preferences_activity">MyWorld Settings</string>
     <string name="title_activity_home">MyWorld</string>
     <string name="title_service_name">UploadService</string>
-    <string name="text_export_votes">Email Votes</string>
+    <string name="text_export_votes">Export Votes</string>
     <string name="title_activity_vote">Vote</string>
-    <string name="title_activity_saved_votes">Saved Votes</string>
-     <string name="welcome_message">MY World Offline Canvasser</string>
-    <string name="title_settings_button_text">Settings</string>
-    <string name="title_saved_votes_button_text">Saved Votes</string>
-     <string name="title_vote_button_text">Start Vote</string>
+    <string name="title_count_vote_on_selection">%1$d/6</string>
     <string name="title_finish_vote_button_text">Next</string>
-    <string name="title_submit_vote_button_text">Vote</string>
+    <string name="title_submit_vote_button_text">Save Vote</string>
     <string name="text_arrow_desc">arrow</string>
     <string name="text_option_hint">Your own option (optional)</string>
     <string name="text_partnerid_hint">Partner ID</string>
@@ -67,30 +65,8 @@ most difference to our lives</string>
     <string name="pref_partner_info_set_button">Set</string>
     <string name="pref_partner_info_change_button">Change</string>
     <string name="pref_partner_info_change_ignore_button">No</string>
-    <string name="pref_canvassing_country">Country in which you are canvassing</string>
-    <string name="pref_save_button">Save Settings</string>
-    <string name="pref_back_button">Main Menu</string>
-    <string name="pref_partner_info_missing">You must set the Country/Partner ID</string>
-    <string name="pref_partner_info_set">OK</string>
-    <string name="saved_votes_partner_id_label">PartnerID: %1$s</string>
-    <string name="sending_votes_process_dialog">Sending Votes</string>
-    <string name="saved_votes_partner_country_label">Country: %1$s</string>
-    <string name="saved_votes_section_description_label">Use this section to :\n(i) View the number of votes you collected\n(ii) Send your saved votes to the centralized Database</string>
-    <string name="saved_votes_not_sent_count_label">As of: %1$s - You have %2$d votes saved and not sent yet.</string>
-     <string name="reminder_send_saved_votes">You need to send us your votes once you\'ve finished collecting them. Click \'Send Votes\' to add them to the Global Database.</string>
-    <string name="saved_votes_upload_process_label">%1$s votes being uploaded now.\n\t\t\tPlease wait… \nDo NOT disconnect device from Internet.</string>
-    <string name="saved_votes_no_internet_reminder">No Network Connection</string>
-    
+
     <string-array name="pref_country_entry_values">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
         <item>10</item>
         <item>11</item>
         <item>12</item>
@@ -544,38 +520,54 @@ most difference to our lives</string>
     <string-array name="priority_description">
 
         <!-- 1 -->
-        <item>This means that governments and private sector companies should do more to make sure that everyone can find a job where they earn a decent wage, and can contribute and feel valued as a productive member of society</item>
+        <item>This means that governments and private sector companies should do more to make sure that everyone can find a job where they earn a decent wage, and can contribute and feel valued as a productive member of society
+</item>
         <!-- 2 -->
-        <item>This means that all children should have a high quality primary and secondary education that equips them for employment and an enjoyable life. Governments and the private sector should work together to provide opportunities for lifelong learning and skills development for adults</item>
+        <item>This means that all children should have a high quality primary and secondary education that equips them for employment and an enjoyable life. Governments and the private sector should work together to provide opportunities for lifelong learning and skills development for adults
+</item>
         <!-- 3 -->
-        <item>This means that good quality health services should be available to everyone when they need treatment. Efforts should be made to reduce the impact of infectious and other chronic diseases. Both the funding and the organization of health systems should suit the needs of the country and its citizens</item>
+        <item>This means that good quality health services should be available to everyone when they need treatment. Efforts should be made to reduce the impact of infectious and other chronic diseases. Both the funding and the organization of health systems should suit the needs of the country and its citizens
+</item>
         <!-- 4 -->
-        <item>This means that everyone should get the food they need. No person in the world should be constantly hungry, and no person should become malnourished, especially pregnant women and children aged less than two</item>
+        <item>This means that everyone should get the food they need. No person in the world should be constantly hungry, and no person should become malnourished, especially pregnant women and children aged less than two
+</item>
         <!-- 5 -->
-        <item>This means that every person should have enough money to live on, either through employment or government help. When people can’t work, or are affected by events like natural disasters or economic crises, governments should make sure that they and their families won’t go hungry, children won’t drop out of school, and they can get the healthcare and other essential services they need</item>
+        <item>This means that every person should have enough money to live on, either through employment or government help. When people can’t work, or are affected by events like natural disasters or economic crises, governments should make sure that they and their families won’t go hungry, children won’t drop out of school, and they can get the healthcare and other essential services they need
+</item>
         <!-- 6 -->
-        <item>This means that governments and the private sector should make sure that everyone has access to a minimum level of communications technology to get online information and participate in social networks</item>
+        <item>This means that governments and the private sector should make sure that everyone has access to a minimum level of communications technology to get online information and participate in social networks
+</item>
         <!-- 7 -->
-        <item>This means that every person should have access to safe water for drinking, cooking and washing, and access to sanitation</item>
+        <item>This means that every person should have access to safe water for drinking, cooking and washing, and access to sanitation
+</item>
         <!-- 8 -->
-        <item>This means that all family members should have reliable and affordable electricity or other sources of energy at home for lighting, heating and cooking. More of that energy should be sustainably generated</item>
+        <item>This means that all family members should have reliable and affordable electricity or other sources of energy at home for lighting, heating and cooking. More of that energy should be sustainably generated
+</item>
         <!-- 9 -->
-        <item>This means that natural resources should be looked after, because people depend on them for food, fuel and other resources. Governments should agree on plans to reduce pollution in oceans and rivers, plant new forests and preserve existing ones, and move towards sustainable agriculture and food systems. Global agreements should protect biodiversity and fragile ecosystems</item>
+        <item>This means that natural resources should be looked after, because people depend on them for food, fuel and other resources. Governments should agree on plans to reduce pollution in oceans and rivers, plant new forests and preserve existing ones, and move towards sustainable agriculture and food systems. Global agreements should protect biodiversity and fragile ecosystems
+</item>
 
         <!-- 10 -->
-        <item>This means that governments should take on binding commitments to reduce carbon emissions to levels which can keep the global temperature rise below 2 degrees, and invest in adaptation measures particularly involving vulnerable communities</item>
+        <item>This means that governments should take on binding commitments to reduce carbon emissions to levels which can keep the global temperature rise below 2 degrees, and invest in adaptation measures particularly involving vulnerable communities
+</item>
         <!-- 11 -->
-        <item>This means that governments should be effective, transparent, accountable and not corrupt. People should have a say on what the government’s priorities should be, and confidence that they will implement those priorities competently. Governments should agree and implement standards for making information available to all people on how public money is spent</item>
+        <item>This means that governments should be effective, transparent, accountable and not corrupt. People should have a say on what the government’s priorities should be, and confidence that they will implement those priorities competently. Governments should agree and implement standards for making information available to all people on how public money is spent
+</item>
         <!-- 12 -->
-        <item>This means that every person should be able to play a part in political processes in their own country, including through voting and forming or joining political parties. People should be able to exercise freedom of expression including through free media. People should be able to join and participate in trade unions and all aspects of civil society including diverse forms of civic engagement and voluntary action</item>
+        <item>This means that every person should be able to play a part in political processes in their own country, including through voting and forming or joining political parties. People should be able to exercise freedom of expression including through free media. People should be able to join and participate in trade unions and all aspects of civil society including diverse forms of civic engagement and voluntary action
+</item>
         <!-- 13 -->
-        <item>This means that all people should expect to live in a community that protects them from the threat of crime and violence. This should include domestic violence and sexual assault against women and girls. Every person should be able to get justice through a court or other system if they are victims of a crime</item>
+        <item>This means that all people should expect to live in a community that protects them from the threat of crime and violence. This should include domestic violence and sexual assault against women and girls. Every person should be able to get justice through a court or other system if they are victims of a crime
+</item>
         <!-- 14 -->
-        <item>This means that men and women should have the same rights and opportunities. Boys and girls should have equal access to school and the same quality of education; men and women should stand the same chance of getting elected to parliaments, have the same chances to be involved in political and social life, and experience the same opportunities and rewards in the workplace</item>
+        <item>This means that men and women should have the same rights and opportunities. Boys and girls should have equal access to school and the same quality of education; men and women should stand the same chance of getting elected to parliaments, have the same chances to be involved in political and social life, and experience the same opportunities and rewards in the workplace
+</item>
         <!-- 15 -->
-        <item>This means that no person in the world should have their economic, social or political opportunities limited because of their race, ethnicity, religion, disability, sexual preference, or for any other reason, and that no person should fear for their personal safety for the same reasons</item>
+        <item>This means that no person in the world should have their economic, social or political opportunities limited because of their race, ethnicity, religion, disability, sexual preference, or for any other reason, and that no person should fear for their personal safety for the same reasons
+</item>
         <!-- 16 -->
-        <item>This means that transport and roads should be improved so that people can move freely and easily to visit their friends and families, find new economic opportunities and use the services they need</item>
+        <item>This means that transport and roads should be improved so that people can move freely and easily to visit their friends and families, find new economic opportunities and use the services they need
+</item>
     </string-array>
     <string-array name="gender">
         <item>Select gender</item>
@@ -738,12 +730,13 @@ most difference to our lives</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_main">MyWorld</string>
     <string name="title_activity_finish_vote">Complete</string>
+    <string name="title_activity_saved_votes">Saved Votes</string>
     <string name="title_activity_voting_complete">VotingCompleteActivity</string>
     <string name="partner_id_required">Enter Partner ID</string>
-    <string name="gender_required">Select your gender</string>
-    <string name="age_required">Select your age</string>
-    <string name="country_required">Select your country</string>
-    <string name="education_required">Select your education level</string>
+    <string name="gender_required">Select gender</string>
+    <string name="age_required">Select age</string>
+    <string name="country_required">Select country</string>
+    <string name="education_required">Select education level</string>
 
     <!-- preference file strings -->
     <string-array name="pref_language_item">
@@ -772,16 +765,28 @@ most difference to our lives</string>
         <item>bi</item>
         <item>sw</item>
     </string-array>
-    
+
     <string name="pref_partner_info_title">Partner Information</string>
     <string name="pref_partner_info_summary">The information (Country, Partner ID) is filled once for all the subsequent votes submitted</string>
+    <string name="pref_canvassing_country">Country in which you are collecting votes</string>
     <string name="pref_language_list_title">Language</string>
-    <string name="pref_language_list_summary">Choose the appropriate language from the provided set</string>
-    <string name="pref_country_list_title">Partner Country</string>
+    <string name="pref_language_list_summary">Your Language</string>
+    <string name="pref_country_list_title">Country</string>
     <string name="pref_partner_id_title">Partner ID</string>
-    <string name="pref_partner_id_summary">If you don\'t have a Partner ID, contact your local MyWorld Office to get one</string>
+    <string name="pref_partner_id_summary">Need a Partner ID? Send an Email to: support@myworld.org or you can Visit: http://partner.myworld2015.org</string>
     <string name="title_activity_my_world_launcher">MyWorld</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="use_language_button">Use ภาษาไทย</string>
-
+    <string name="pref_save_button">Save Settings</string>
+    <string name="pref_back_button">Main Menu</string>
+    <string name="pref_partner_info_missing">You must set the Country/Partner ID</string>
+    <string name="pref_partner_info_set">OK</string>
+    <string name="saved_votes_partner_id_label">PartnerID: %1$s</string>
+    <string name="sending_votes_process_dialog">Sending Votes</string>
+    <string name="saved_votes_partner_country_label">Country: %1$s</string>
+    <string name="saved_votes_section_description_label">Use this section to :\n(i) View the number of votes you collected\n(ii) Send your saved votes to the Global Database</string>
+    <string name="saved_votes_not_sent_count_label">As of: %1$s - You have %2$d vote(s) saved and not sent yet.</string>
+    <string name="reminder_send_saved_votes">You need to send us your votes once you\'ve finished collecting them. \n \nNote:\n (1) Press \'Send Votes\' to add them to the Global Database.\n (2) Press \'Export Votes\' to store them on local file in your phone\'s memory.\nThis is useful incase there is failure in step (1)</string>
+    <string name="saved_votes_upload_process_label">%1$s vote(s) being uploaded now.\n\t\t\tPlease wait… \nDo NOT disconnect device from Internet.</string>
+    <string name="saved_votes_no_internet_reminder">No Network Connection</string>
 </resources>

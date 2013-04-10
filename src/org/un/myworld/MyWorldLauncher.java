@@ -153,6 +153,7 @@ public class MyWorldLauncher extends Activity {
 		Intent intentHome = new Intent(getApplicationContext(), HomeActivity.class);
 		intentHome.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 		startActivityForResult(intentHome,START_ANY_ACTIVITY_REQUEST);
+		finish();
 	}
 
 	@Override

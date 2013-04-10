@@ -49,7 +49,7 @@ public class SendingVoteActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		
 		//language config
-		//Preferences.configureLanguage(this);
+		Preferences.configureLanguage(this);
 		
 		//initialize sharePrefs variable
 		Preferences.sharedPrefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());

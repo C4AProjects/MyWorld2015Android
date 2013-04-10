@@ -12,9 +12,6 @@ import java.io.IOException;
 import java.util.Calendar;
 
 
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.un.imports.JSONParser;
 import org.un.myworld.data.sync.DB_Adapter;
 import org.un.myworld.data.sync.Sync;
 
@@ -64,7 +61,7 @@ public class SavedVotesActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		
 		//language config
-		//Preferences.configureLanguage(this);
+		Preferences.configureLanguage(this);
 		
 		//initialize sharePrefs variable
 		Preferences.sharedPrefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());

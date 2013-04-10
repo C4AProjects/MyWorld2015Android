@@ -19,10 +19,55 @@ public final class R {
         public static final int gender=0x7f090006;
         public static final int pref_country_entry_values=0x7f090000;
         /**  preference file strings 
+item>中文</item
+item>한국어</item
+item>Português</item
+item>ภาษาไทย</item
+item>Bahasa Indonesia</item
+item>Swahili</item
+ preference file strings 
+item>中文</item
+item>한국어</item
+item>Português</item
+item>ภาษาไทย</item
+item>Bahasa Indonesia</item
+item>Swahili</item
+ preference file strings 
+ preference file strings 
+ preference file strings 
+item>中文</item
+item>한국어</item
+item>Português</item
+item>ภาษาไทย</item
+item>Bahasa Indonesia</item
+item>Swahili</item
+ preference file strings 
+ preference file strings 
+ preference file strings 
+ preference file strings 
  preference file strings 
  preference file strings 
          */
         public static final int pref_language_item=0x7f090009;
+        /** item>ch</item
+item>kr</item
+item>pr</item
+item>th</item
+item>bi</item
+item>sw</item
+item>ch</item
+item>kr</item
+item>pr</item
+item>th</item
+item>bi</item
+item>sw</item
+item>ch</item
+item>kr</item
+item>pr</item
+item>th</item
+item>bi</item
+item>sw</item
+         */
         public static final int pref_language_value=0x7f09000a;
         public static final int priority_code=0x7f090003;
         public static final int priority_color=0x7f090002;
@@ -279,11 +324,26 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int pref_save_button=0x7f080051;
         public static final int reminder_send_saved_votes=0x7f080059;
         public static final int saved_votes_no_internet_reminder=0x7f08005c;
+        /** string name="saved_votes_not_sent_count_label">.votes saved and not sent yet%1$sYou have- %1$s اعتبارا من؛</string
+         */
         public static final int saved_votes_not_sent_count_label=0x7f080058;
+        /** string name="saved_votes_partner_id_value">%1$s</string
+string name="saved_votes_partner_id_value">%1$s</string
+string name="saved_votes_partner_id_value">%1$s</string
+         */
         public static final int saved_votes_partner_country_label=0x7f080056;
         public static final int saved_votes_partner_id_label=0x7f080055;
+        /** string name="saved_votes_partner_country_value">%1$s</string
+  string name="saved_votes_partner_country_value">%1$s</string
+string name="saved_votes_partner_country_value">%1$s</string
+string name="saved_votes_partner_country_value">%1$s</string
+         */
         public static final int saved_votes_section_description_label=0x7f080057;
+        /**  string name="reminder_send_saved_votes">.Click \'Send Votes\' to add them to the Global Database.You need to send us your votes once you\'ve finished collecting them</string
+         */
         public static final int saved_votes_upload_process_label=0x7f08005a;
+        /** string name="saved_votes_partner_id_value">%1$s</string
+         */
         public static final int sending_votes_process_dialog=0x7f08005b;
         public static final int text_age_hint=0x7f080029;
         public static final int text_arrow_desc=0x7f080025;

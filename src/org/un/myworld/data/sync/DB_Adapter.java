@@ -211,9 +211,8 @@ public class DB_Adapter {
 			singleVote.put("country", Integer.valueOf(country));
 			singleVote.put("education", Integer.valueOf(education));
 			singleVote.put("partner", String.valueOf(partner_id));
-			//singleVote.put("test", Integer.valueOf(test)); //--not needed for the live posting
-			//json = new JSONObject("{\"key\":\""+key+"\",\"votes\":\"["+votes+"]\",\"suggested\":\""+suggested_p+"\",\"reason\":\""+reason+"\",gender:\""+gender+"\",age:\""+age+"\",country:\""+country+"\",education:\""+education+"\",test:\""+test+"\"}");
-			//Log.i(TAG,"JSONObject: "+json.toString());
+			//singleVote.put("test", Integer.valueOf(test)); //--test param
+			
 			
 			//data.put(singleVote);
 			json=singleVote;

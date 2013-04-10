@@ -25,7 +25,7 @@ public class HomeActivity extends Activity {
     	//language config
     	Preferences.sharedPrefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
     	Preferences.languagePrefix=Preferences.sharedPrefs.getString(Preferences.KEY_LANGUAGE_LIST_PREFERENCE, "");
-    	//Preferences.configureLanguage(this);
+    	Preferences.configureLanguage(this);
     	
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
