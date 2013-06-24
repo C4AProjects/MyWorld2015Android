@@ -19,23 +19,12 @@ public final class R {
         public static final int gender=0x7f090006;
         public static final int pref_country_entry_values=0x7f090000;
         /**  preference file strings 
-item>中文</item
 item>한국어</item
 item>Português</item
 item>ภาษาไทย</item
 item>Bahasa Indonesia</item
 item>Swahili</item
  preference file strings 
-item>中文</item
-item>한국어</item
-item>Português</item
-item>ภาษาไทย</item
-item>Bahasa Indonesia</item
-item>Swahili</item
- preference file strings 
- preference file strings 
- preference file strings 
-item>中文</item
 item>한국어</item
 item>Português</item
 item>ภาษาไทย</item
@@ -43,25 +32,70 @@ item>Bahasa Indonesia</item
 item>Swahili</item
  preference file strings 
  preference file strings 
+item>한국어</item
+item>Português</item
+item>ภาษาไทย</item
+item>Bahasa Indonesia</item
+item>Swahili</item
+ preference file strings 
+item>한국어</item
+item>Português</item
+item>ภาษาไทย</item
+item>Bahasa Indonesia</item
+item>Swahili</item
+ preference file strings 
+item>한국어</item
+item>Português</item
+item>ภาษาไทย</item
+item>Bahasa Indonesia</item
+item>Swahili</item
+ preference file strings 
+item>한국어</item
+item>Português</item
+item>ภาษาไทย</item
+item>Bahasa Indonesia</item
+item>Swahili</item
  preference file strings 
  preference file strings 
  preference file strings 
+item>한국어</item
+item>Português</item
+item>ภาษาไทย</item
+item>Bahasa Indonesia</item
+item>Swahili</item
  preference file strings 
          */
         public static final int pref_language_item=0x7f090009;
-        /** item>ch</item
+        /** item>kr</item
+item>pr</item
+item>th</item
+item>bi</item
+item>sw</item
 item>kr</item
 item>pr</item
 item>th</item
 item>bi</item
 item>sw</item
-item>ch</item
 item>kr</item
 item>pr</item
 item>th</item
 item>bi</item
 item>sw</item
-item>ch</item
+item>kr</item
+item>pr</item
+item>th</item
+item>bi</item
+item>sw</item
+item>kr</item
+item>pr</item
+item>th</item
+item>bi</item
+item>sw</item
+item>kr</item
+item>pr</item
+item>th</item
+item>bi</item
+item>sw</item
 item>kr</item
 item>pr</item
 item>th</item
@@ -330,11 +364,15 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         /** string name="saved_votes_partner_id_value">%1$s</string
 string name="saved_votes_partner_id_value">%1$s</string
 string name="saved_votes_partner_id_value">%1$s</string
+string name="saved_votes_partner_id_value">%1$s</string
+string name="saved_votes_partner_id_value">%1$s</string
          */
         public static final int saved_votes_partner_country_label=0x7f080056;
         public static final int saved_votes_partner_id_label=0x7f080055;
         /** string name="saved_votes_partner_country_value">%1$s</string
   string name="saved_votes_partner_country_value">%1$s</string
+string name="saved_votes_partner_country_value">%1$s</string
+string name="saved_votes_partner_country_value">%1$s</string
 string name="saved_votes_partner_country_value">%1$s</string
 string name="saved_votes_partner_country_value">%1$s</string
          */

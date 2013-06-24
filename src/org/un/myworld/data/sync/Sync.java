@@ -57,7 +57,7 @@ public class Sync extends IntentService {
 	private double latitude;
 	private double longitude;
 	public static DB_Adapter db;
-	private final String API_ACCESS_KEY="API_ACCESS_KEY";//the app key
+	private final String API_ACCESS_KEY="API_KEY";//the app key
 	private final int TEST_CODE=1; //1-for testing..other for posting
 	public static boolean sync_done=false,sync_cancelled=false;
 	private int loop_value,total_votes,progressCount=0,service_result=0;

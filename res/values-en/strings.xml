@@ -741,11 +741,11 @@ most difference to our lives</string>
    <!-- preference file strings -->
     <string-array name="pref_language_item">
         <item>English</item>
-        <!--item>Español</item-->
-        <!--item>Français</item-->
-        <!--item>Pусский</item-->
+        <item>Español</item>
+        <item>Français</item>
+        <item>Pусский</item>
         <item>العربية</item>
-        <!--item>中文</item-->
+        <item>中文</item>
         <!--item>한국어</item-->
         <!--item>Português</item-->
         <!--item>ภาษาไทย</item-->
@@ -754,11 +754,11 @@ most difference to our lives</string>
     </string-array>
     <string-array name="pref_language_value">
         <item>en</item>
-        <!--item>es</item-->
-        <!--item>fr</item-->
-        <!--item>ru</item-->
+        <item>es</item>
+        <item>fr</item>
+        <item>ru</item>
         <item>ar</item>
-        <!--item>ch</item-->
+        <item>ch</item>
         <!--item>kr</item-->
         <!--item>pr</item-->
         <!--item>th</item-->

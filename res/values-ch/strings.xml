@@ -746,11 +746,11 @@ most difference to our lives</string>
         <item>Pусский</item>
         <item>العربية</item>
         <item>中文</item>
-        <item>한국어</item>
-        <item>Português</item>
-        <item>ภาษาไทย</item>
-        <item>Bahasa Indonesia</item>
-        <item>Swahili</item>
+        <!--item>한국어</item-->
+        <!--item>Português</item-->
+        <!--item>ภาษาไทย</item-->
+        <!--item>Bahasa Indonesia</item-->
+        <!--item>Swahili</item-->
     </string-array>
     <string-array name="pref_language_value">
         <item>en</item>
@@ -759,11 +759,11 @@ most difference to our lives</string>
         <item>ru</item>
         <item>ar</item>
         <item>ch</item>
-        <item>kr</item>
-        <item>pr</item>
-        <item>th</item>
-        <item>bi</item>
-        <item>sw</item>
+        <!--item>kr</item-->
+        <!--item>pr</item-->
+        <!--item>th</item-->
+        <!--item>bi</item-->
+        <!--item>sw</item-->
     </string-array>
 
     <string name="pref_partner_info_title">Partner Information</string>
@@ -776,7 +776,7 @@ most difference to our lives</string>
     <string name="pref_partner_id_summary">Need a Partner ID? Send an Email to: support@myworld.org or you can Visit: http://partner.myworld2015.org</string>
     <string name="title_activity_my_world_launcher">MyWorld</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
-     <string name="use_language_button">Use 中文</string>
+    <string name="use_language_button">使用 中文</string>
     <string name="pref_save_button">Save Settings</string>
     <string name="pref_back_button">Main Menu</string>
     <string name="pref_partner_info_missing">You must set the Country/Partner ID</string>

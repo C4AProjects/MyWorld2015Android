@@ -1,72 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">MyWorld</string>
-    <string name="title_exit_app_button_text">Exit Application</string>
-    <string name="myworld_message">VOTE FOR THE CHANGES THAT WOULD MAKE THE MOST DIFFERENCE TO YOUR WORLD</string>
-    <string name="welcome_message">MY World Ballot Collector</string>
-    <string name="title_settings_button_text">Settings</string>
-    <string name="title_saved_votes_button_text">Saved Votes</string>
-     <string name="title_vote_button_text">Start Vote</string>
-    <string name="myworld_thank_you">Thanks for voting! \n\nYou still have to send us your vote(s): \n\n (1)Go back to the main menu to \'Saved Votes\' \n\n (2)Press \'Send Votes\' when you\'ve gathered all your votes for this round</string>
-    <string name="text_upload_votes">Send Votes </string>
-    <string name="text_more_votes">Vote Again</string>
-    <string name="text_synchronized_votes">All Votes Uploaded</string>
-    <string name="text_votes_count_label">You have <b>%1$s</b> vote(s) saved and not sent yet</string>
-    <string name="language_title_1">Language</string>
-    <string name="myworld_brief">MY World is a global survey led by the United Nations asking YOU to choose your priorities for a better world. 
-Answers will be shared with governments and decision makers in setting the next development agenda for the world.</string>
+    <string name="app_name">MiMundo</string>
+    <string name="title_exit_app_button_text">Salir de la aplicación</string>
+    <string name="myworld_message">VOTE OR LOS CAMBIOS QUE MARCARÍAN LA MAYOR DIFERENCIA EN SU MUNDO</string>
+    <string name="welcome_message">Recolector de votos de Mi Mundo</string>
+    <string name="title_settings_button_text">Ajustes</string>
+    <string name="title_saved_votes_button_text">Votos guardados</string>
+     <string name="title_vote_button_text">Comience la votación</string>
+    <string name="myworld_thank_you">¡Gracias por votar! \n\nTodavía tiene que enviarnos su(s) voto(s): \n\n (1)Vuelva al menú principal a "Votos Guardados" \n\n (2)Presione "Enviar Votos" cuando haya reunido todos los votos de esta serie</string>
+    <string name="text_upload_votes">Enviar Votos </string>
+    <string name="text_more_votes">Votar de nuevo</string>
+    <string name="text_synchronized_votes">Todos los votos cargados</string>
+    <string name="text_votes_count_label">Usted tiene <b>%1$s</b> Voto(s) guardado(s) y sin enviar</string>
+    <string name="language_title_1">Idioma</string>
+    <string name="myworld_brief">Mi Mundo es una encuesta dirigida por las Naciones Unidas que le pide a USTED elegir sus prioridades para un mundo mejor. Las respuestas serán compartidas con los gobiernos y responsables de fijar la próxima agenda de desarrollo para el mundo.</string>
     <string name="logo_description">Logo</string>
     <string name="bottom_msg_col_1a">2000</string>
-    <string name="bottom_msg_col_2a">NOW</string>
+    <string name="bottom_msg_col_2a">AHORA</string>
     <string name="bottom_msg_col_3a">2015</string>
     <string name="bottom_msg_col_1b">MDG</string>
-    <string name="bottom_msg_col_2b">VOTE</string>
-    <string name="bottom_msg_col_3b">GOAL</string>
+    <string name="bottom_msg_col_2b">VOTAR</string>
+    <string name="bottom_msg_col_3b">OBJETIVO</string>
     <string name="mdg_color_desc">Color</string>
     <string name="mdg_checkbox_desc">Color</string>
-    <string name="mdg_title_1">Better Job Opportunities</string>
-    <string name="mdg_desc_1">This means that governments and private sector companies should do more to make sure that everyone can find a job where they earn a decent wage, and can contribute and feel valued as a productive member of society</string>
-    <string name="menu_settings">Settings</string>
-    <string name="menu_home">Home</string>
-    <string name="menu_info">About</string>
-    <string name="menu_report">Results</string>
-    <string name="title_preferences_activity">MyWorld Settings</string>
-    <string name="title_activity_home">MyWorld</string>
+    <string name="mdg_title_1">Mejores oportunidades de trabajo</string>
+    <string name="mdg_desc_1">Los gobiernos y el sector privado deben poner en marcha más medidas para garantizar que todas las personas puedan acceder a un trabajo con un salario digno; y puedan sentirse valorados como agentes productivos de la sociedad.</string>
+    <string name="menu_settings">Ajustes</string>
+    <string name="menu_home">Casa</string>
+    <string name="menu_info">Sobre</string>
+    <string name="menu_report">Resultados</string>
+    <string name="title_preferences_activity">MiMundo Ajustes</string>
+    <string name="title_activity_home">MiMundo</string>
     <string name="title_service_name">UploadService</string>
-    <string name="text_export_votes">Export Votes</string>
-    <string name="title_activity_vote">Vote</string>
+    <string name="text_export_votes">Exportar votos</string>
+    <string name="title_activity_vote">Vota</string>
     <string name="title_count_vote_on_selection">%1$d/6</string>
-    <string name="title_finish_vote_button_text">Next</string>
-    <string name="title_submit_vote_button_text">Save Vote</string>
+    <string name="title_finish_vote_button_text">Siguiente</string>
+    <string name="title_submit_vote_button_text">Guardar voto</string>
     <string name="text_arrow_desc">arrow</string>
-    <string name="text_option_hint">Your own option (optional)</string>
-    <string name="text_partnerid_hint">Partner ID</string>
-    <string name="text_gender_hint">I am</string>
-    <string name="text_age_hint">age</string>
-    <string name="text_country_hint">and live in</string>
-    <string name="text_vote_instructions">Which of these are most important for you and your family? Choose 6</string>
-    <string name="text_info_instructions">Lastly, please tell us a little about yourself</string>
-    <string name="bottom_note_col_1">World leaders agree on 8 development goals to 
-eradicate extreme poverty and disease by 2015</string>
-    <string name="bottom_note_col_2">Important progress has been made, millions have been lifted out of 
-poverty, but there\'s still a lot to be done.
-We need you to help us now to define global priorities
-for the next fifteen years.</string>
+    <string name="text_option_hint">Su opción (opcional)</string>
+    <string name="text_partnerid_hint">Identificación del socio</string>
+    <string name="text_gender_hint">Me llamo</string>
+    <string name="text_age_hint">edad</string>
+    <string name="text_country_hint">y vivir en</string>
+    <string name="text_vote_instructions">De estas, ¿cuáles son más importantes para usted y su familia?</string>
+    <string name="text_info_instructions">Por último, cuéntanos un poco sobre ti.</string>
+    <string name="bottom_note_col_1">En el año 2000, los líderes mundiales acordaron 8 objetivos para erradicar la pobreza extrema para el año 2015. </string>
+    <string name="bottom_note_col_2">Desde entonces, se han alcanzado importantes progresos, pero todavía queda mucho por hacer.</string>
     <string name="bottom_note_col_3">Together we will have designed an action plan to
 create the world we want focused on the issues that would make the 
 most difference to our lives</string>
     <string name="dialog_less_priority_title">Must Select 6 Votes</string>
-    <string name="pref_partner_info_reminder">Set Country and Partner ID</string>
-     <string name="alert_dialog_upload_error_msg">Sorry, encountered an error. Try sending the votes later</string>
-    <string name="alert_dialog_upload_success_msg">%1$d vote(s) been sent to the Global Database</string>
+    <string name="pref_partner_info_reminder">Debe establecer el País o Identificación de socio</string>
     <string name="alert_dialog_upload_error_title">Error</string>
-    <string name="alert_dialog_upload_sucess_title">Success</string>
-    <string name="pref_partner_info_change">Change Partner information</string>
-    <string name="pref_partner_info_set_button">Set</string>
-    <string name="pref_partner_info_change_button">Change</string>
+    <string name="alert_dialog_upload_sucess_title">éxito</string>
+    <string name="alert_dialog_upload_error_msg">Lo sentimos, se encontró con un error. Pruebe a enviar los votos tarde</string>
+    <string name="alert_dialog_upload_success_msg">%1$d voto(s) enviado a la Base de Datos Global</string>
+    <string name="pref_partner_info_change">Cambiar la información de socio</string>
+    <string name="pref_partner_info_set_button">Establecer</string>
+    <string name="pref_partner_info_change_button">Cambiar</string>
     <string name="pref_partner_info_change_ignore_button">No</string>
 
     <string-array name="pref_country_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
         <item>10</item>
         <item>11</item>
         <item>12</item>
@@ -253,199 +257,199 @@ most difference to our lives</string>
         <item>193</item>
     </string-array>
     <string-array name="countries_un">
-        <item>Afghanistan</item>
-        <item>Albania</item>
-        <item>Algeria</item>
-        <item>Andorra</item>
-        <item>Angola</item>
-        <item>Antigua and Barbuda</item>
-        <item>Argentina</item>
-        <item>Armenia</item>
-        <item>Australia</item>
-        <item>Austria</item>
-        <item>Azerbaijan</item>
-        <item>Bahamas</item>
-        <item>Bahrain</item>
-        <item>Bangladesh</item>
-        <item>Barbados</item>
-        <item>Belarus</item>
-        <item>Belgium</item>
-        <item>Belize</item>
-        <item>Benin</item>
-        <item>Bhutan</item>
-        <item>Bolivia (Plurinational State of)</item>
-        <item>Bosnia and Herzegovina</item>
-        <item>Botswana</item>
-        <item>Brazil</item>
-        <item>Brunei Darussalam</item>
-        <item>Bulgaria</item>
-        <item>Burkina Faso</item>
-        <item>Burundi</item>
-        <item>Cambodia</item>
-        <item>Cameroon</item>
-        <item>Canada</item>
-        <item>Cape Verde</item>
-        <item>Central African Republic</item>
-        <item>Chad</item>
-        <item>Chile</item>
-        <item>China</item>
-        <item>Colombia</item>
-        <item>Comoros</item>
-        <item>Congo</item>
-        <item>Costa Rica</item>
-        <item>Cote d\'Ivoire</item>
-        <item>Croatia</item>
-        <item>Cuba</item>
-        <item>Cyprus</item>
-        <item>Czech Republic</item>
-        <item>Democratic People\'s Republic of Korea</item>
-        <item>Democratic Republic of the Congo</item>
-        <item>Denmark</item>
-        <item>Djibouti</item>
-        <item>Dominica</item>
-        <item>Dominican Republic</item>
-        <item>Ecuador</item>
-        <item>Egypt</item>
-        <item>El Salvador</item>
-        <item>Equatorial Guinea</item>
-        <item>Eritrea</item>
-        <item>Estonia</item>
-        <item>Ethiopia</item>
-        <item>Fiji</item>
-        <item>Finland</item>
-        <item>France</item>
-        <item>Gabon</item>
-        <item>Gambia</item>
-        <item>Georgia</item>
-        <item>Germany</item>
-        <item>Ghana</item>
-        <item>Greece</item>
-        <item>Grenada</item>
-        <item>Guatemala</item>
-        <item>Guinea</item>
-        <item>Guinea-Bissau</item>
-        <item>Guyana</item>
-        <item>Haiti</item>
-        <item>Honduras</item>
-        <item>Hungary</item>
-        <item>Iceland</item>
-        <item>India</item>
-        <item>Indonesia</item>
-        <item>Iran (Islamic Republic of)</item>
-        <item>Iraq</item>
-        <item>Ireland</item>
-        <item>Israel</item>
-        <item>Italy</item>
-        <item>Jamaica</item>
-        <item>Japan</item>
-        <item>Jordan</item>
-        <item>Kazakhstan</item>
-        <item>Kenya</item>
-        <item>Kiribati</item>
-        <item>Kuwait</item>
-        <item>Kyrgyzstan</item>
-        <item>Lao People\'s Democratic Republic</item>
-        <item>Latvia</item>
-        <item>Lebanon</item>
-        <item>Lesotho</item>
-        <item>Liberia</item>
-        <item>Libya</item>
-        <item>Liechtenstein</item>
-        <item>Lithuania</item>
-        <item>Luxembourg</item>
-        <item>Madagascar</item>
-        <item>Malawi</item>
-        <item>Malaysia</item>
-        <item>Maldives</item>
-        <item>Mali</item>
-        <item>Malta</item>
-        <item>Marshall Islands</item>
-        <item>Mauritania</item>
-        <item>Mauritius</item>
-        <item>Mexico</item>
-        <item>Micronesia (Federated States of)</item>
-        <item>Monaco</item>
-        <item>Mongolia</item>
-        <item>Montenegro</item>
-        <item>Morocco</item>
-        <item>Mozambique</item>
-        <item>Myanmar</item>
-        <item>Namibia</item>
-        <item>Nauru</item>
-        <item>Nepal</item>
-        <item>Netherlands</item>
-        <item>New Zealand</item>
-        <item>Nicaragua</item>
-        <item>Niger</item>
-        <item>Nigeria</item>
-        <item>Norway</item>
-        <item>Oman</item>
-        <item>Pakistan</item>
-        <item>Palau</item>
-        <item>Panama</item>
-        <item>Papua New Guinea</item>
-        <item>Paraguay</item>
-        <item>Peru</item>
-        <item>Philippines</item>
-        <item>Poland</item>
-        <item>Portugal</item>
-        <item>Qatar</item>
-        <item>Republic of Korea</item>
-        <item>Republic of Moldova</item>
-        <item>Romania</item>
-        <item>Russian Federation</item>
-        <item>Rwanda</item>
-        <item>Saint Kitts and Nevis</item>
-        <item>Saint Lucia</item>
-        <item>Saint Vincent and the Grenadines</item>
-        <item>Samoa</item>
-        <item>San Marino</item>
-        <item>Sao Tome and Principe</item>
-        <item>Saudi Arabia</item>
-        <item>Senegal</item>
-        <item>Serbia</item>
-        <item>Seychelles</item>
-        <item>Sierra Leone</item>
-        <item>Singapore</item>
-        <item>Slovakia</item>
-        <item>Slovenia</item>
-        <item>Solomon Islands</item>
-        <item>Somalia</item>
-        <item>South Africa</item>
-        <item>South Sudan</item>
-        <item>Spain</item>
-        <item>Sri Lanka</item>
-        <item>Sudan</item>
-        <item>Suriname</item>
-        <item>Swaziland</item>
-        <item>Sweden</item>
-        <item>Switzerland</item>
-        <item>Syrian Arab Republic</item>
-        <item>Tajikistan</item>
-        <item>Thailand</item>
-        <item>The former Yugoslav Republic of Macedonia</item>
-        <item>Timor-Leste</item>
-        <item>Togo</item>
-        <item>Tonga</item>
-        <item>Trinidad and Tobago</item>
-        <item>Tunisia</item>
-        <item>Turkey</item>
-        <item>Turkmenistan</item>
-        <item>Tuvalu</item>
-        <item>Uganda</item>
-        <item>Ukraine</item>
-        <item>United Arab Emirates</item>
-        <item>United Kingdom of Great Britain and Northern Ireland</item>
-        <item>United Republic of Tanzania</item>
-        <item>United States of America</item>
-        <item>Uruguay</item>
-        <item>Uzbekistan</item>
-        <item>Vanuatu</item>
-        <item>Venezuela (Bolivarian Republic of)</item>
-        <item>Viet Nam</item>
-        <item>Yemen</item>
-        <item>Zambia</item>
-        <item>Zimbabwe</item>
+       <item> Afganistán </item>
+        <item> Albania </item>
+        <item> Argelia </item>
+        <item> Andorra </item>
+        <item> Angola </item>
+        <item> Antigua y Barbuda </item>
+        <item> Argentina </item>
+        <item> Armenia </item>
+        <item> Australia </item>
+        <item> Austria </item>
+        <item> Azerbaijan </item>
+        <item> Bahamas </item>
+        <item> Bahrein </item>
+        <item> Bangladesh </item>
+        <item> Barbados </item>
+        <item> Bielorrusia </item>
+        <item> Bélgica </item>
+        <item> Belice </item>
+        <item> Benin </item>
+        <item> Bután </item>
+        <item> Bolivia (Estado Plurinacional de) </item>
+        <item> Bosnia y Herzegovina </item>
+        <item> Botswana </item>
+        <item> Brasil </item>
+        <item> Brunei Darussalam </item>
+        <item> Bulgaria </item>
+        <item> Burkina Faso </item>
+        <item> Burundi </item>
+        <item> Camboya </item>
+        <item> Camerún </item>
+        <item> Canada </item>
+        <item> Cabo Verde </item>
+        <item> República Centroafricana </item>
+        <item> Chad </item>
+        <item> Chile </item>
+        <item> china </item>
+        <item> Colombia </item>
+        <item> Comoras </item>
+        <item> Congo </item>
+        <item> Costa Rica </item>
+        <item> Costa de Marfil </item>
+        <item> Croacia </item>
+        <item> Cuba </item>
+        <item> Chipre </item>
+        <item> República Checa </item>
+        <item> Corea del Norte </item>
+        <item> República Democrática del Congo </item>
+        <item> Dinamarca </item>
+        <item> Djibouti </item>
+        <item> Dominica </item>
+        <item> República Dominicana </item>
+        <item> Ecuador </item>
+        <item> Egipto </item>
+        <item> El Salvador </item>
+        <item> Guinea Ecuatorial </item>
+        <item> Eritrea </item>
+        <item> Estonia </item>
+        <item> Etiopía </item>
+        <item> Fiji </item>
+        <item> Finlandia </item>
+        <item> Francia </item>
+        <item> Gabón </item>
+        <item> Gambia </item>
+        <item> Georgia </item>
+        <item> Alemania </item>
+        <item> Ghana </item>
+        <item> Grecia </item>
+        <item> Granada </item>
+        <item> Guatemala </item>
+        <item> Guinea </item>
+        <item> Guinea-Bissau </item>
+        <item> Guyana </item>
+        <item> Haití </item>
+        <item> Honduras </item>
+        <item> Hungría </item>
+        <item> Islandia </item>
+        <item> India </item>
+        <item> Indonesia </item>
+        <item> Irán (República Islámica del) </item>
+        <item> Irak </item>
+        <item> Irlanda </item>
+        <item> Israel </item>
+        <item> Italia </item>
+        <item> Jamaica </item>
+        <item> Japón </item>
+        <item> Jordania </item>
+        <item> Kazajstán </item>
+        <item> Kenia </item>
+        <item> Kiribati </item>
+        <item> Kuwait </item>
+        <item> Kirguistán </item>
+        <item> Laos </item>
+        <item> Letonia </item>
+        <item> Líbano </item>
+        <item> Lesotho </item>
+        <item> Liberia </item>
+        <item> Libia </item>
+        <item> Liechtenstein </item>
+        <item> Lituania </item>
+        <item> Luxemburgo </item>
+        <item> Madagascar </item>
+        <item> Malawi </item>
+        <item> Malasia </item>
+        <item> Maldivas </item>
+        <item> Malí </item>
+        <item> Malta </item>
+        <item> Islas Marshall </item>
+        <item> Mauritania </item>
+        <item> Mauricio </item>
+        <item> México </item>
+        <item> Micronesia (Estados Federados de) </item>
+        <item> Monaco </item>
+        <item> Mongolia </item>
+        <item> Montenegro </item>
+        <item> Marruecos </item>
+        <item> Mozambique </item>
+        <item> Myanmar </item>
+        <item> Namibia </item>
+        <item> Nauru </item>
+        <item> Nepal </item>
+        <item> Holanda </item>
+        <item> Nueva Zelanda </item>
+        <item> Nicaragua </item>
+        <item> Niger </item>
+        <item> Nigeria </item>
+        <item> noruega </item>
+        <item> Omán </item>
+        <item> Pakistán </item>
+        <item> Palau </item>
+        <item> Panamá </item>
+        <item> Papúa Nueva Guinea </item>
+        <item> Paraguay </item>
+        <item> Perú </item>
+        <item> Filipinas </item>
+        <item> Polonia </item>
+        <item> Portugal </item>
+        <item> Qatar </item>
+        <item> República de Corea </item>
+        <item> República de Moldova </item>
+        <item> Rumanía </item>
+        <item> Rusia </item>
+        <item> Rwanda </item>
+        <item> Saint Kitts y Nevis </item>
+        <item> Santa Lucía </item>
+        <item> San Vicente y las Granadinas </item>
+        <item> Samoa </item>
+        <item> San Marino </item>
+        <item> Santo Tomé y Príncipe </item>
+        <item> Arabia Saudí </item>
+        <item> Senegal </item>
+        <item> Serbia </item>
+        <item> Seychelles </item>
+        <item> Sierra Leona </item>
+        <item> Singapur </item>
+        <item> Eslovaquia </item>
+        <item> Eslovenia </item>
+        <item> Islas Salomón </item>
+        <item> Somalia </item>
+        <item> Sudáfrica </item>
+        <item> Sudán del Sur </item>
+        <item> España </item>
+        <item> Sri Lanka </item>
+        <item> Sudán </item>
+        <item> Surinam </item>
+        <item> Swazilandia </item>
+        <item> Suecia </item>
+        <item> Suiza </item>
+        <item> Siria </item>
+        <item> Tayikistán </item>
+        <item> Tailandia </item>
+        <item> Macedonia </item>
+        <item> Timor-Leste </item>
+        <item> Togo </item>
+        <item> Tonga </item>
+        <item> Trinidad y Tobago </item>
+        <item> Túnez </item>
+        <item> Turquía </item>
+        <item> Turkmenistán </item>
+        <item> Tuvalu </item>
+        <item> Uganda </item>
+        <item> Ucrania </item>
+        <item> Emiratos Árabes Unidos </item>
+        <item> Reino Unido de Gran Bretaña e Irlanda del Norte </item>
+        <item> República Unida de Tanzania </item>
+        <item> Estados Unidos de América </item>
+        <item> Uruguay </item>
+        <item> Uzbekistán </item>
+        <item> Vanuatu </item>
+        <item> Venezuela (República Bolivariana de) </item>
+        <item> Viet Nam </item>
+        <item> Yemen </item>
+        <item> Zambia </item>
+        <item> Zimbabue </item>
     </string-array>
     <string-array name="priority_color">
         <item>option_01_color</item>
@@ -484,107 +488,98 @@ most difference to our lives</string>
         <item>16</item>
     </string-array>
     <string-array name="priority_title">
-        <item>Better job opportunities</item>
+        <item>Mejores oportunidades de trabajo</item>
         <!-- 1 -->
-        <item>A good education</item>
+        <item>Una buena educación</item>
         <!-- 2 -->
-        <item>Better healthcare</item>
+        <item>Mejor atención médica</item>
         <!-- 3 -->
-        <item>Affordable and nutritious food</item>
+        <item>Una alimentación adecuada y a un precio accesible</item>
         <!-- 4 -->
-        <item>Support for people who cant work</item>
+        <item>Medidas de apoyo para quienes no pueden trabajar</item>
         <!-- 5 -->
-        <item>Phone and Internet Access</item>
+        <item>Acceso a la telefonía e internet</item>
         <!-- 6 -->
-        <item>Access to clean water and sanitation</item>
+        <item>Acceso a agua potable y saneamiento</item>
         <!-- 7 -->
-        <item>Reliable energy at home</item>
+        <item>Acceso a energía fiable en los hogares</item>
         <!-- 8 -->
-        <item>Protecting forests,rivers and oceans</item>
+        <item>Protección de bosques, ríos y océanos</item>
         <!-- 9 -->
-        <item>Action taken on climate change</item>
+        <item>Medidas para combatir el cambio climático</item>
         <!-- 10 -->
-        <item>An honest and responsive government</item>
+        <item>Un gobierno honesto y receptivo</item>
         <!-- 11 -->
-        <item>Political freedoms</item>
+        <item>Libertades políticas</item>
         <!-- 12 -->
-        <item>Protection against crime and violence</item>
+        <item>Protección contra el crimen y la violencia</item>
         <!-- 13 -->
-        <item>Equality between men and women</item>
+        <item>Igualdad entre hombres y mujeres</item>
         <!-- 14 -->
-        <item>Freedom from discrimination and persecution</item>
+        <item>Protección contra la discriminación y la persecución</item>
         <!-- 15 -->
-        <item>Better transport and roads</item>
+        <item>Mejores carreteras y servicios de transporte</item>
         <!-- 16 -->
     </string-array>
     <string-array name="priority_description">
 
         <!-- 1 -->
-        <item>This means that governments and private sector companies should do more to make sure that everyone can find a job where they earn a decent wage, and can contribute and feel valued as a productive member of society
+        <item>Los gobiernos y el sector privado deben poner en marcha más medidas para garantizar que todas las personas puedan acceder a un trabajo con un salario digno; y puedan sentirse valorados como agentes productivos de la sociedad.
 </item>
         <!-- 2 -->
-        <item>This means that all children should have a high quality primary and secondary education that equips them for employment and an enjoyable life. Governments and the private sector should work together to provide opportunities for lifelong learning and skills development for adults
+        <item>Todos los niños y niñas deben poder acceder a una educación primaria y secundaria de calidad que los prepare para el mundo laboral y para una vida plena. Los gobiernos deben trabajar de forma conjunta con el sector privado para ofrecer oportunidades de formación continua a los adultos.
 </item>
         <!-- 3 -->
-        <item>This means that good quality health services should be available to everyone when they need treatment. Efforts should be made to reduce the impact of infectious and other chronic diseases. Both the funding and the organization of health systems should suit the needs of the country and its citizens
+        <item>Todas aquellas personas que necesiten tratamiento deben poder acceder a servicios de salud de calidad. Es necesario hacer mayores esfuerzos para reducir el impacto de las enfermedades infecciosas y otras enfermedades crónicas. Tanto la financiación como la organización de los sistemas de salud deben adaptarse a las necesidades de cada país y de sus ciudadanos.
 </item>
         <!-- 4 -->
-        <item>This means that everyone should get the food they need. No person in the world should be constantly hungry, and no person should become malnourished, especially pregnant women and children aged less than two
+        <item>Todas las personas deben poder acceder a los alimentos que necesitan. Ninguna persona del mundo debería pasar hambre ni sufrir desnutrición, especialmente, las mujeres embarazadas y los niños menores de dos años.
 </item>
         <!-- 5 -->
-        <item>This means that every person should have enough money to live on, either through employment or government help. When people can’t work, or are affected by events like natural disasters or economic crises, governments should make sure that they and their families won’t go hungry, children won’t drop out of school, and they can get the healthcare and other essential services they need
+        <item>Toda persona debe contar con dinero suficiente para poder vivir, ya sea por medio de un empleo o a través de la asistencia prestada por el gobierno. Si una persona no puede trabajar o sufre las consecuencias de, por ejemplo, una catástrofe natural o una crisis económica, el gobierno debe asegurarse de que ese individuo y su familia no pasen hambre, de que sus hijos no abandonen la escuela y de que reciban la atención médica y otras prestaciones esenciales necesarias.
 </item>
         <!-- 6 -->
-        <item>This means that governments and the private sector should make sure that everyone has access to a minimum level of communications technology to get online information and participate in social networks
+        <item>Los gobiernos y el sector privado deben garantizar que todas las personas tengan cierto nivel de acceso a las tecnologías de la comunicación  para poder obtener información en línea y participar en redes sociales
 </item>
         <!-- 7 -->
-        <item>This means that every person should have access to safe water for drinking, cooking and washing, and access to sanitation
+        <item>Toda persona debe tener acceso a agua potable -para beber, cocinar y lavar- y al saneamiento.
 </item>
         <!-- 8 -->
-        <item>This means that all family members should have reliable and affordable electricity or other sources of energy at home for lighting, heating and cooking. More of that energy should be sustainably generated
+        <item>Todos los miembros de una familia deben contar con acceso a electricidad u otras fuentes de energía fiables y económicas en su casa, para iluminación, uso de calefacción o preparación de los alimentos. Es importante que una cantidad cada vez mayor de esta energía sea generada de forma sostenible.
 </item>
         <!-- 9 -->
-        <item>This means that natural resources should be looked after, because people depend on them for food, fuel and other resources. Governments should agree on plans to reduce pollution in oceans and rivers, plant new forests and preserve existing ones, and move towards sustainable agriculture and food systems. Global agreements should protect biodiversity and fragile ecosystems
+        <item>Debemos cuidar los recursos naturales de los que disponemos porque las personas dependen de ellos para obtener alimentos, combustible y otros bienes. Los gobiernos deben acordar iniciativas para reducir la contaminación en océanos y ríos, plantar nuevos bosques y preservar los que ya existen; así como avanzar hacia una agricultura y sistemas alimentarios sostenibles. Los acuerdos mundiales deben además proteger la biodiversidad y los ecosistemas vulnerables
 </item>
 
         <!-- 10 -->
-        <item>This means that governments should take on binding commitments to reduce carbon emissions to levels which can keep the global temperature rise below 2 degrees, and invest in adaptation measures particularly involving vulnerable communities
+        <item>Los gobiernos deben asumir compromisos vinculantes para reducir las emisiones de carbono hasta aquellos niveles que garanticen que la temperatura del planeta no aumentará más de dos grados, e invertir en medidas de adaptación involucrando sobre todo a las comunidades más vulnerables.
 </item>
         <!-- 11 -->
-        <item>This means that governments should be effective, transparent, accountable and not corrupt. People should have a say on what the government’s priorities should be, and confidence that they will implement those priorities competently. Governments should agree and implement standards for making information available to all people on how public money is spent
+        <item>Los gobiernos deben ser eficaces, transparentes, responsables e incorruptos. Las personas deben poder opinar sobre cuáles deberían ser las prioridades de cada gobierno y confiar en que éste las implementará de manera competente. Es necesario que los gobiernos acuerden y pongan en marcha mecanismos para garantizar el acceso de todas las personas a la información sobre el gasto público.
 </item>
         <!-- 12 -->
-        <item>This means that every person should be able to play a part in political processes in their own country, including through voting and forming or joining political parties. People should be able to exercise freedom of expression including through free media. People should be able to join and participate in trade unions and all aspects of civil society including diverse forms of civic engagement and voluntary action
+        <item>Toda persona debe poder participar en los procesos políticos de su país, incluida la participación a través del voto, o la creación o militancia en un partido político. Las personas deben poder ejercer su libertad de expresión y deben poder hacerlo también a través de medios de comunicación independientes. Deben poder asociarse y formar parte de un sindicato o participar en otros ámbitos de la sociedad civil, incluidas diversas manifestaciones de compromiso cívico y voluntariado.
 </item>
         <!-- 13 -->
-        <item>This means that all people should expect to live in a community that protects them from the threat of crime and violence. This should include domestic violence and sexual assault against women and girls. Every person should be able to get justice through a court or other system if they are victims of a crime
+        <item>Toda persona debe aspirar a vivir en una comunidad que la proteja del  crimen y la violencia. Esto debe incluir la protección contra la violencia de género y los ataques sexuales contra mujeres y niñas. Toda persona debe tener acceso a la justicia a través de un tribunal u otro sistema si ha sido víctima de un delito.
 </item>
         <!-- 14 -->
-        <item>This means that men and women should have the same rights and opportunities. Boys and girls should have equal access to school and the same quality of education; men and women should stand the same chance of getting elected to parliaments, have the same chances to be involved in political and social life, and experience the same opportunities and rewards in the workplace
+        <item>Hombres y mujeres deben contar con los mismos derechos y las mismas oportunidades. Los niños y las niñas deben acceder por igual a la escuela y recibir una educación de igual calidad. Hombres y mujeres deben contar con las mismas posibilidades de ser elegidos como miembros de un parlamento, de participar en la vida política y social, y de ser reconocidos en su lugar de trabajo.
 </item>
         <!-- 15 -->
-        <item>This means that no person in the world should have their economic, social or political opportunities limited because of their race, ethnicity, religion, disability, sexual preference, or for any other reason, and that no person should fear for their personal safety for the same reasons
+        <item>Ninguna persona en el mundo debe ver limitadas sus oportunidades económicas, políticas y sociales por cuestiones de raza, etnia, religión, discapacidad, preferencia sexual ni por ningún otro motivo, y ninguna persona debe temer por su seguridad personal por ello.
 </item>
         <!-- 16 -->
-        <item>This means that transport and roads should be improved so that people can move freely and easily to visit their friends and families, find new economic opportunities and use the services they need
+        <item>Es necesario mejorar los servicios de transporte y las condiciones en las carreteras para una mejor y más libre circulación de las personas, de modo que puedan darse  nuevas oportunidades económicas, y se garantice un servicio adecuado.
 </item>
     </string-array>
     <string-array name="gender">
-        <item>Select gender</item>
-        <item>Male</item>
-        <item>Female</item>
+        <item>Seleccione el género</item>
+        <item>Hombre</item>
+        <item>Mujer</item>
     </string-array>
     <string-array name="age">
-        <item>Select age</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
+        <item>Seleccione la edad</item>
         <item>10</item>
         <item>11</item>
         <item>12</item>
@@ -718,25 +713,25 @@ most difference to our lives</string>
         <item>140</item>
     </string-array>
     <string-array name="education_level">
-        <item>Select education level</item>
-        <item>Some Primary</item>
-        <item>Finished Primary</item>
-        <item>Finished Secondary</item>
-        <item>Beyond Secondary</item>
+        <item>Seleccione nivel de educación</item>
+        <item>Primaria (sin finalizar)</item>
+        <item>Primaria finalizada</item>
+        <item>Secundaria terminada</item>
+        <item>Estudios superiores</item>
     </string-array>
 
-    <string name="title_activity_voting">Vote</string>
-    <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="title_activity_main">MyWorld</string>
-    <string name="title_activity_finish_vote">Complete</string>
-    <string name="title_activity_saved_votes">Saved Votes</string>
+    <string name="title_activity_voting">Ahora</string>
+    <string name="action_settings">Configuración</string>
+    <string name="hello_world">¡Hola mundo!</string>
+    <string name="title_activity_main">MiMundo</string>
+    <string name="title_activity_finish_vote">Completo</string>
+    <string name="title_activity_saved_votes">Votos guardados</string>
     <string name="title_activity_voting_complete">VotingCompleteActivity</string>
-    <string name="partner_id_required">Enter Partner ID</string>
-    <string name="gender_required">Select gender</string>
-    <string name="age_required">Select age</string>
-    <string name="country_required">Select country</string>
-    <string name="education_required">Select education level</string>
+    <string name="partner_id_required">Ingrese identificación de socio</string>
+    <string name="gender_required">Seleccione género</string>
+    <string name="age_required">Seleccione edad</string>
+    <string name="country_required">Seleccione país</string>
+    <string name="education_required">Seleccione nivel de educación</string>
 
     <!-- preference file strings -->
     <string-array name="pref_language_item">
@@ -746,11 +741,11 @@ most difference to our lives</string>
         <item>Pусский</item>
         <item>العربية</item>
         <item>中文</item>
-        <item>한국어</item>
-        <item>Português</item>
-        <item>ภาษาไทย</item>
-        <item>Bahasa Indonesia</item>
-        <item>Swahili</item>
+        <!--item>한국어</item-->
+        <!--item>Português</item-->
+        <!--item>ภาษาไทย</item-->
+        <!--item>Bahasa Indonesia</item-->
+        <!--item>Swahili</item-->
     </string-array>
     <string-array name="pref_language_value">
         <item>en</item>
@@ -759,34 +754,36 @@ most difference to our lives</string>
         <item>ru</item>
         <item>ar</item>
         <item>ch</item>
-        <item>kr</item>
-        <item>pr</item>
-        <item>th</item>
-        <item>bi</item>
-        <item>sw</item>
+        <!--item>kr</item-->
+        <!--item>pr</item-->
+        <!--item>th</item-->
+        <!--item>bi</item-->
+        <!--item>sw</item-->
     </string-array>
 
-    <string name="pref_partner_info_title">Partner Information</string>
-    <string name="pref_partner_info_summary">The information (Country, Partner ID) is filled once for all the subsequent votes submitted</string>
-    <string name="pref_canvassing_country">Country in which you are collecting votes</string>
-    <string name="pref_language_list_title">Language</string>
-    <string name="pref_language_list_summary">Your Language</string>
-    <string name="pref_country_list_title">Country</string>
-    <string name="pref_partner_id_title">Partner ID</string>
-    <string name="pref_partner_id_summary">Need a Partner ID? Send an Email to: support@myworld.org or you can Visit: http://partner.myworld2015.org</string>
-    <string name="title_activity_my_world_launcher">MyWorld</string>
+    <string name="pref_partner_info_title">Información del socio</string>
+    <string name="pref_partner_info_summary">La información (país, Identificación del socio) se completa una sola vez para todos los votos enviados</string>
+    <string name="pref_canvassing_country">País en el que usted está recogiendo votos</string>
+    <string name="pref_language_list_title">Idioma</string>
+    <string name="pref_language_list_summary">Su idioma</string>
+    <string name="pref_country_list_title">País</string>
+    <string name="pref_partner_id_title">Identificación del socio</string>
+    <string name="pref_partner_id_summary">¿Necesita una Identificación de socio? Envíe un correo a:: support@myworld.org O puede visitar: http://partner.myworld2015.org</string>
+    <string name="title_activity_my_world_launcher">MiMundo</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
-    <string name="use_language_button">Use Español</string>
-    <string name="pref_save_button">Save Settings</string>
-    <string name="pref_back_button">Main Menu</string>
-    <string name="pref_partner_info_missing">You must set the Country/Partner ID</string>
+    <string name="use_language_button">Utilice español</string>
+    <string name="pref_save_button">Guardar configuración</string>
+    <string name="pref_back_button">Menú principal</string>
+    <string name="pref_partner_info_missing">Debe establecer el País o Identificación de socio</string>
     <string name="pref_partner_info_set">OK</string>
-    <string name="saved_votes_partner_id_label">PartnerID: %1$s</string>
-    <string name="sending_votes_process_dialog">Sending Votes</string>
-    <string name="saved_votes_partner_country_label">Country: %1$s</string>
-    <string name="saved_votes_section_description_label">Use this section to :\n(i) View the number of votes you collected\n(ii) Send your saved votes to the Global Database</string>
-    <string name="saved_votes_not_sent_count_label">As of: %1$s - You have %2$d vote(s) saved and not sent yet.</string>
-    <string name="reminder_send_saved_votes">You need to send us your votes once you\'ve finished collecting them. \n \nNote:\n (1) Press \'Send Votes\' to add them to the Global Database.\n (2) Press \'Export Votes\' to store them on local file in your phone\'s memory.\nThis is useful incase there is failure in step (1)</string>
-    <string name="saved_votes_upload_process_label">%1$s vote(s) being uploaded now.\n\t\t\tPlease wait… \nDo NOT disconnect device from Internet.</string>
-    <string name="saved_votes_no_internet_reminder">No Network Connection</string>
+    <string name="saved_votes_partner_id_label">Identificación del socio:%1$s</string>
+    <!--string name="saved_votes_partner_id_value">%1$s</string-->
+    <string name="saved_votes_partner_country_label">País:%1$s</string>
+    <!--string name="saved_votes_partner_country_value">%1$s</string-->
+    <string name="saved_votes_section_description_label">Use esta sección para :\n(i) Ver la cantidad de votos realizados\n(ii)  Enviar los votos guardados en la Base de Datos Global</string>
+    <string name="saved_votes_not_sent_count_label">A partir de: %1$s - Usted tiene %2$d Voto(s) guardados y sin enviar.</string>
+    <string name="reminder_send_saved_votes">Es necesario que nos envíe sus voto(s) una vez que haya terminado de recoger las. \n \nNota:\n (1) Presione el botón "Enviar Votos" para agregarlos a la Base Mundial de Datos.\n (2)  Presione el botón "Exportar Votos" para almacenarlos en el archivo local de la memoria de su teléfono.\n Esto es muy últil cuando el paso (1) falla.</string>
+    <string name="saved_votes_upload_process_label">%1$s Votos que se están cargando.\n\t\t\tPor favor, espere&#8230; \nNO desconecte el dispositivo de Internet.</string>
+    <string name="sending_votes_process_dialog">Enviar votos</string>
+    <string name="saved_votes_no_internet_reminder">Sin conexión de red</string>
 </resources>

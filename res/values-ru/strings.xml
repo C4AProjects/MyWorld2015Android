@@ -1,72 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">MyWorld</string>
-    <string name="title_exit_app_button_text">Exit Application</string>
-    <string name="myworld_message">VOTE FOR THE CHANGES THAT WOULD MAKE THE MOST DIFFERENCE TO YOUR WORLD</string>
-    <string name="welcome_message">MY World Ballot Collector</string>
-    <string name="title_settings_button_text">Settings</string>
-    <string name="title_saved_votes_button_text">Saved Votes</string>
-     <string name="title_vote_button_text">Start Vote</string>
-    <string name="myworld_thank_you">Thanks for voting! \n\nYou still have to send us your vote(s): \n\n (1)Go back to the main menu to \'Saved Votes\' \n\n (2)Press \'Send Votes\' when you\'ve gathered all your votes for this round</string>
-    <string name="text_upload_votes">Send Votes </string>
-    <string name="text_more_votes">Vote Again</string>
-    <string name="text_synchronized_votes">All Votes Uploaded</string>
-    <string name="text_votes_count_label">You have <b>%1$s</b> vote(s) saved and not sent yet</string>
-    <string name="language_title_1">Language</string>
-    <string name="myworld_brief">MY World is a global survey led by the United Nations asking YOU to choose your priorities for a better world. 
-Answers will be shared with governments and decision makers in setting the next development agenda for the world.</string>
+    <string name="app_name">МойМир</string>
+    <string name="title_exit_app_button_text">Выйти из приложения</string>
+    <string name="myworld_message">ПРОГОЛОСУЙТЕ ЗА ПЕРЕМЕНЫ, КОТОРЫЕ ДЕЙСТВИТЕЛЬНО ИЗМЕНЯТ ВАШ МИР</string>
+    <string name="welcome_message">Сбор бюллетеней МОЙ Мир</string>
+    <string name="title_settings_button_text">Настройки</string>
+    <string name="title_saved_votes_button_text">Сохраненные голоса</string>
+     <string name="title_vote_button_text">Начать голосование</string>
+    <string name="myworld_thank_you">Спасибо за Ваш голос! \n\nВы пока не отправили голос(а): \n\n (1) Вернитесь в главное меню, в "Сохраненные результаты голосования". \n\n (2) нажмите "Отправить голоса" когда Вы соберете все Ваши голоса текущего тура</string>
+    <string name="text_upload_votes">Отправить голоса </string>
+    <string name="text_more_votes">Проголосовать еще раз</string>
+    <string name="text_synchronized_votes">Все голоса загружены</string>
+    <string name="text_votes_count_label">У Вас есть <b>%1$s</b> сохраненные и еще неотправленные голоса</string>
+    <string name="language_title_1">Язык</string>
+    <string name="myworld_brief">МОЙ Мир - это всемирный опрос, проводимый Организацией Объединенных Наций, который просит ВАС выбрать ваши приоритеты лучшего мира. Ответы будут переданы правительствам и принимающим решения лицам при составлении новой повестки развития в мире.</string>
     <string name="logo_description">Logo</string>
     <string name="bottom_msg_col_1a">2000</string>
-    <string name="bottom_msg_col_2a">NOW</string>
+    <string name="bottom_msg_col_2a">СООБЩЕНИЕ</string>
     <string name="bottom_msg_col_3a">2015</string>
-    <string name="bottom_msg_col_1b">MDG</string>
-    <string name="bottom_msg_col_2b">VOTE</string>
-    <string name="bottom_msg_col_3b">GOAL</string>
+    <string name="bottom_msg_col_1b">ЦРТ</string>
+    <string name="bottom_msg_col_2b">ГОЛОСОВАТЬ</string>
+    <string name="bottom_msg_col_3b">ЦЕЛЬ</string>
     <string name="mdg_color_desc">Color</string>
     <string name="mdg_checkbox_desc">Color</string>
-    <string name="mdg_title_1">Better Job Opportunities</string>
-    <string name="mdg_desc_1">This means that governments and private sector companies should do more to make sure that everyone can find a job where they earn a decent wage, and can contribute and feel valued as a productive member of society</string>
-    <string name="menu_settings">Settings</string>
+    <string name="mdg_title_1">Повышение количества рабочих мест</string>
+    <string name="mdg_desc_1">Это означает, что правительства и компании частного сектора должны делать больше для того, чтобы каждый мог найти работу с достойной заработной платой, вносить свой вклад в процветание общества и ощущать себя его значимым членом</string>
+    <string name="menu_settings">Настройки</string>
     <string name="menu_home">Home</string>
     <string name="menu_info">About</string>
     <string name="menu_report">Results</string>
-    <string name="title_preferences_activity">MyWorld Settings</string>
-    <string name="title_activity_home">MyWorld</string>
+    <string name="title_preferences_activity">МойМир Настройки</string>
+    <string name="title_activity_home">МойМир</string>
     <string name="title_service_name">UploadService</string>
-    <string name="text_export_votes">Export Votes</string>
-    <string name="title_activity_vote">Vote</string>
+    <string name="text_export_votes">Экспортировать голоса</string>
+    <string name="title_activity_vote">Голосовать</string>
     <string name="title_count_vote_on_selection">%1$d/6</string>
-    <string name="title_finish_vote_button_text">Next</string>
-    <string name="title_submit_vote_button_text">Save Vote</string>
+    <string name="title_finish_vote_button_text">Далее</string>
+    <string name="title_submit_vote_button_text">Сохранить голос</string>
     <string name="text_arrow_desc">arrow</string>
-    <string name="text_option_hint">Your own option (optional)</string>
-    <string name="text_partnerid_hint">Partner ID</string>
-    <string name="text_gender_hint">I am</string>
-    <string name="text_age_hint">age</string>
-    <string name="text_country_hint">and live in</string>
-    <string name="text_vote_instructions">Which of these are most important for you and your family? Choose 6</string>
-    <string name="text_info_instructions">Lastly, please tell us a little about yourself</string>
-    <string name="bottom_note_col_1">World leaders agree on 8 development goals to 
-eradicate extreme poverty and disease by 2015</string>
-    <string name="bottom_note_col_2">Important progress has been made, millions have been lifted out of 
-poverty, but there\'s still a lot to be done.
-We need you to help us now to define global priorities
-for the next fifteen years.</string>
-    <string name="bottom_note_col_3">Together we will have designed an action plan to
-create the world we want focused on the issues that would make the 
-most difference to our lives</string>
+    <string name="text_option_hint">Ваш вариант (по желанию)</string>
+    <string name="text_partnerid_hint">ID Партнера</string>
+    <string name="text_gender_hint">Я</string>
+    <string name="text_age_hint">возраст</string>
+    <string name="text_country_hint">проживаю в</string>
+    <string name="text_vote_instructions">Какие из предложенных вариантов наиболее важны для Вас и Вашей семьи? Выберите 6</string>
+    <string name="text_info_instructions">В заключение, пожалуйста, расскажите нам немного о себе</string>
+    <string name="bottom_note_col_1">Мировые лидеры договорились о восьми целях, касающихся искоренения крайней нищеты к 2015 году</string>
+    <string name="bottom_note_col_2">За это время достигнут значительный прогресс, но ещё многое предстоит сделать</string>
+    <string name="bottom_note_col_3">Вместе мы составим поэтапный план создания мира, каким мы его видим после 2015 года; мир, сосредоточенный на проблемах, решение которых радикально изменит наши жизни</string>
     <string name="dialog_less_priority_title">Must Select 6 Votes</string>
-    <string name="pref_partner_info_reminder">Set Country and Partner ID</string>
-     <string name="alert_dialog_upload_error_msg">Sorry, encountered an error. Try sending the votes later</string>
-    <string name="alert_dialog_upload_success_msg">%1$d vote(s) been sent to the Global Database</string>
-    <string name="alert_dialog_upload_error_title">Error</string>
-    <string name="alert_dialog_upload_sucess_title">Success</string>
-    <string name="pref_partner_info_change">Change Partner information</string>
-    <string name="pref_partner_info_set_button">Set</string>
-    <string name="pref_partner_info_change_button">Change</string>
-    <string name="pref_partner_info_change_ignore_button">No</string>
+    <string name="pref_partner_info_reminder">отбросили страну и ID партнера</string>
+     <string name="alert_dialog_upload_error_msg">К сожалению, встречаются ошибка. Попробуйте отправить голосов позже.</string>
+    <string name="alert_dialog_upload_success_msg">%1$d Голос(ов) были направлены в Глобальную базу данных</string>
+    <string name="alert_dialog_upload_error_title">ошибка</string>
+    <string name="alert_dialog_upload_sucess_title">успех</string>
+    <string name="pref_partner_info_change">изменить информационный партнер</string>
+    <string name="pref_partner_info_set_button">устанавливать</string>
+    <string name="pref_partner_info_change_button">изменять</string>
+    <string name="pref_partner_info_change_ignore_button">нет</string>
 
     <string-array name="pref_country_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
         <item>10</item>
         <item>11</item>
         <item>12</item>
@@ -253,199 +255,199 @@ most difference to our lives</string>
         <item>193</item>
     </string-array>
     <string-array name="countries_un">
-        <item>Afghanistan</item>
-        <item>Albania</item>
-        <item>Algeria</item>
-        <item>Andorra</item>
-        <item>Angola</item>
-        <item>Antigua and Barbuda</item>
-        <item>Argentina</item>
-        <item>Armenia</item>
-        <item>Australia</item>
-        <item>Austria</item>
-        <item>Azerbaijan</item>
-        <item>Bahamas</item>
-        <item>Bahrain</item>
-        <item>Bangladesh</item>
-        <item>Barbados</item>
-        <item>Belarus</item>
-        <item>Belgium</item>
-        <item>Belize</item>
-        <item>Benin</item>
-        <item>Bhutan</item>
-        <item>Bolivia (Plurinational State of)</item>
-        <item>Bosnia and Herzegovina</item>
-        <item>Botswana</item>
-        <item>Brazil</item>
-        <item>Brunei Darussalam</item>
-        <item>Bulgaria</item>
-        <item>Burkina Faso</item>
-        <item>Burundi</item>
-        <item>Cambodia</item>
-        <item>Cameroon</item>
-        <item>Canada</item>
-        <item>Cape Verde</item>
-        <item>Central African Republic</item>
-        <item>Chad</item>
-        <item>Chile</item>
-        <item>China</item>
-        <item>Colombia</item>
-        <item>Comoros</item>
-        <item>Congo</item>
-        <item>Costa Rica</item>
-        <item>Cote d\'Ivoire</item>
-        <item>Croatia</item>
-        <item>Cuba</item>
-        <item>Cyprus</item>
-        <item>Czech Republic</item>
-        <item>Democratic People\'s Republic of Korea</item>
-        <item>Democratic Republic of the Congo</item>
-        <item>Denmark</item>
-        <item>Djibouti</item>
-        <item>Dominica</item>
-        <item>Dominican Republic</item>
-        <item>Ecuador</item>
-        <item>Egypt</item>
-        <item>El Salvador</item>
-        <item>Equatorial Guinea</item>
-        <item>Eritrea</item>
-        <item>Estonia</item>
-        <item>Ethiopia</item>
-        <item>Fiji</item>
-        <item>Finland</item>
-        <item>France</item>
-        <item>Gabon</item>
-        <item>Gambia</item>
-        <item>Georgia</item>
-        <item>Germany</item>
-        <item>Ghana</item>
-        <item>Greece</item>
-        <item>Grenada</item>
-        <item>Guatemala</item>
-        <item>Guinea</item>
-        <item>Guinea-Bissau</item>
-        <item>Guyana</item>
-        <item>Haiti</item>
-        <item>Honduras</item>
-        <item>Hungary</item>
-        <item>Iceland</item>
-        <item>India</item>
-        <item>Indonesia</item>
-        <item>Iran (Islamic Republic of)</item>
-        <item>Iraq</item>
-        <item>Ireland</item>
-        <item>Israel</item>
-        <item>Italy</item>
-        <item>Jamaica</item>
-        <item>Japan</item>
-        <item>Jordan</item>
-        <item>Kazakhstan</item>
-        <item>Kenya</item>
-        <item>Kiribati</item>
-        <item>Kuwait</item>
-        <item>Kyrgyzstan</item>
-        <item>Lao People\'s Democratic Republic</item>
-        <item>Latvia</item>
-        <item>Lebanon</item>
-        <item>Lesotho</item>
-        <item>Liberia</item>
-        <item>Libya</item>
-        <item>Liechtenstein</item>
-        <item>Lithuania</item>
-        <item>Luxembourg</item>
-        <item>Madagascar</item>
-        <item>Malawi</item>
-        <item>Malaysia</item>
-        <item>Maldives</item>
-        <item>Mali</item>
-        <item>Malta</item>
-        <item>Marshall Islands</item>
-        <item>Mauritania</item>
-        <item>Mauritius</item>
-        <item>Mexico</item>
-        <item>Micronesia (Federated States of)</item>
-        <item>Monaco</item>
-        <item>Mongolia</item>
-        <item>Montenegro</item>
-        <item>Morocco</item>
-        <item>Mozambique</item>
-        <item>Myanmar</item>
-        <item>Namibia</item>
-        <item>Nauru</item>
-        <item>Nepal</item>
-        <item>Netherlands</item>
-        <item>New Zealand</item>
-        <item>Nicaragua</item>
-        <item>Niger</item>
-        <item>Nigeria</item>
-        <item>Norway</item>
-        <item>Oman</item>
-        <item>Pakistan</item>
-        <item>Palau</item>
-        <item>Panama</item>
-        <item>Papua New Guinea</item>
-        <item>Paraguay</item>
-        <item>Peru</item>
-        <item>Philippines</item>
-        <item>Poland</item>
-        <item>Portugal</item>
-        <item>Qatar</item>
-        <item>Republic of Korea</item>
-        <item>Republic of Moldova</item>
-        <item>Romania</item>
-        <item>Russian Federation</item>
-        <item>Rwanda</item>
-        <item>Saint Kitts and Nevis</item>
-        <item>Saint Lucia</item>
-        <item>Saint Vincent and the Grenadines</item>
-        <item>Samoa</item>
-        <item>San Marino</item>
-        <item>Sao Tome and Principe</item>
-        <item>Saudi Arabia</item>
-        <item>Senegal</item>
-        <item>Serbia</item>
-        <item>Seychelles</item>
-        <item>Sierra Leone</item>
-        <item>Singapore</item>
-        <item>Slovakia</item>
-        <item>Slovenia</item>
-        <item>Solomon Islands</item>
-        <item>Somalia</item>
-        <item>South Africa</item>
-        <item>South Sudan</item>
-        <item>Spain</item>
-        <item>Sri Lanka</item>
-        <item>Sudan</item>
-        <item>Suriname</item>
-        <item>Swaziland</item>
-        <item>Sweden</item>
-        <item>Switzerland</item>
-        <item>Syrian Arab Republic</item>
-        <item>Tajikistan</item>
-        <item>Thailand</item>
-        <item>The former Yugoslav Republic of Macedonia</item>
-        <item>Timor-Leste</item>
-        <item>Togo</item>
-        <item>Tonga</item>
-        <item>Trinidad and Tobago</item>
-        <item>Tunisia</item>
-        <item>Turkey</item>
-        <item>Turkmenistan</item>
-        <item>Tuvalu</item>
-        <item>Uganda</item>
-        <item>Ukraine</item>
-        <item>United Arab Emirates</item>
-        <item>United Kingdom of Great Britain and Northern Ireland</item>
-        <item>United Republic of Tanzania</item>
-        <item>United States of America</item>
-        <item>Uruguay</item>
-        <item>Uzbekistan</item>
-        <item>Vanuatu</item>
-        <item>Venezuela (Bolivarian Republic of)</item>
-        <item>Viet Nam</item>
-        <item>Yemen</item>
-        <item>Zambia</item>
-        <item>Zimbabwe</item>
+        <item> Афганистане </item>
+        <item> Албания </item>
+        <item> Алжир </item>
+        <item> Андорра </item>
+        <item> Анголы </item>
+        <item> Антигуа и Барбуда </item>
+        <item> Аргентина </item>
+        <item> Армении </item>
+        <item> Австралия </item>
+        <item> Австрия </item>
+        <item> Азербайджан </item>
+        <item> Багамы </item>
+        <item> Бахрейне </item>
+        <item> Бангладеш </item>
+        <item> Барбадос </item>
+        <item> Беларусь </item>
+        <item> Бельгия </item>
+        <item> Белиз </item>
+        <item> Бенин </item>
+        <item> Бутан </item>
+        <item> Боливия (Многонациональное Государство) </item>
+        <item> Босния и Герцеговина </item>
+        <item> Ботсвана </item>
+        <item> Бразилия </item>
+        <item> Бруней-Даруссалам </item>
+        <item> Болгарии </item>
+        <item> Буркина-Фасо </item>
+        <item> Бурунди </item>
+        <item> Камбоджи </item>
+        <item> Камерун </item>
+        <item> Канаде </item>
+        <item> Кабо-Верде </item>
+        <item> Центральноафриканская Республика </item>
+        <item> Чада </item>
+        <item> Чили </item>
+        <item> Китае </item>
+        <item> Колумбии </item>
+        <item> Коморских островов </item>
+        <item> Конго </item>
+        <item> Коста-Рике </item>
+        <item> Кот-д \'Ивуар </item>
+        <item> Хорватии </item>
+        <item> Кубе </item>
+        <item> Кипр </item>
+        <item> Чехия </item>
+        <item>Корейская Народно-Демократическая Республика Корея</item>
+        <item> Демократическая Республика Конго </item>
+        <item> Дании </item>
+        <item> Джибути </item>
+        <item> Доминика </item>
+        <item> Доминиканская республика </item>
+        <item> Эквадор </item>
+        <item> Египет </item>
+        <item> Сальвадор </item>
+        <item> Экваториальная Гвинея </item>
+        <item> Эритрея </item>
+        <item> Эстонии </item>
+        <item> Эфиопии </item>
+        <item> Фиджи </item>
+        <item> Финляндия </item>
+        <item> Франции </item>
+        <item> Габон </item>
+        <item> Гамбия </item>
+        <item> Грузии </item>
+        <item> Германии </item>
+        <item> Гана </item>
+        <item> Греции </item>
+        <item> Гренада </item>
+        <item> Гватемала </item>
+        <item> Гвинее </item>
+        <item> Гвинее-Бисау </item>
+        <item> Гайана </item>
+        <item> Гаити </item>
+        <item> Гондурас </item>
+        <item> Венгрия </item>
+        <item> Исландии </item>
+        <item> Индии </item>
+        <item> Индонезии </item>
+        <item> Иран (Исламская Республика) </item>
+        <item> Ираке </item>
+        <item> Ирландия </item>
+        <item> Израиль </item>
+        <item> Италии </item>
+        <item> Ямайка </item>
+        <item> Японии </item>
+        <item> Иордании </item>
+        <item> Казахстан </item>
+        <item> Кении </item>
+        <item> Кирибати </item>
+        <item> Кувейт </item>
+        <item> Кыргызстана </item>
+        <item> Лаосская Народно-Демократическая Республика  </item>
+        <item> Латвии </item>
+        <item> Ливан </item>
+        <item> Лесото </item>
+        <item> Либерии </item>
+        <item> Ливии </item>
+        <item> Лихтенштейн </item>
+        <item> Литве </item>
+        <item> Люксембурге </item>
+        <item> Мадагаскар </item>
+        <item> Малави </item>
+        <item> Малайзии </item>
+        <item> Мальдивах </item>
+        <item> Мали </item>
+        <item> Мальта </item>
+        <item> Маршалловы острова </item>
+        <item> Мавритании </item>
+        <item> Маврикий </item>
+        <item> Мексике </item>
+        <item> Микронезия (Федеративные Штаты) </item>
+        <item> Монако </item>
+        <item> Монголии </item>
+        <item> Черногория </item>
+        <item> Марокко </item>
+        <item> Мозамбик </item>
+        <item> Мьянме </item>
+        <item> Намибии </item>
+        <item> Науру </item>
+        <item> Непала </item>
+        <item> Нидерландов </item>
+        <item> Новой Зеландии </item>
+        <item> Никарагуа </item>
+        <item> Нигер </item>
+        <item> Нигерии </item>
+        <item> Норвегия </item>
+        <item> Оман </item>
+        <item> Пакистана </item>
+        <item> Палау </item>
+        <item> Панама </item>
+        <item> Папуа-Новой Гвинее </item>
+        <item> Парагвай </item>
+        <item> Перу </item>
+        <item> Филиппинах </item>
+        <item> Польша </item>
+        <item> Португалия </item>
+        <item> Катар </item>
+        <item> Республики Корея </item>
+        <item> Республики Молдова </item>
+        <item> Румынии </item>
+        <item> Русской Федерации </item>
+        <item> Руанда </item>
+        <item> Сент-Китс и Невис </item>
+        <item> Сент-Люсия </item>
+        <item> Сент-Винсент и Гренадины </item>
+        <item> Самоа </item>
+        <item> Сан-Марино </item>
+        <item> Сан-Томе и Принсипи </item>
+        <item> Саудовской Аравии </item>
+        <item> Сенегал </item>
+        <item> Сербии </item>
+        <item> Сейшельские острова </item>
+        <item> Сьерра-Леоне </item>
+        <item> Сингапуре </item>
+        <item> Словакии </item>
+        <item> Словении </item>
+        <item> Соломоновых островов </item>
+        <item> Сомали </item>
+        <item> ЮАР </item>
+        <item> Южного Судана </item>
+        <item> Испании </item>
+        <item> Шри-Ланка </item>
+        <item> Судана </item>
+        <item> Суринам </item>
+        <item> Свазиленд </item>
+        <item> Швеция </item>
+        <item> Швейцария </item>
+        <item> Сирийской Арабской Республики </item>
+        <item> Таджикистана </item>
+        <item> Таиланде </item>
+        <item> Бывшая Югославская Республика Македония </item>
+        <item> Тимор-Лешти </item>
+        <item> Того </item>
+        <item> Тонга </item>
+        <item> Тринидад и Тобаго </item>
+        <item> Тунис </item>
+        <item> Турции </item>
+        <item> Туркменистан </item>
+        <item> Тувалу </item>
+        <item> Уганде </item>
+        <item> Украине </item>
+        <item> Объединенные Арабские Эмираты </item>
+        <item> Соединенного Королевства Великобритании и Северной Ирландии </item>
+        <item> Объединенная Республика Танзания </item>
+        <item> Соединенных Штатов Америки </item>
+        <item> Уругвай </item>
+        <item> Узбекистана </item>
+        <item> Вануату </item>
+        <item> Венесуэла (Боливарианская Республика) </item>
+        <item> Вьетнама </item>
+        <item> Йемена </item>
+        <item> Замбия </item>
+        <item> Зимбабве </item>
     </string-array>
     <string-array name="priority_color">
         <item>option_01_color</item>
@@ -484,107 +486,99 @@ most difference to our lives</string>
         <item>16</item>
     </string-array>
     <string-array name="priority_title">
-        <item>Better job opportunities</item>
+        <item>Повышение количества рабочих мест</item>
         <!-- 1 -->
-        <item>A good education</item>
+        <item>Хорошее образование</item>
         <!-- 2 -->
-        <item>Better healthcare</item>
+        <item>Повышение уровня здравоохранения</item>
         <!-- 3 -->
-        <item>Affordable and nutritious food</item>
+        <item>Доступная питательная пища</item>
         <!-- 4 -->
-        <item>Support for people who cant work</item>
+        <item>Поддержка нетрудоспособных лиц</item>
         <!-- 5 -->
-        <item>Phone and Internet Access</item>
+        <item>Доступ к телефонной связи и интернету</item>
         <!-- 6 -->
-        <item>Access to clean water and sanitation</item>
+        <item>Доступ к чистой воде и улучшение санитарных условий</item>
         <!-- 7 -->
-        <item>Reliable energy at home</item>
+        <item>Надёжное энергоснабжение домов</item>
         <!-- 8 -->
-        <item>Protecting forests,rivers and oceans</item>
+        <item>Охрана лесов, рек и океанов</item>
         <!-- 9 -->
-        <item>Action taken on climate change</item>
+        <item>Действия, предпринимаемые в области изменения климата</item>
         <!-- 10 -->
-        <item>An honest and responsive government</item>
+        <item>Честное и эффективное  правительство</item>
         <!-- 11 -->
-        <item>Political freedoms</item>
+        <item>Политические свободы</item>
         <!-- 12 -->
-        <item>Protection against crime and violence</item>
+        <item>Защита от преступности и насилия</item>
         <!-- 13 -->
-        <item>Equality between men and women</item>
+        <item>Равенство между мужчинами и женщинами</item>
         <!-- 14 -->
-        <item>Freedom from discrimination and persecution</item>
+        <item>Отсутствие дискриминации и преследований</item>
         <!-- 15 -->
-        <item>Better transport and roads</item>
+        <item>Улучшение транспортной системы и качества дорог</item>
         <!-- 16 -->
     </string-array>
     <string-array name="priority_description">
 
         <!-- 1 -->
-        <item>This means that governments and private sector companies should do more to make sure that everyone can find a job where they earn a decent wage, and can contribute and feel valued as a productive member of society
+        <item>Это означает, что правительства и компании частного сектора должны делать больше для того, чтобы каждый мог найти работу с достойной заработной платой, вносить свой вклад в процветание общества и ощущать себя его значимым членом
 </item>
         <!-- 2 -->
-        <item>This means that all children should have a high quality primary and secondary education that equips them for employment and an enjoyable life. Governments and the private sector should work together to provide opportunities for lifelong learning and skills development for adults
+        <item>Это означает, что все дети должны получать высококачественное начальное и среднее образование, готовящее их к трудоустройству и жизни в достатке. Правительства и частный сектор должны совместно предоставлять возможности для непрерывного образования и 
 </item>
         <!-- 3 -->
-        <item>This means that good quality health services should be available to everyone when they need treatment. Efforts should be made to reduce the impact of infectious and other chronic diseases. Both the funding and the organization of health systems should suit the needs of the country and its citizens
+        <item>Это означает, что качественные медицинские услуги должны быть доступны всем, кто нуждается в лечении. Следует прилагать усилия в области снижения риска инфекционных и других хронических заболеваний. И финансирование, и организация системы здравоохранения должны отвечать потребностям страны и её граждан
 </item>
         <!-- 4 -->
-        <item>This means that everyone should get the food they need. No person in the world should be constantly hungry, and no person should become malnourished, especially pregnant women and children aged less than two
+        <item>Это означает, что все должны получать еду, в которой они нуждаются. Ни один человек в мире не должен быть постоянно голодным, и никто не должен недоедать -  особенно беременные женщины и дети в возрасте до двух лет
 </item>
         <!-- 5 -->
-        <item>This means that every person should have enough money to live on, either through employment or government help. When people can’t work, or are affected by events like natural disasters or economic crises, governments should make sure that they and their families won’t go hungry, children won’t drop out of school, and they can get the healthcare and other essential services they need
+        <item>Это означает, что каждый человек должен иметь достаточно денег на жизнь – либо посредством работы по найму, либо являясь получателем государственной помощи. В случае утраты трудоспособности, при стихийных бедствиях или экономических кризисах правительства должны позаботиться о том, чтобы граждане и их семьи не голодали, дети не бросали школу, чтобы все получали медицинскую помощь и иные необходимые услуги
 </item>
         <!-- 6 -->
-        <item>This means that governments and the private sector should make sure that everyone has access to a minimum level of communications technology to get online information and participate in social networks
+        <item>Это означает, что правительство и частный сектор должны обеспечить минимальный доступ к техническим средствам связи, чтобы каждый человек мог получать информацию онлайн и участвовать в социальных сетях
 </item>
         <!-- 7 -->
-        <item>This means that every person should have access to safe water for drinking, cooking and washing, and access to sanitation
+        <item>Это означает, что у каждого человека должен быть доступ к чистой питьевой воде, для приготовления пищи и умывания; а также к водопроводу и канализации
 </item>
         <!-- 8 -->
-        <item>This means that all family members should have reliable and affordable electricity or other sources of energy at home for lighting, heating and cooking. More of that energy should be sustainably generated
+        <item>Это означает, что все члены семьи должны пользоваться в домашних условиях надёжным и доступным электроснабжением или другими источниками энергии для освещения, обогрева и приготовления пищи. Это должны быть премущественно возобновляемые источники энергии
 </item>
         <!-- 9 -->
-        <item>This means that natural resources should be looked after, because people depend on them for food, fuel and other resources. Governments should agree on plans to reduce pollution in oceans and rivers, plant new forests and preserve existing ones, and move towards sustainable agriculture and food systems. Global agreements should protect biodiversity and fragile ecosystems
+        <item>Это означает заботу о природных ресурсах – источнике продовольствия, топлива и других благ для людей. Правительства должны договориться о планах по сокращению загрязнения океанов и рек, посадке новых и сохранения существующих лесов и двигаться в направлении устойчивого развития сельского хозяйства и продовольственных систем. Глобальные соглашения призваны защитить биоразнообразие и уязвимые экосистемы
 </item>
 
         <!-- 10 -->
-        <item>This means that governments should take on binding commitments to reduce carbon emissions to levels which can keep the global temperature rise below 2 degrees, and invest in adaptation measures particularly involving vulnerable communities
+        <item>Действия, предпринимаемые в области изменения климата
+Это означает, что правительства должны взять на себя обязательства по сокращению выбросов углерода до уровня, обеспечивающего рост глобальной температуры до 2 градусов, и инвестировать средства в адаптационные мероприятия, в особенности в отношении уязвимых групп населения
 </item>
         <!-- 11 -->
-        <item>This means that governments should be effective, transparent, accountable and not corrupt. People should have a say on what the government’s priorities should be, and confidence that they will implement those priorities competently. Governments should agree and implement standards for making information available to all people on how public money is spent
+        <item>Это означает, что правительство должно быть эффективным, прозрачным, подотчётным и не коррумпированным. У людей должно быть право высказываться о том, какими приоритетами следует руководствоваться правительству, и должна быть уверенность в его компетентности. Правительствам следует договориться о внедрении норм информированности граждан о расходовании государственных средств
 </item>
         <!-- 12 -->
-        <item>This means that every person should be able to play a part in political processes in their own country, including through voting and forming or joining political parties. People should be able to exercise freedom of expression including through free media. People should be able to join and participate in trade unions and all aspects of civil society including diverse forms of civic engagement and voluntary action
+        <item>Это означает, что каждому человеку предоставлена возможность участвовать в политических процессах в своей стране, в том числе путём голосования, а также создания политических партий и вступления в них. Граждане должны иметь право на свободу выражения своего мнения, в том числе через независимые СМИ. Люди должны иметь возможность вступать в профсоюзы и участвовать в их деятельности, а также во всех аспектах жизни гражданского общества, включая различные формы общественной и добровольческой деятельности
 </item>
         <!-- 13 -->
-        <item>This means that all people should expect to live in a community that protects them from the threat of crime and violence. This should include domestic violence and sexual assault against women and girls. Every person should be able to get justice through a court or other system if they are victims of a crime
+        <item>Это означает, что люди вправе жить в обществе, которое защищает их от преступности и насилия, в том числе от насилия в семье и сексуального насилия над женщинами и девочками. Каждый, кто стал жертвой преступления, должен быть вправе добиваться справедливости через суд или другую систему правосудия
 </item>
         <!-- 14 -->
-        <item>This means that men and women should have the same rights and opportunities. Boys and girls should have equal access to school and the same quality of education; men and women should stand the same chance of getting elected to parliaments, have the same chances to be involved in political and social life, and experience the same opportunities and rewards in the workplace
+        <item>Это означает, что мужчины и женщины должны иметь равные права и возможности. Мальчикам и девочкам должны быть предоставлены равные возможности обучения в школе и получения образования одинакового качества; у мужчин и женщин должны быть равные шансы на избрание в парламент, на участие в политической и общественной жизни и равные возможности и льготы при работе по найму
 </item>
         <!-- 15 -->
-        <item>This means that no person in the world should have their economic, social or political opportunities limited because of their race, ethnicity, religion, disability, sexual preference, or for any other reason, and that no person should fear for their personal safety for the same reasons
+        <item>Это означает, что ни один человек в мире не сталкнется с ограничениями своих экономических, социальных и политических возможностей из-за расовой или этнической принадлежности, религии, инвалидности, сексуальной ориентации или по любой другой причине, и что никто не должен опасаться за свою личную безопасность по тем же причинам
 </item>
         <!-- 16 -->
-        <item>This means that transport and roads should be improved so that people can move freely and easily to visit their friends and families, find new economic opportunities and use the services they need
+        <item>Это означает, что должны быть оптимизированы транспортная и дорожная системы, чтобы люди могли свободно и легко перемещаться, навещать своих друзей и семьи, находить новые экономические возможности и пользоваться необходимыми им услугами
 </item>
     </string-array>
     <string-array name="gender">
-        <item>Select gender</item>
-        <item>Male</item>
-        <item>Female</item>
+        <item>выберите гендерное</item>
+        <item>Мужчина</item>
+        <item>Женщина</item>
     </string-array>
     <string-array name="age">
-        <item>Select age</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
+        <item>Выберите возраст</item>
         <item>10</item>
         <item>11</item>
         <item>12</item>
@@ -718,25 +712,25 @@ most difference to our lives</string>
         <item>140</item>
     </string-array>
     <string-array name="education_level">
-        <item>Select education level</item>
-        <item>Some Primary</item>
-        <item>Finished Primary</item>
-        <item>Finished Secondary</item>
-        <item>Beyond Secondary</item>
+        <item>Выберите Ваш уровень образования</item>
+        <item>Неоконченное начальное</item>
+        <item>Начальное</item>
+        <item>Среднее</item>
+        <item>Выше среднего</item>
     </string-array>
 
-    <string name="title_activity_voting">Vote</string>
-    <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="title_activity_main">MyWorld</string>
-    <string name="title_activity_finish_vote">Complete</string>
-    <string name="title_activity_saved_votes">Saved Votes</string>
+    <string name="title_activity_voting">Голосовать</string>
+    <string name="action_settings">Настройки</string>
+    <string name="hello_world">Привет МИР!</string>
+    <string name="title_activity_main">МойМир</string>
+    <string name="title_activity_finish_vote">Закончить</string>
+    <string name="title_activity_saved_votes">Сохраненные голоса</string>
     <string name="title_activity_voting_complete">VotingCompleteActivity</string>
-    <string name="partner_id_required">Enter Partner ID</string>
-    <string name="gender_required">Select gender</string>
-    <string name="age_required">Select age</string>
-    <string name="country_required">Select country</string>
-    <string name="education_required">Select education level</string>
+    <string name="partner_id_required">Ввести ID Партнера</string>
+    <string name="gender_required">выберите гендерное</string>
+    <string name="age_required">Выберите возраст</string>
+    <string name="country_required">выбрать страну</string>
+    <string name="education_required">Выберите Ваш уровень образования</string>
 
     <!-- preference file strings -->
     <string-array name="pref_language_item">
@@ -746,11 +740,11 @@ most difference to our lives</string>
         <item>Pусский</item>
         <item>العربية</item>
         <item>中文</item>
-        <item>한국어</item>
-        <item>Português</item>
-        <item>ภาษาไทย</item>
-        <item>Bahasa Indonesia</item>
-        <item>Swahili</item>
+        <!--item>한국어</item-->
+        <!--item>Português</item-->
+        <!--item>ภาษาไทย</item-->
+        <!--item>Bahasa Indonesia</item-->
+        <!--item>Swahili</item-->
     </string-array>
     <string-array name="pref_language_value">
         <item>en</item>
@@ -759,34 +753,34 @@ most difference to our lives</string>
         <item>ru</item>
         <item>ar</item>
         <item>ch</item>
-        <item>kr</item>
-        <item>pr</item>
-        <item>th</item>
-        <item>bi</item>
-        <item>sw</item>
+        <!--item>kr</item-->
+        <!--item>pr</item-->
+        <!--item>th</item-->
+        <!--item>bi</item-->
+        <!--item>sw</item-->
     </string-array>
 
-    <string name="pref_partner_info_title">Partner Information</string>
-    <string name="pref_partner_info_summary">The information (Country, Partner ID) is filled once for all the subsequent votes submitted</string>
-    <string name="pref_canvassing_country">Country in which you are collecting votes</string>
-    <string name="pref_language_list_title">Language</string>
-    <string name="pref_language_list_summary">Your Language</string>
-    <string name="pref_country_list_title">Country</string>
-    <string name="pref_partner_id_title">Partner ID</string>
-    <string name="pref_partner_id_summary">Need a Partner ID? Send an Email to: support@myworld.org or you can Visit: http://partner.myworld2015.org</string>
-    <string name="title_activity_my_world_launcher">MyWorld</string>
+    <string name="pref_partner_info_title">Информация о партнере</string>
+    <string name="pref_partner_info_summary">Информация (страна, ID партнера) заполняется единожды для всех последующих голосований</string>
+    <string name="pref_canvassing_country">Страна, в которой Вы производите сбор голосов</string>
+    <string name="pref_language_list_title">Язык</string>
+    <string name="pref_language_list_summary">Ваш язык</string>
+    <string name="pref_country_list_title">Страна</string>
+    <string name="pref_partner_id_title">ID Партнера</string>
+    <string name="pref_partner_id_summary">Нужен ID Партнера? Отправьте письмо на: support@myworld.org или посетите: http://partner.myworld2015.org</string>
+    <string name="title_activity_my_world_launcher">МойМир</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
-     <string name="use_language_button">Use Pусский</string>
-    <string name="pref_save_button">Save Settings</string>
-    <string name="pref_back_button">Main Menu</string>
-    <string name="pref_partner_info_missing">You must set the Country/Partner ID</string>
-    <string name="pref_partner_info_set">OK</string>
-    <string name="saved_votes_partner_id_label">PartnerID: %1$s</string>
-    <string name="sending_votes_process_dialog">Sending Votes</string>
-    <string name="saved_votes_partner_country_label">Country: %1$s</string>
-    <string name="saved_votes_section_description_label">Use this section to :\n(i) View the number of votes you collected\n(ii) Send your saved votes to the Global Database</string>
-    <string name="saved_votes_not_sent_count_label">As of: %1$s - You have %2$d vote(s) saved and not sent yet.</string>
-    <string name="reminder_send_saved_votes">You need to send us your votes once you\'ve finished collecting them. \n \nNote:\n (1) Press \'Send Votes\' to add them to the Global Database.\n (2) Press \'Export Votes\' to store them on local file in your phone\'s memory.\nThis is useful incase there is failure in step (1)</string>
-    <string name="saved_votes_upload_process_label">%1$s vote(s) being uploaded now.\n\t\t\tPlease wait… \nDo NOT disconnect device from Internet.</string>
-    <string name="saved_votes_no_internet_reminder">No Network Connection</string>
+     <string name="use_language_button">использовать Pусский</string>
+    <string name="pref_save_button">Сохранить установки</string>
+    <string name="pref_back_button">Главное меню</string>
+    <string name="pref_partner_info_missing">Неоходимо уточнить Страну или ID Партнера</string>
+    <string name="pref_partner_info_set">ОК</string>
+    <string name="saved_votes_partner_id_label">ID Партнера: %1$s</string>
+    <string name="sending_votes_process_dialog">Передача голосов</string>
+    <string name="saved_votes_partner_country_label">Страна: %1$s</string>
+    <string name="saved_votes_section_description_label">Используйте этот раздел для:\n(i) Узнайте количество собранных Вами голосов\n(ii) Отправить сохранены голосами против глобальной базы данных</string>
+    <string name="saved_votes_not_sent_count_label">По состоянию на: %1$s - У Вас есть %2$d сохраненные и еще неотправленные голоса.</string>
+    <string name="reminder_send_saved_votes">Вам нужно прислать нам свои голосов как только вы закончили сбор. \n \nПримечание:\n  (1) Нажмите "Отправить голосa", чтобы добавить их к Общей базе данных.\n (2) Нажмите "Экспортировать голоса", чтобы сохранить их в отдельном файле в памяти Вашего телефона. Это поможет при неудачной попытке осуществления действия (1)</string>
+    <string name="saved_votes_upload_process_label">%1$s загружаемые голоса.\n\t\t\tПожалуйста, подождите&#8230; \nНЕ отключайтесь от сети Интернет.</string>
+    <string name="saved_votes_no_internet_reminder">Нет соединения с сетью</string>
 </resources>
