@@ -299,6 +299,7 @@ public class DB_Adapter {
 		Log.d(TAG, "prioritylist_saved");
 		return val;
 	}
+	
 	/**
 	 * @param id
 	 * @description - return String array of prioritylist details

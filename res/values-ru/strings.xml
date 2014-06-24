@@ -734,12 +734,12 @@
 
     <!-- preference file strings -->
     <string-array name="pref_language_item">
-        <item>English</item>
-        <item>Español</item>
-        <item>Français</item>
-        <item>Pусский</item>
-        <item>العربية</item>
-        <item>中文</item>
+        <item>Use English</item>
+        <item>Utilice Español</item>
+        <item>Utilisez Français</item>
+        <item>использовать Pусский</item>
+        <item>استخدم العربية</item>
+        <!--item>中文</item-->
         <!--item>한국어</item-->
         <!--item>Português</item-->
         <!--item>ภาษาไทย</item-->
@@ -752,7 +752,7 @@
         <item>fr</item>
         <item>ru</item>
         <item>ar</item>
-        <item>ch</item>
+        <!--item>ch</item-->
         <!--item>kr</item-->
         <!--item>pr</item-->
         <!--item>th</item-->

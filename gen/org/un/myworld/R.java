@@ -19,37 +19,14 @@ public final class R {
         public static final int gender=0x7f090006;
         public static final int pref_country_entry_values=0x7f090000;
         /**  preference file strings 
+item>中文</item
 item>한국어</item
 item>Português</item
 item>ภาษาไทย</item
 item>Bahasa Indonesia</item
 item>Swahili</item
  preference file strings 
-item>한국어</item
-item>Português</item
-item>ภาษาไทย</item
-item>Bahasa Indonesia</item
-item>Swahili</item
- preference file strings 
- preference file strings 
-item>한국어</item
-item>Português</item
-item>ภาษาไทย</item
-item>Bahasa Indonesia</item
-item>Swahili</item
- preference file strings 
-item>한국어</item
-item>Português</item
-item>ภาษาไทย</item
-item>Bahasa Indonesia</item
-item>Swahili</item
- preference file strings 
-item>한국어</item
-item>Português</item
-item>ภาษาไทย</item
-item>Bahasa Indonesia</item
-item>Swahili</item
- preference file strings 
+item>中文</item
 item>한국어</item
 item>Português</item
 item>ภาษาไทย</item
@@ -57,7 +34,36 @@ item>Bahasa Indonesia</item
 item>Swahili</item
  preference file strings 
  preference file strings 
+item>한국어</item
+item>Português</item
+item>ภาษาไทย</item
+item>Bahasa Indonesia</item
+item>Swahili</item
  preference file strings 
+item>中文</item
+item>한국어</item
+item>Português</item
+item>ภาษาไทย</item
+item>Bahasa Indonesia</item
+item>Swahili</item
+ preference file strings 
+item>中文</item
+item>한국어</item
+item>Português</item
+item>ภาษาไทย</item
+item>Bahasa Indonesia</item
+item>Swahili</item
+ preference file strings 
+item>中文</item
+item>한국어</item
+item>Português</item
+item>ภาษาไทย</item
+item>Bahasa Indonesia</item
+item>Swahili</item
+ preference file strings 
+ preference file strings 
+ preference file strings 
+item>中文</item
 item>한국어</item
 item>Português</item
 item>ภาษาไทย</item
@@ -71,6 +77,7 @@ item>pr</item
 item>th</item
 item>bi</item
 item>sw</item
+item>ch</item
 item>kr</item
 item>pr</item
 item>th</item
@@ -81,21 +88,25 @@ item>pr</item
 item>th</item
 item>bi</item
 item>sw</item
+>item>ch</item
 item>kr</item
 item>pr</item
 item>th</item
 item>bi</item
 item>sw</item
+item>ch</item
 item>kr</item
 item>pr</item
 item>th</item
 item>bi</item
 item>sw</item
+item>ch</item
 item>kr</item
 item>pr</item
 item>th</item
 item>bi</item
 item>sw</item
+item>ch</item
 item>kr</item
 item>pr</item
 item>th</item
@@ -223,61 +234,59 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int upload=0x7f020046;
     }
     public static final class id {
-        public static final int MyWorldSplashLayout=0x7f0c0027;
-        public static final int action_settings=0x7f0c0034;
-        public static final int add_option=0x7f0c002b;
-        public static final int back_to_main=0x7f0c0022;
-        public static final int btnSaveSettings=0x7f0c0026;
+        public static final int MyWorldSplashLayout=0x7f0c0025;
+        public static final int action_settings=0x7f0c0032;
+        public static final int add_option=0x7f0c0029;
+        public static final int back_to_main=0x7f0c0020;
+        public static final int btnSaveSettings=0x7f0c0024;
         public static final int canvasser_msg=0x7f0c0002;
         public static final int canvasser_thank_you_msg=0x7f0c0003;
-        public static final int exit_app=0x7f0c0010;
-        public static final int export_votes=0x7f0c0024;
-        public static final int finishVote=0x7f0c002c;
-        public static final int fullscreen_content_controls=0x7f0c0008;
-        public static final int info_instructions=0x7f0c002e;
-        public static final int language_code=0x7f0c0013;
-        public static final int language_flag=0x7f0c0012;
-        public static final int language_title=0x7f0c0014;
+        public static final int exit_app=0x7f0c000e;
+        public static final int export_votes=0x7f0c0022;
+        public static final int finishVote=0x7f0c002a;
+        public static final int info_instructions=0x7f0c002c;
+        public static final int language_code=0x7f0c0011;
+        public static final int language_flag=0x7f0c0010;
+        public static final int language_title=0x7f0c0012;
         public static final int linearLayoutButtons=0x7f0c0000;
-        public static final int linearLayoutCloseButton=0x7f0c000f;
-        public static final int linearLayoutHeader=0x7f0c001a;
+        public static final int linearLayoutCloseButton=0x7f0c000d;
+        public static final int linearLayoutHeader=0x7f0c0018;
         public static final int listview=0x7f0c0007;
         public static final int logo=0x7f0c0001;
-        public static final int lower_bar=0x7f0c002a;
-        public static final int mdg_check=0x7f0c0019;
-        public static final int mdg_description=0x7f0c0018;
-        public static final int mdg_title=0x7f0c0017;
-        public static final int menu_home=0x7f0c0036;
-        public static final int menu_save=0x7f0c0037;
-        public static final int menu_settings=0x7f0c0035;
+        public static final int lower_bar=0x7f0c0028;
+        public static final int mdg_check=0x7f0c0017;
+        public static final int mdg_description=0x7f0c0016;
+        public static final int mdg_title=0x7f0c0015;
+        public static final int menu_home=0x7f0c0034;
+        public static final int menu_save=0x7f0c0035;
+        public static final int menu_settings=0x7f0c0033;
         public static final int more_votes=0x7f0c0006;
-        public static final int myworld_brief=0x7f0c000b;
-        public static final int myworld_msg=0x7f0c000a;
-        public static final int myworldanimation=0x7f0c0033;
-        public static final int option_code=0x7f0c0016;
-        public static final int option_color=0x7f0c0015;
-        public static final int partercountry_label=0x7f0c001c;
-        public static final int parterid_label=0x7f0c001b;
-        public static final int progressIcon=0x7f0c0021;
-        public static final int save_votes=0x7f0c0023;
-        public static final int saved_votes=0x7f0c000d;
-        public static final int section_description=0x7f0c001d;
-        public static final int section_send_vote_emphasis=0x7f0c001f;
-        public static final int section_votes_not_sent=0x7f0c001e;
-        public static final int section_votes_upload_process=0x7f0c0020;
-        public static final int sending_back_to_main=0x7f0c0025;
-        public static final int settings=0x7f0c000c;
-        public static final int spinner_age=0x7f0c0030;
-        public static final int spinner_education=0x7f0c0031;
-        public static final int spinner_gender=0x7f0c002f;
-        public static final int splashImage=0x7f0c0028;
-        public static final int startVote=0x7f0c000e;
-        public static final int thumbnail=0x7f0c0011;
+        public static final int myworld_brief=0x7f0c0009;
+        public static final int myworld_msg=0x7f0c0008;
+        public static final int myworldanimation=0x7f0c0031;
+        public static final int option_code=0x7f0c0014;
+        public static final int option_color=0x7f0c0013;
+        public static final int partercountry_label=0x7f0c001a;
+        public static final int parterid_label=0x7f0c0019;
+        public static final int progressIcon=0x7f0c001f;
+        public static final int save_votes=0x7f0c0021;
+        public static final int saved_votes=0x7f0c000b;
+        public static final int section_description=0x7f0c001b;
+        public static final int section_send_vote_emphasis=0x7f0c001d;
+        public static final int section_votes_not_sent=0x7f0c001c;
+        public static final int section_votes_upload_process=0x7f0c001e;
+        public static final int sending_back_to_main=0x7f0c0023;
+        public static final int settings=0x7f0c000a;
+        public static final int spinner_age=0x7f0c002e;
+        public static final int spinner_education=0x7f0c002f;
+        public static final int spinner_gender=0x7f0c002d;
+        public static final int splashImage=0x7f0c0026;
+        public static final int startVote=0x7f0c000c;
+        public static final int thumbnail=0x7f0c000f;
         public static final int unsynchronized_votes=0x7f0c0005;
-        public static final int use_language_button=0x7f0c0009;
-        public static final int validation_status=0x7f0c0032;
-        public static final int vote_count=0x7f0c002d;
-        public static final int vote_instructions=0x7f0c0029;
+        public static final int validation_status=0x7f0c0030;
+        public static final int vote_count=0x7f0c002b;
+        public static final int vote_instructions=0x7f0c0027;
         public static final int votes_count_label=0x7f0c0004;
     }
     public static final class layout {
@@ -473,7 +482,7 @@ string name="saved_votes_partner_country_value">%1$s</string
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:buttonBarButtonStyle
+          @attr name org.un.myworld:buttonBarButtonStyle
         */
         public static final int ButtonBarContainerTheme_buttonBarButtonStyle = 1;
         /**
@@ -483,7 +492,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:buttonBarStyle
+          @attr name org.un.myworld:buttonBarStyle
         */
         public static final int ButtonBarContainerTheme_buttonBarStyle = 0;
     };

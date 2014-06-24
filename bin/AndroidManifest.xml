@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.un.myworld"
-    android:versionCode="12"
-    android:versionName="1.2.9" >
+    android:versionCode="14"
+    android:versionName="1.3.0" >
 
     <uses-sdk
         android:minSdkVersion="10"
-        android:targetSdkVersion="18" />
+        android:targetSdkVersion="19" />
 
     <!-- Allow Internet connection -->
     <uses-permission android:name="android.permission.INTERNET" />
@@ -114,11 +114,10 @@
             android:name="org.un.myworld.MyWorldLauncher"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_my_world_launcher"
-            android:parentActivityName="android.app.ListActivity"
-            android:theme="@style/FullscreenTheme" >
-            <meta-data
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <!--meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="android.app.ListActivity" />
+                android:value="android.app.ListActivity" /-->
 
             <!--intent-filter>
                 <action android:name="android.intent.action.MAIN" />
